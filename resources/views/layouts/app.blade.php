@@ -140,6 +140,8 @@
     </div>
     <!-- End Page wrapper  -->
 </div>
+<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/axios.min.js')}}"></script>
 @yield('scripts')
 </body>
 </html>

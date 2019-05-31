@@ -36,8 +36,11 @@ class LoaderExcelController extends Controller
 
                Excel::import(new StudentImport,$ruta);
 
-               return back()->with('info','Datos Cargados Correctamente');
+               return response([
+                    'success' => true
+               ]);
         }
+
 
     }
 

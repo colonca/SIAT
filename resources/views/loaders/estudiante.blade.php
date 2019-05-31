@@ -43,20 +43,56 @@
         @endif
         <div class="row">
             <div class="col">
-                {!! Form::open(['route'=>'loaderestudiante', 'method'=>'POST', 'files' => true, 'role' => 'form']) !!}
+                {!! Form::open(['route'=>'loaderestudiante', 'method'=>'POST', 'files' => true, 'role' => 'form','id' => 'form']) !!}
                 <div class="form-group">
                     {!! Form::label('file', 'Agregar Archivo de Excel') !!}
-                    {!! Form::file('file',null, ['required' => 'true','class' => 'form-control']) !!}
+                    {!! Form::file('file',null, ['required' => 'true','class' => 'form-control','id' => 'file']) !!}
+                </div>
+
+                <div class="form-group" id="check" style="display: none">
+                    <img src="{{asset('images/checkedvalid.gif')}}" alt="" width="80px" height="80px">
+                </div>
+
+                <div class="form-group" id="spinner" style="display: none">
+                    <img src="{{asset('images/spinner.gif')}}" alt="" width="80px" height="80px">
                 </div>
 
                 <div class="form-group">
-                    {{ Form::submit('Cargar Datos',['class' => 'btn btn-sm btn-success']) }}
+                    <input id="btnCargarEstudiante"  onclick="cargarEstudiantes(event)" type="submit" value="Cargar Datos" class="btn btn-sm btn-success">
                 </div>
 
                 {!! Form::close() !!}
+
             </div>
 
         </div>
         <!-- Row -->
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+           $('document').ready(function () {
+
+           });
+
+           function cargarEstudiantes(event){
+               event.preventDefault();
+               let btn = document.getElementById('btnCargarEstudiante');
+               btn.disabled = true;
+               let spinner = document.getElementById('spinner');
+               let check = document.getElementById('check');
+               spinner.style.display = 'block';
+               let form  = document.getElementById('form');
+               let datos = new FormData(form);
+               axios.post('{{route('loaderestudiante')}}',datos).then(response => {
+                    spinner.style.display = 'none';
+                    check.style.display = 'block';
+                    setTimeout(function () {
+                        check.style.display = 'none';
+                        btn.disabled = false;
+                    },3000);
+               });
+           }
+    </script>
 @endsection
