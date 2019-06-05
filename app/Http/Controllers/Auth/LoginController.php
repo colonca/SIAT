@@ -18,7 +18,7 @@ class LoginController extends Controller {
     public function login(){
 
         $credentials = $this->validate(request(),[
-            'email' => 'email|required|string',
+            $this->username() => 'required|string',
             'password'  => 'required|string'
         ]);
 
@@ -26,8 +26,12 @@ class LoginController extends Controller {
             return  redirect()->route('dashboard');
         }
 
-        return back()->withErrors(['email' => 'Estas credenciales no coinciden con nuestros registros']);
+        return back()->withErrors([$this->username() => 'Estas credenciales no coinciden con nuestros registros']);
 
+    }
+
+    public function username(){
+          return 'cedula';
     }
 
 

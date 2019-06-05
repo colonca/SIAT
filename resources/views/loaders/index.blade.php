@@ -1,27 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container-fluid">
-        <div class="row page-titles">
-            <div class="col-md-6 col-8 align-self-center">
-                <h3 class="text-themecolor m-b-0 m-t-0">Loaders</h3>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="javascript:void(0)" style="margin-right: 10px">Inicio </a>
-                        <i class="fas fa-angle-right"></i>
-                    </li>
-                    <li class="breadcrumb-item">Dashboard</li>
-                </ol>
-            </div>
-        </div>
         <!-- Row -->
         <div class="row">
             <!-- Column -->
-            <div class="col">
+            <div class="box-header with-border bg-teal">
+                <ol class="breadcrumb">
+                    <li><a href="{{route('loaders')}}" style="color: white;"> inicio</a></li>
+                </ol>
+            </div>
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
-                    <div class="card-block">
-                        <a  href="{{route('loaderEstudiantes')}}" onclick="" class="btn btn-success btn-md margin">Cargar Estudiantes</a>
-                        <a  href="{{route('loaderAsignaturas')}}" href="" class="btn btn-success btn-md margin">Cargar Asignaturas</a>
+                    <div class="header">
+                        <h2>
+                            Informacion del Sistema
+                            <small>Menu</small>
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <div class="button-demo">
+                            <a href="{{route('loaderEstudiantes')}}" type="button" class="btn btn-success waves-effect">Cargar Estudiantes</a>
+                            <a href="{{route('loaderAsignaturas')}}" type="button" class="btn btn-success waves-effect">Cargar Asignaturas</a>
+                        </div>
                     </div>
                 </div>
             </div>

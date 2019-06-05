@@ -47,9 +47,9 @@
 
             <form class="login100-form validate-form" action="{{route('login')}}" method="POST">
                 @csrf
-                <div class="wrap-input100 validate-input m-b-26 {{$errors->has('email') ? 'has-error' : '' }}" data-validate="Email is required">
-                    <span class="label-input100">E-mail</span>
-                    <input class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Enter Email">
+                <div class="wrap-input100 validate-input m-b-26 {{$errors->has('cedula') ? 'has-error' : '' }}" data-validate="Cedula is required">
+                    <span class="label-input100">Cedula</span>
+                    <input class="input100" type="text" name="cedula" value="{{ old('cedula') }}" placeholder="Ingresa tu Identificacion">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -58,8 +58,8 @@
                     <input class="input100" type="password" name="password" placeholder="Enter password">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="{{$errors->has('email') ? 'alert alert-danger' : '' }}">
-                    {!! $errors->first('email','<span class="help-block">:message</span>') !!}
+                <div class="{{$errors->has('cedula') ? 'alert alert-danger' : '' }}">
+                    {!! $errors->first('cedula','<span class="help-block">:message</span>') !!}
                 </div>
                 <div class="{{$errors->has('password') ? 'alert alert-danger' : '' }}">
                     {!! $errors->first('password','<span class="help-block">:message</span>') !!}
