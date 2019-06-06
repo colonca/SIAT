@@ -6,9 +6,12 @@
         <!-- Row -->
         <div class="row">
             <!-- Column -->
-            <div class="box-header with-border bg-teal">
+            <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
                 <ol class="breadcrumb">
-                    <li><a href="{{route('loaders')}}" style="color: white;"> inicio</a></li>
+                    <li><a href="{{route('loaders')}}" style="color: white;">
+                            <i class="material-icons">home</i> inicio
+                        </a>
+                    </li>
                 </ol>
             </div>
             

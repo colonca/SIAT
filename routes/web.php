@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/', 'Auth\LoginController@showLoginForm')->middleware('guest')->name('/');
 Route::get('login', 'Auth\LoginController@ShowLoginForm');
 Route::post('login','Auth\LoginController@login')->name('login');
 
@@ -18,7 +19,12 @@ Route::post('login','Auth\LoginController@login')->name('login');
 
 Route::get('dashboard','HomeController@index')->name('dashboard');
 
+//loaders
 Route::get('loaders/index','LoaderExcelController@index')->name('loaders');
 Route::get('loaders/estudiantes','LoaderExcelController@viewEstudiantes')->name('loaderEstudiantes');
 Route::get('loaders/asignaturas','LoaderExcelController@viewAsignaturas')->name('loaderAsignaturas');
 Route::post('loaders/estudiantes','LoaderExcelController@loadEstudiantes')->name('loaderestudiante');
+
+
+//usuarios
+Route::get('users','GruposUsuariosController@index')->name('users');

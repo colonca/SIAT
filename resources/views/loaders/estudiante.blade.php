@@ -11,10 +11,16 @@
                 </div>
             </div>
         @endif
-        <div class="box-header with-border bg-teal">
+        <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
             <ol class="breadcrumb">
-                <li><a href="{{route('loaders')}}" style="color: white;">inicio</a></li>
-                <li><a href="" style="color: white;">Carga de Estudiantes</a></li>
+                <li><a href="{{route('loaders')}}" style="color: white;">
+                        <i class="material-icons">home</i> inicio
+                    </a>
+                </li>
+                <li><a href="" style="color: white;">
+                        <i class="material-icons">archive</i> Carga de Estudiantes
+                    </a>
+                </li>
             </ol>
         </div>
 
@@ -27,6 +33,10 @@
                     </h2>
                 </div>
                 <div class="body">
+                    <div class="alert alert-success">
+                        <strong>Detalles: </strong>  Recuerde Que el archivo debe estar en el formato correcto para que se puede realizar el cargue correctamente en la base de datos.
+                        <a onclick="showEjemplo(event)" href="javascript:void(0);" class="alert-link">Ver Ejemplo</a></a>.
+                    </div>
                     <div class="row clearfix">
                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             {!! Form::open(['route'=>'loaderestudiante', 'method'=>'POST', 'files' => true, 'role' => 'form','id' => 'form']) !!}
@@ -46,8 +56,23 @@
                             <div class="form-group">
                                 <input id="btnCargarEstudiante"  onclick="cargarEstudiantes(event)" type="submit" value="Cargar Datos" class="btn btn-sm btn-success">
                             </div>
-
                             {!! Form::close() !!}
+                        </div>
+                    </div>
+                    <div class="row clearfix" id="ejemplos" style="display: none;">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>
+                                        Ejemplos del Archivo
+                                    </h2>
+                                </div>
+                                <div class="body">
+                                    <img src="{{asset('images/Loaders/ejemplos/estudiantes.png')}}" class="js-animating-object img-responsive">
+                                    <hr>
+                                    <img src="{{asset('images/Loaders/ejemplos/estudiantes2.png')}}" class="js-animating-object img-responsive">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,6 +86,12 @@
            $('document').ready(function () {
 
            });
+
+           function showEjemplo(event){
+               event.preventDefault();
+               let ejemplo = document.getElementById('ejemplos');
+               ejemplo.style.display = 'block';
+           }
 
            function cargarEstudiantes(event){
                event.preventDefault();

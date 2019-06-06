@@ -35,7 +35,7 @@
             <div class="login100-form-title" style="background-image:url({{asset('images/bg-01.jpg')}});">
                 <img src="" alt="">
                 <span class="login100-form-title-1">
-						SIAT
+						<img src="{{asset('images/logo.png')}}" alt="">
 					</span>
             </div>
 

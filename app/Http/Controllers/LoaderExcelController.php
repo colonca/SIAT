@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Estudiante;
+use App\Exceptions\LoaderException;
 use App\Imports\StudentImport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use mysql_xdevapi\Exception;
 
 class LoaderExcelController extends Controller
 {
@@ -19,7 +21,6 @@ class LoaderExcelController extends Controller
     public function viewEstudiantes(){
        return view('loaders.estudiante');
     }
-
 
     public function loadEstudiantes(Request $request){
 
@@ -40,7 +41,6 @@ class LoaderExcelController extends Controller
                     'success' => true
                ]);
         }
-
 
     }
 
