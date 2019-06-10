@@ -28,3 +28,6 @@ Route::post('loaders/estudiantes','LoaderExcelController@loadEstudiantes')->name
 
 //usuarios
 Route::get('users','GruposUsuariosController@index')->name('users');
+Route::resource('paginas','PaginaController');
+Route::resource('modulos','ModuloController');
+Route::resource('grupos','Grupo_UsuarioController');

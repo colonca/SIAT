@@ -20,6 +20,8 @@
     <!-- Bootstrap Core Css -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
+    <link href="{{asset("css/bootstrap-select.min.css")}}" rel="stylesheet">
+
     <!-- Waves Effect Css -->
     <link href="{{asset('css/waves.min.css')}}" rel="stylesheet" />
 
@@ -31,6 +33,8 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset('css/all-themes.min.css')}}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
 
 </head>
 
@@ -343,6 +347,8 @@
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 <!-- Select Plugin Js -->
+<!--<script src="{{asset('js/bootstrap-select.min.js')}}"></script>-->
+
 <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
 
 <!-- Slimscroll Plugin Js -->
@@ -360,6 +366,8 @@
 <script src="{{asset('js/axios.min.js')}}"></script>
 
 <script src="{{asset('js/notifications.js')}}"></script>
+
+<script src="{{asset('js/jquery.dataTables.js')}}"></script>
 
 @yield('scripts')
 
