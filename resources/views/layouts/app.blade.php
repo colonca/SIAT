@@ -291,11 +291,9 @@
                     <ul class="dropdown-menu pull-right">
                         <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                          <!--<li></li>-->
                         <li role="separator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                        <li><a href="{{url('logout')}}"><i class="material-icons">input</i>Cerrar Session</a></li>
                     </ul>
                 </div>
             </div>
@@ -305,18 +303,22 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">Navegacion Principal</li>
-                <li>
-                    <a href="{{route('loaders')}}">
-                        <i class="material-icons">note_add</i>
-                        <span>Cargar Informacion</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{route('users')}}">
-                        <i class="material-icons">people</i>
-                        <span>Usuarios</span>
-                    </a>
-                </li>
+                  @if(session()->has('MOD_CARGAR_INFORMACIóN'))
+                    <li>
+                        <a href="{{route('loaders')}}">
+                            <i class="material-icons">note_add</i>
+                            <span>Cargar Informacion</span>
+                        </a>
+                    </li>
+                  @endif
+                @if(session()->has('MOD_USUARIOS'))
+                    <li>
+                        <a href="{{route('users')}}">
+                            <i class="material-icons">people</i>
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div>
         <!-- #Menu -->

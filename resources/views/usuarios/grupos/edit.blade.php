@@ -10,12 +10,12 @@
                 </a>
             </li>
             <li><a href="{{route('grupos.index')}}" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Grupo de grupos
+                    <i class="material-icons">perm_identity</i> Grupo de Usuarios
                 </a>
             </li>
             <li>
                 <a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i>Actualizando grupo
+                    <i class="material-icons">perm_identity</i>Actualizando Grupo
                 </a>
             </li>
         </ol>
@@ -62,7 +62,9 @@
                         <label for="" class="form-control">Selecione los Modulos a los que el Grupo Tendrá Acceso</label>
                         <select name="modulos[]" id="" class="selectpicker form-control" multiple data-live-search="true" data-size="10">
                             @foreach($modulos as $modulo)
-                                @if($modulosSelecionados->contains($modulo->nombre))
+                                @if($modulosSelecionados->contains(function ($value,$key) use ($modulo){
+                                      return $value->id == $modulo->id;
+                                }))
                                     <option value="{{$modulo->id}}" selected>{{$modulo->nombre}}</option>
                                 @else
                                     <option value="{{$modulo->id}}" >{{$modulo->nombre}}</option>

@@ -94,6 +94,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-12">
+                        <div class="alert bg-green">
+                            Modulos a los que Tiene Acceso el Grupo de Usuario
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="margin-top: -10px;">
+                        <div class="list-group">
+                            @foreach($grupo->modulos as $modulo)
+                                <button type="button" class="list-group-item">{{$modulo->nombre}}  ==>  {{$modulo->descripcion}}
+                                </button>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
                 </div>
         </div>

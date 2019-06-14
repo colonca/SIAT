@@ -20,4 +20,9 @@ class Grupo_Usuario extends Model
         return $this->belongsToMany(Modulo::class,'grupo_modulos','grupo_usuario_id','modulo_id');
     }
 
+
+    public function paginas(){
+        return $this->belongsToMany(Pagina::class,'grupo_paginas','grupo_usuario_id','pagina_id');
+    }
+
 }

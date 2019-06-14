@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Grupo_Usuario;
 use App\Http\Controllers\Controller;
+use function foo\func;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller {
 
     public function __construct(){
-
     }
 
     public function ShowLoginForm(){
@@ -23,7 +25,20 @@ class LoginController extends Controller {
         ]);
 
         if(Auth::attempt($credentials)){
+
+            $user = Auth::user();
+            $grupo = Grupo_Usuario::find($user->grupo_usuario_id);
+
+            $grupo->modulos->each(function($item){
+                session()->put(strtoupper($item->nombre),strtoupper($item->nombre));
+            });
+
+            $grupo->paginas->each(function($item){
+                session()->put(strtoupper($item->nombre),strtoupper($item->nombre));
+            });
+
             return  redirect()->route('dashboard');
+
         }
 
         return back()->withErrors([$this->username() => 'Estas credenciales no coinciden con nuestros registros']);
@@ -34,5 +49,10 @@ class LoginController extends Controller {
           return 'cedula';
     }
 
+    public function logout(){
+        Auth::logout();
+        session()->flush();
+        return redirect('/');
+    }
 
 }
