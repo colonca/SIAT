@@ -36,6 +36,7 @@
 
     <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
 
+    @yield('styles')
 </head>
 
 <body class="theme-red">
@@ -303,6 +304,30 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">Navegacion Principal</li>
+                <li onclick="">
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="material-icons">contacts</i>
+                        <span>Personal</span>
+                    </a>
+                    <ul class="ml-menu" style="display: none;">
+                        <li>
+                            <a href="{{route('psicologos.index')}}">
+                                <span>Psicologos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('loaders')}}">
+                                <span>Docente Permanencia</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('loaders')}}">
+                                <span>Tallerista</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                   @if(session()->has('MOD_CARGAR_INFORMACIóN'))
                     <li>
                         <a href="{{route('loaders')}}">
@@ -319,6 +344,7 @@
                         </a>
                     </li>
                 @endif
+
             </ul>
         </div>
         <!-- #Menu -->
@@ -342,6 +368,7 @@
     @yield('content')
 </section>
 
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <!-- Jquery Core Js -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 

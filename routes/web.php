@@ -28,3 +28,4 @@ Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
 
 
 //psicologos
+Route::resource('psicologos','PsicologoController');
