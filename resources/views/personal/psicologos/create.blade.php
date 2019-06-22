@@ -54,7 +54,7 @@
     @endif
 
     <form action="">
-        <div class="row clearfix">
+        <div id="form1" class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -70,7 +70,7 @@
                                     <b>Primer Nombre</b>
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" class="form-control date" placeholder="Ex: daniel">
+                                            <input type="text" class="form-control date" placeholder="Ex: daniel" required>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                     <b>Primer Apellido</b>
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" class="form-control time12" placeholder="Ex: aguirre">
+                                            <input type="text" class="form-control time12" placeholder="Ex: aguirre" required>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                         <div class="form-line">
-                                            <input type="text" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00">
+                                            <input type="text" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                                                 <i class="material-icons">place</i>
                                             </span>
                                         <div class="form-line">
-                                            <input type="text" class="form-control money-dollar" placeholder="Ex: callexxD#xx-xxx">
+                                            <input type="text" class="form-control money-dollar" placeholder="Ex: callexxD#xx-xxx" required>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@
                                                 <i class="material-icons">my_location</i>
                                             </span>
                                         <div class="form-line">
-                                            <input type="text" class="form-control money-euro" placeholder="Ex: 99,99 €">
+                                            <input type="text" class="form-control money-euro" placeholder="Ex:villa ligia" required>
                                         </div>
                                     </div>
                                 </div>
@@ -149,9 +149,23 @@
                                                 <i class="material-icons">email</i>
                                             </span>
                                         <div class="form-line">
-                                            <input type="text" class="form-control email" placeholder="Ex: example@example.com">
+                                            <input type="email" class="form-control email" placeholder="Ex: example@example.com" required>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <b>Correo Institucional</b>
+                                    <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">email</i>
+                                            </span>
+                                        <div class="form-line">
+                                            <input type="email" class="form-control email" placeholder="Ex: example@example.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <button class="btn btn-lg btn-success pull-right" onclick="irAdelante(event,1)">Siguiente</button>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
+        <div id="form2" style="display: none" class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -198,13 +212,17 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-group col-md-12">
+                                    <button type="submit" class="btn btn-lg btn-success pull-right" onclick="irAdelante(event,2)">Siguiente</button>
+                                    <button type="submit" class="btn btn-lg btn-success pull-right m-r-10" onclick="irAtras(event,2)">Anterior</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row clearfix">
+        <div id="form3" style="display: none" class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -305,6 +323,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-lg btn-success pull-right">Guardar Psicologo</button>
+                                        <button type="submit" class="btn btn-lg btn-success pull-right m-r-10" onclick="irAtras(event,3)">Anterior</button>
                                     </div>
                                 </div>
                             </div>
@@ -319,9 +338,7 @@
 
 @section('scripts')
     <script>
-
         var horario = [];
-
          function addDisponibilidad(event) {
              if(!horario.includes(event.target.getAttribute('data-value'))){
                  horario.push(event.target.getAttribute('data-value'));
@@ -335,7 +352,7 @@
                  event.target.classList = '';
                  event.target.style.backgroundColor ="white";
              }else{
-                 event.target.innerHTML = 'Asignado';
+                 event.target.innerHTML = 'Disponible';
                  event.target.style.color = 'black';
                  event.target.classList = 'hora-activa';
                  event.target.style.backgroundColor ="rgb(253, 231, 112)";
@@ -348,6 +365,22 @@
             if ( i !== -1 ) {
                 arr.splice( i, 1 );
             }
+        }
+
+        function irAdelante(event,div){
+               event.preventDefault();
+               let divActual = document.getElementById('form'+(div));
+               let divSiguiente= document.getElementById('form'+(div+1));
+               divActual.style.display = 'none';
+               divSiguiente.style.display = 'block';
+        }
+        
+        function  irAtras(event,div) {
+            event.preventDefault();
+            let divActual = document.getElementById('form'+(div));
+            let divAnterior= document.getElementById('form'+(div-1));
+            divActual.style.display = 'none';
+            divAnterior.style.display = 'block';
         }
     </script>
 @endsection

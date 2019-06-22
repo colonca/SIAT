@@ -304,6 +304,8 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">Navegacion Principal</li>
+
+                @if(session()->has('MOD_PERSONAL'))
                 <li onclick="">
                     <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
                         <i class="material-icons">contacts</i>
@@ -327,7 +329,7 @@
                         </li>
                     </ul>
                 </li>
-
+                @endif
                   @if(session()->has('MOD_CARGAR_INFORMACIóN'))
                     <li>
                         <a href="{{route('loaders')}}">
@@ -336,22 +338,22 @@
                         </a>
                     </li>
                   @endif
-                @if(session()->has('MOD_USUARIOS'))
-                    <li>
-                        <a href="{{route('users')}}">
-                            <i class="material-icons">people</i>
-                            <span>Usuarios</span>
-                        </a>
-                    </li>
-                @endif
+                <!--@if(session()->has('MOD_USUARIOS'))-->
 
+                <!---@endif-->
+                <li>
+                    <a href="{{route('users')}}">
+                        <i class="material-icons">people</i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- #Menu -->
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2019 - 2020 <a href="javascript:void(0);">PEBI-CADANA</a>.
+                &copy; 2019 - 2020 <a href="javascript:void(0);">PEBI- CANADA</a>.
             </div>
             <div class="version">
                 <b>Version: </b> 1.0.0
