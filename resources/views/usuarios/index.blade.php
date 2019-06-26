@@ -47,7 +47,7 @@
                     <a  href='{{route('paginas.index')}}' type="button" class="btn bg-light-green waves-effect">PAGINAS DEL SISTEMA</a>
                     <a  href="{{route('grupos.index')}}" type="button" class="btn bg-light-green waves-effect">GRUPOS O ROLES DE USUARIOS</a>
                     <a  href="{{route('privilegios')}}" type="button" class="btn bg-light-green waves-effect">PRIVILEGIOS A PAGINAS</a>
-                    <a  href="#" type="button" class="btn bg-light-green waves-effect">LISTAR A LOS USUARIOS</a>
+                    <a  href="{{route('usuarios.index')}}" type="button" class="btn bg-light-green waves-effect">LISTAR A LOS USUARIOS</a>
                     <a  href="#" type="button" class="btn bg-light-green waves-effect">USUARIO MANUAL</a>
                 </div>
             </div>

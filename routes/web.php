@@ -19,6 +19,7 @@ Route::post('loaders/estudiantes','LoaderExcelController@loadEstudiantes')->name
 
 //usuarios
 Route::get('users','GruposUsuariosController@index')->name('users');
+Route::resource('usuarios','UsuarioController');
 Route::resource('paginas','PaginaController');
 Route::resource('modulos','ModuloController');
 Route::resource('grupos','Grupo_UsuarioController');
@@ -29,3 +30,13 @@ Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
 
 //psicologos
 Route::resource('psicologos','PsicologoController');
+Route::get('horarios/{id}','PsicologoController@horarios');
+
+
+//estudiantes
+Route::resource('estudiantes','EstudianteController');
+
+//citas
+Route::get('/citas',function(){
+    return view('citas.agendar_cita');
+});

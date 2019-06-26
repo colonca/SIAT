@@ -86,11 +86,12 @@
 @section('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script>
+
          $('document').ready(function () {
              $('#paginas').dataTable({
-                 "paging":   false,
+                 "paging":   true,
                  "ordering": false,
-                 "info":     false
+                 "info":     true
              });
          });
 

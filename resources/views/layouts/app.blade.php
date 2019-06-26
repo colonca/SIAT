@@ -17,16 +17,22 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
+
+
     <!-- Bootstrap Core Css -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
     <link href="{{asset("css/bootstrap-select.min.css")}}" rel="stylesheet">
+
 
     <!-- Waves Effect Css -->
     <link href="{{asset('css/waves.min.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
     <link href="{{asset("css/animate.min.css")}}" rel="stylesheet" />
+
+    <link href="{{asset("css/bootstrap-material-datetimepicker.css")}}" rel="stylesheet" />
+    <link href="{{asset("css/bootstrap-datepicker/css/bootstrap-datepicker.css")}}" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="{{asset("css/style.min.css")}}" rel="stylesheet">
@@ -35,6 +41,7 @@
     <link href="{{asset('css/all-themes.min.css')}}" rel="stylesheet" />
 
     <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
+
 
     @yield('styles')
 </head>
@@ -285,8 +292,8 @@
                 <img src="{{asset('images/user.png')}}" width="48" height="48" alt="User" />
             </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                <div class="email">john.doe@example.com</div>
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->nombre}}</div>
+                <div class="email">{{Auth::user()->email}}</div>
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
@@ -319,17 +326,24 @@
                         </li>
                         <li>
                             <a href="{{route('loaders')}}">
-                                <span>Docente Permanencia</span>
+                                <span>Docentes de Permanencia</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{route('loaders')}}">
-                                <span>Tallerista</span>
+                                <span>Talleristas</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 @endif
+                
+                <li>
+                    <a href="{{route('estudiantes.index')}}">
+                        <i class="material-icons">face</i>
+                        <span>Estudiantes</span>
+                    </a>
+                </li>
                   @if(session()->has('MOD_CARGAR_INFORMACIóN'))
                     <li>
                         <a href="{{route('loaders')}}">
@@ -347,6 +361,8 @@
                         <span>Usuarios</span>
                     </a>
                 </li>
+                        
+                        
             </ul>
         </div>
         <!-- #Menu -->
@@ -388,6 +404,11 @@
 <!-- Waves Effect Plugin Js -->
 <script src="{{asset('js/waves.min.js')}}"></script>
 
+<script src="{{asset('js/moment.js')}}"></script>
+<script src="{{asset('js/bootstrap-material-datetimepicker.js')}}"></script>
+<script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
+
+
 <!-- Custom Js -->
 <script src="{{asset('js/admin.js')}}"></script>
 
@@ -399,6 +420,9 @@
 <script src="{{asset('js/notifications.js')}}"></script>
 
 <script src="{{asset('js/jquery.dataTables.js')}}"></script>
+
+
+
 
 @yield('scripts')
 
