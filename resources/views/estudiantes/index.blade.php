@@ -159,7 +159,7 @@
                                         remove_red_eye
                                     </i>
                                 </a>
-                                <a href="#"  class="btn btn-sm btn-outline-danger m-t-5" title="Enviar Correo Electronico" data-toggle="modal" data-target="#correo">
+                                <a href="#" onclick="enviarCorreo(event,'{{$estudiante->email}}')" class="btn btn-sm btn-outline-danger m-t-5" title="Enviar Correo Electronico">
                                     <i class="material-icons">
                                         exit_to_app
                                     </i>
@@ -189,26 +189,27 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <form action="" id="body_correo" enctype="multipart/form-data">
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" class="form-control" placeholder="Destinatario">
+                                <input type="text" name="destino" id="destino" class="form-control" placeholder="Destinatario">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-line">
-                                <input type="text" class="form-control" placeholder="Asunto">
+                                <input type="text" name ="asunto" class="form-control" placeholder="Asunto">
                             </div>
                         </div>
                         <div class="form-group">
                             <textarea name="" id="editor" name="mensaje" class="ckeditor" cols="30" rows="10">
+
                             </textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Enviar</button>
+                    <button type="button"  onclick="enviar(event)" class="btn btn-primary">Enviar</button>
                 </div>
             </div>
         </div>
@@ -219,6 +220,16 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
     <script>
+        
+        $(document).ready(function () {
+            CKEDITOR.replace( 'editor',
+                {
+                    lang: 'es',
+                    allowedContent: true,
+                    ignoreEmptyParagraph: false,
+                    enterMode: CKEDITOR.ENTER_BR
+                });
+        });
         function eliminar(event,id){
             event.preventDefault();
             Swal.fire({
@@ -245,6 +256,22 @@
                 }
             })
         }
+        function enviarCorreo(event,correo){
+          event.preventDefault();
+          document.getElementById('destino').value = correo;
+          $('#correo').modal('show');
+        }
+        function enviar(event){
+            event.preventDefault();
+            let data = new FormData(document.getElementById('body_correo'));
 
+            data.append('mensaje',CKEDITOR.instances['editor'].getData());
+
+            axios.post('mensageIndividual',data).then(response => {
+               console.log(response);
+            });
+
+
+        }
     </script>
 @endsection
