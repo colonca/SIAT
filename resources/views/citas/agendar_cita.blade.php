@@ -49,7 +49,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12" style="margin: 10px 0 20px 0;">
-            <img src="http://localhost/SIAT/public/images/logo.png" style="margin-top: 20px;">
+            <img src="{{asset('images/users/logo.png')}}" style="margin-top: 20px;">
             <img src="{{asset('images/logoEntidad.png')}}" class = "pull-right" height="125px">
         </div>
     </div>
