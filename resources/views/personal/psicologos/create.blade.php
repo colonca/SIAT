@@ -364,7 +364,7 @@
 @endsection
 
 @section('scripts')
-    <script src="{{asset('js/notify.min.js')}}"></script>
+
     <script>
         $(function () {
             //Datetimepicker plugin

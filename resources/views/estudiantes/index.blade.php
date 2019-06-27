@@ -218,6 +218,7 @@
 
 @section('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="{{asset('js/notify.min.js')}}"></script>
     <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
     <script>
         
@@ -267,8 +268,10 @@
 
             data.append('mensaje',CKEDITOR.instances['editor'].getData());
 
-            axios.post('mensageIndividual',data).then(response => {
-               console.log(response);
+            axios.post('mensageIndividual',data)
+                .then(response => {
+                 $.notify('enviado correctamente','success');
+                 $('#correo').modal('hide');
             });
 
 

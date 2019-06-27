@@ -7,8 +7,6 @@ Route::get('login', 'Auth\LoginController@ShowLoginForm');
 Route::post('login','Auth\LoginController@login')->name('login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-
-
 Route::get('dashboard','HomeController@index')->name('dashboard');
 
 //loaders
@@ -43,3 +41,4 @@ Route::post('mensageIndividual','MessageController@store');
 Route::get('/citas',function(){
     return view('citas.agendar_cita');
 });
+Route::get('cita/estudiante/{id}','CitaController@estudiante');
