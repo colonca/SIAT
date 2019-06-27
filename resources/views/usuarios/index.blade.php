@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li><a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Usuarioss
+                    <i class="material-icons">perm_identity</i> Usuarios
                 </a>
             </li>
         </ol>
@@ -40,15 +40,15 @@
                 <div class="alert alert-success">
                     <strong>Detalles: </strong>  Agregue usuarios al sistema y administre sus privilegios, gestione los usuarios, configure los grupos de usuarios, asi como tambien los modulos del sistema, entre otras tareas</a>.
                 </div>
-                <div class="button-demo">
+                <div class="icon-and-text-button-demo">
                     @if(session()->has('PAG_MODULOS'))
-                        <a  href="{{route('modulos.index')}}" type="button" class="btn bg-light-green waves-effect" >MODULOS DEL SISTEMA</a>
+                        <a  href="{{route('modulos.index')}}" type="button" class="btn btn-primary btn-lg  waves-effect" > <i class="material-icons">view_module</i><span>MÓDULOS</span></a>
                     @endif
-                    <a  href='{{route('paginas.index')}}' type="button" class="btn bg-light-green waves-effect">PAGINAS DEL SISTEMA</a>
-                    <a  href="{{route('grupos.index')}}" type="button" class="btn bg-light-green waves-effect">GRUPOS O ROLES DE USUARIOS</a>
-                    <a  href="{{route('privilegios')}}" type="button" class="btn bg-light-green waves-effect">PRIVILEGIOS A PAGINAS</a>
-                    <a  href="{{route('usuarios.index')}}" type="button" class="btn bg-light-green waves-effect">LISTAR A LOS USUARIOS</a>
-                    <a  href="#" type="button" class="btn bg-light-green waves-effect">USUARIO MANUAL</a>
+                    <a  href="{{route('paginas.index')}}" type="button" class="btn bg-deep-orange btn-lg  waves-effect" > <i class="material-icons">pages</i><span>PÁGINAS</span></a>
+                    <a  href="{{route('grupos.index')}}" type="button" class="btn bg-green btn-lg  waves-effect" > <i class="material-icons">group</i><span>GRUPOS O ROLES</span></a>
+                    <a  href="{{route('privilegios')}}" type="button" class="btn bg-brown btn-lg waves-effect" > <i class="material-icons">desktop_access_disabled</i><span>PRIVILEGIOS</span></a>
+                    <a  href="{{route('usuarios.index')}}" type="button" class="btn bg-teal btn-lg  waves-effect" > <i class="material-icons">list</i><span>LISTADO USUARIOS</span></a>
+                    <a  href="#" type="button" class="btn bg-red  btn-lg  waves-effect"> <i class="material-icons">book</i><span>MANUAL DE USUARIOS</span></a>
                 </div>
             </div>
         </div>
@@ -71,7 +71,10 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <button type="button"  class="btn btn-success btn-lg m-l-15 waves-effect"> <i class="material-icons">search</i> CONSULTAR USUARIO</button>
+                                <center><button type="button" class="btn btn-primary waves-effect btn-lg">
+                                        <i class="material-icons">search</i>
+                                        <span>Consultar Usuarios</span>
+                                    </button></center>
                         </div>
                     </div>
 

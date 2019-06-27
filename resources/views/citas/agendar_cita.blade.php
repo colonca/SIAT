@@ -62,9 +62,7 @@
             <div class="card col-6">
                 <div class="body">
                     <form id="sign_in" method="POST" novalidate="novalidate">
-
                         <P class="font-bold font-underline text-center font-20">DATOS DE IDENTIFICACIÓN</P>
-
                         <label for="password"><b>Número de Identificación</b></label>
                         <div class="form-group">
                             <div class="form-line">
@@ -75,6 +73,7 @@
                         <div class="row ">
                             <div class="col-12">
                                 <button type="button" onclick="btnAgendar()" class="btn btn-block btn-lg btn-success waves-effect">
+
                                 <i class="material-icons">rate_review</i>
                                 <span>Agendar Cita</span>
                                 </button>
@@ -149,9 +148,29 @@
                                                         <i class="material-icons">trending_up</i>
                                                     </span>
                                     <input type="text" name="promedio" id="promedio" class="form-control" placeholder="Ejemplo: 3.4">
-                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="row">
+                                    <div class="col-md-4">
+                                        <b>Programa</b>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">credit_card</i>
+                                                    </span>                                                        
+                                                    <input type="text" name="programa" id="programa" class="form-control" placeholder="Ejemplo: Sistemas">                                               
+                                                </div>                                        
+                                    </div>
+    
+                                    <div class="col-md-4">
+                                        <b>Semestre</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">sort</i>
+                                                </span>                                                        
+                                                <input type="number" name="semestre" id="semestre" class="form-control" placeholder="Ejemplo: 3">                                               
+                                            </div>                                        
+                                    </div>
+
 
                         <div class="row">
                             <div class="col-md-12">
@@ -201,7 +220,6 @@
                 </div>
 
             </div>
-
         </div>
 
 
@@ -209,9 +227,14 @@
 
 
 
+    </div>
+
+
 </div>
 
+</div>
 
+ 
 
 <!--===============================================================================================-->
 <script src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
@@ -232,6 +255,8 @@
 
 <script src="{{asset('js/bootstrap-material-datetimepicker.js')}}"></script>
 <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
+
+=======
 <script src="{{asset('js/axios.min.js')}}"></script>
 <script src="{{asset('js/notify.min.js')}}"></script>
 
@@ -264,6 +289,7 @@
                 $('#programa').val(data.programa);
                 $('#promedio').val(data.promedio_general);
                 $('#semestre').val(data.periodo_cronologico);
+
 
                 form1 = document.getElementById('form1');
                 form1.style.display = 'none';
