@@ -38,8 +38,6 @@
             justify-content: center;
             align-content: center;
         }
-
-
     </style>
 
 </head>
@@ -64,20 +62,7 @@
             <div class="card col-6">
                 <div class="body">
                     <form id="sign_in" method="POST" novalidate="novalidate">
-
-
                         <P class="font-bold font-underline text-center font-20">DATOS DE IDENTIFICACIÓN</P>
-
-                        <label for="tipi"><b>Tipo de Identificación</b></label>
-                        <select class="form-control" id="tipoID">
-                            <option value="">--Escoja una Opción--</option>
-                            <option value="CC">Cédula de Ciudadanía</option>
-                            <option value="TI">Tarjeta de Identidad</option>
-                            <option value="CE">Cédula de Extranjería</option>
-                            <option value="RC">Registro Civil</option>
-                            <option value="PA">Pasaporte</option>
-                        </select><br>
-
                         <label for="password"><b>Número de Identificación</b></label>
                         <div class="form-group">
                             <div class="form-line">
@@ -87,7 +72,8 @@
 
                         <div class="row ">
                             <div class="col-12">
-                                <button type="button" onclick="btnAgendar()" class="btn btn-block btn-lg btn-success waves-effect"">
+                                <button type="button" onclick="btnAgendar()" class="btn btn-block btn-lg btn-success waves-effect">
+
                                 <i class="material-icons">rate_review</i>
                                 <span>Agendar Cita</span>
                                 </button>
@@ -110,28 +96,58 @@
         <div id="form2" class="col-12 cita" style="display:none">
             <div class="card col-9" >
                 <div class="body">
-                        <form id="formulario" action="cita_Individual">
-                            <P class="font-bold font-underline text-center font-20">DATOS DEL ESTUDIANTE</P><br>
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <b>Numero de Identificación</b>
-                                            <div class="input-group">
+                    <form id="formulario" action="cita_Individual">
+                        <P class="font-bold font-underline text-center font-20">DATOS DEL ESTUDIANTE</P><br>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <b>Numero de Identificación</b>
+                                <div class="input-group">
                                                 <span class="input-group-addon">
                                                     <i class="material-icons">verified_user</i>
-                                                </span>                                                        
-                                                <input type="number" name="numID" id="numID" class="form-control" placeholder="Ejemplo: 1065...">                                               
-                                            </div>                                        
+                                                </span>
+                                    <input type="number" name="numID" id="numID" class="form-control" placeholder="Ejemplo: 1065...">
                                 </div>
+                            </div>
 
-                                <div class="col-md-7">
-                                    <b>Nombres y Apellidos</b>
-                                        <div class="input-group">
+                            <div class="col-md-7">
+                                <b>Apellidos y Hombres</b>
+                                <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="material-icons">person</i>
-                                            </span>                                                        
-                                            <input type="text" name="nombres" id="nombres" class="form-control" placeholder="Ejemplo: Juan">                                               
-                                        </div>                                        
+                                            </span>
+                                    <input type="text" name="nombres" id="nombres" class="form-control" placeholder="Ejemplo: Juan">
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <b>Programa</b>
+                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">credit_card</i>
+                                                    </span>
+                                    <input type="text" name="programa" id="programa" class="form-control" placeholder="Ejemplo: Sistemas">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <b>Semestre</b>
+                                <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">sort</i>
+                                                </span>
+                                    <input type="number" name="semestre" id="semestre" class="form-control" placeholder="Ejemplo: 3">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <b>Promedio Acumulado</b>
+                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">trending_up</i>
+                                                    </span>
+                                    <input type="text" name="promedio" id="promedio" class="form-control" placeholder="Ejemplo: 3.4">
                             </div>
                             
                             <div class="row">
@@ -155,74 +171,66 @@
                                             </div>                                        
                                     </div>
 
-                                    <div class="col-md-4">
-                                            <b>Promedio Acumulado</b>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">trending_up</i>
-                                                    </span> 
-                                                    <input type="text" name="promedio" id="promedio" class="form-control" placeholder="Ejemplo: 3.4">                                                                                                    
-                                                </div>                                        
-                                    </div>
-                            </div> 
-                            
-                            <div class="row">
-                                    <div class="col-md-12">
-                                        <b>MOTIVO DE SOLICITUD DE ATENCION: (Describa brevemente porque efectúa la solicitud) </b>
-                                                <div class="input-group">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <b>MOTIVO DE SOLICITUD DE ATENCION: (Describa brevemente porque efectúa la solicitud) </b>
+                                <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">text_format</i>
-                                                    </span>                                                        
-                                                    <input type="text" name="motivo" id="motivo" class="form-control" placeholder="Escriba aquí...">                                               
-                                                </div>                                        
-                                    </div>
-                            </div>
-
-                            <div class="row">
-                                    <div class="col-md-12">
-                                        <b>Escoja una fecha</b>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">date_range</i>
                                                     </span>
-                                                    <input type="text" class="datepicker_component form-control" placeholder="Por favor escoja una fecha..." data-dtp="dtp_l0wTT">                                                        
-                                                </div>                                        
-                                    </div>
-                            </div>
-
-
-                            <div class="row">
-                                    <div class="col-6">
-                                        <button type="button" class="btn btn-success float-right">
-                                            <i class="material-icons">check_box</i>
-                                            <span>AGENDAR</span>
-                                        </button>
-        
-                                    </div>
-                                    <div class="col-6">
-                                        <button type="reset" onclick="btnRegresar()" class="btn bg-red waves-effect">
-                                            <i class="material-icons">cancel</i>
-                                            <span>CANCELAR</span>
-                                        </button>
-        
-                                    </div>
+                                    <input type="text" name="motivo" id="motivo" class="form-control" placeholder="Escriba aquí...">
                                 </div>
-                            
-                        </form>                    
-        
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <b>Escoja una fecha</b>
+                                <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">date_range</i>
+                                        </span>
+                                    <input type="text" onchange="buscarDisponibilidad(event)" name="fecha" class="datetimepicker form-control" placeholder="Por favor escoja una fecha..." data-dtp="dtp_l0wTT">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="button" onclick="prueba()" class="btn btn-success float-right">
+                                    <i class="material-icons">check_box</i>
+                                    <span>AGENDAR</span>
+                                </button>
+
+                            </div>
+                            <div class="col-6">
+                                <button type="reset" onclick="btnRegresar()" class="btn bg-red waves-effect">
+                                    <i class="material-icons">cancel</i>
+                                    <span>CANCELAR</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </form>
+
 
                 </div>
 
             </div>
-
-
-            
-        </div>      
+        </div>
 
 
     </div>
 
 
+
+    </div>
+
+
+</div>
 
 </div>
 
@@ -248,21 +256,49 @@
 <script src="{{asset('js/bootstrap-material-datetimepicker.js')}}"></script>
 <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 
+=======
+<script src="{{asset('js/axios.min.js')}}"></script>
+<script src="{{asset('js/notify.min.js')}}"></script>
+
 <!--Calendario-->
 <script>
-
     $(document).ready(function(){
-        $('.datepicker_component').datepicker({
-                autoclose: true,
-                dateFormat: 'yyyy/mm/dd'
-         });
+        moment.locale("es");
+        $('.datetimepicker').bootstrapMaterialDatePicker({
+            format: 'dddd DD MMMM YYYY',
+            clearButton: false,
+            lang : 'es',
+            weekStart: 1,
+            time: false,
+        });
     });
 
     function btnAgendar(){
-        form1 = document.getElementById('form1');
-        form1.style.display = 'none';
-        form2 = document.getElementById('form2');
-        form2.style.display = 'flex';
+
+        let url = location.pathname;
+        url = 'cita/estudiante/'+$('#numID').val();
+        axios.get(url).then(response => {
+            let data = response.data;
+            if(data == null){
+                  $.notify('Error\n' +
+                      'No se encuentran registros con esta identificación');
+            }else{
+
+                $('#form2 #numID').val(data.cedula);
+                $('#nombres').val(data.nombres);
+                $('#programa').val(data.programa);
+                $('#promedio').val(data.promedio_general);
+                $('#semestre').val(data.periodo_cronologico);
+
+
+                form1 = document.getElementById('form1');
+                form1.style.display = 'none';
+                form2 = document.getElementById('form2');
+                form2.style.display = 'flex';
+
+            }
+        });
+
     }
 
     function btnRegresar(){
@@ -272,9 +308,17 @@
         form1.style.display = 'flex';
     }
     
+    function prueba() {
+        console.log('xxx00');
+        console.log($('#formulario').serialize());
+    }
+
+    function buscarDisponibilidad(event){
+          let dayweek  = [''];
+          console.log(event.target.value.split(' ')[0]);
+    }
 </script>
-    
+
 
 </body>
 </html>
-

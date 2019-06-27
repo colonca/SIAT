@@ -421,6 +421,8 @@
 
 <script src="{{asset('js/jquery.dataTables.js')}}"></script>
 
+<script src="{{asset('js/notify.min.js')}}"></script>
+
 
 
 
