@@ -311,6 +311,7 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">Navegacion Principal</li>
+                
 
                 @if(session()->has('MOD_PERSONAL'))
                 <li onclick="">
