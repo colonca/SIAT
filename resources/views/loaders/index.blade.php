@@ -25,8 +25,12 @@
                     </div>
                     <div class="body">
                         <div class="button-demo">
+                            @if(session()->has('PAG_CARGAR_ESTUDIANTE'))
                             <a href="{{route('loaderEstudiantes')}}" type="button" class="btn btn-success waves-effect">Cargar Estudiantes</a>
+                            @endif
+                            @if(session()->has('PAG_CARGAR_ASIGNATURA'))
                             <a href="{{route('loaderAsignaturas')}}" type="button" class="btn btn-success waves-effect">Cargar Asignaturas</a>
+                            @endif
                         </div>
                     </div>
                 </div>
