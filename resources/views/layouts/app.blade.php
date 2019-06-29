@@ -320,25 +320,30 @@
                         <span>Personal</span>
                     </a>
                     <ul class="ml-menu" style="display: none;">
+                            @if(session()->has('PAG_PSICOLOGOS'))
                         <li>
                             <a href="{{route('psicologos.index')}}">
                                 <span>Psicologos</span>
                             </a>
                         </li>
+                        @endif
+                        @if(session()->has('PAG_DOCENTES_DE_PERMANENCIA'))
                         <li>
                             <a href="{{route('loaders')}}">
                                 <span>Docentes de Permanencia</span>
                             </a>
                         </li>
+                        @endif
+                        @if(session()->has('PAG_TALLERISTAS'))
                         <li>
                             <a href="{{route('loaders')}}">
                                 <span>Talleristas</span>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </li>
                 @endif
-                
                 <li>
                     <a href="{{route('estudiantes.index')}}">
                         <i class="material-icons">face</i>
