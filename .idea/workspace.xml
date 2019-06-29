@@ -5,22 +5,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/nuevaContraseña.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Estudiante.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estudiante.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Imports/StudentImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/StudentImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/citas/agendar_cita.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/agendar_cita.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/bootstrap/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/bootstrap/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/bootstrap/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/bootstrap/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar-dz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar-kw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar-ly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar-ma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar-sa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar-tn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/en-nz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/es-us.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/fr-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/lb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/nn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/sr-cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/locales/zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/core/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/daygrid/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/daygrid/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/daygrid/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/daygrid/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/google-calendar/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/google-calendar/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/interaction/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/interaction/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/list/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/list/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/list/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/list/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/luxon/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/luxon/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/moment-timezone/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/moment-timezone/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/moment/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/moment/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/rrule/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/rrule/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/timegrid/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/timegrid/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/timegrid/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/packages/timegrid/main.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/loaders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/loaders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\Proyectos\SIAT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,11 +144,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="90" column="93" selection-start-line="90" selection-start-column="93" selection-end-line="90" selection-end-column="93" />
+            <state relative-caret-position="112">
+              <caret line="87" column="78" selection-start-line="87" selection-start-column="78" selection-end-line="87" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="346" column="16" selection-start-line="346" selection-start-column="16" selection-end-line="346" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -163,13 +258,13 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/citas/agendar_cita.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" />
         <option value="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       </list>
     </option>
   </component>
@@ -322,6 +417,13 @@
               <item name="citas" type="462c0819:PsiDirectoryNode" />
               <item name="estudiante" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -439,12 +541,12 @@
       <workItem from="1561645026496" duration="22052000" />
       <workItem from="1561692528355" duration="7059000" />
       <workItem from="1561726712803" duration="9878000" />
-      <workItem from="1561759448512" duration="10379000" />
+      <workItem from="1561759448512" duration="10761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="397794000" />
+    <option name="totallyTimeSpent" value="398176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -752,19 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1358">
-          <caret line="341" column="51" selection-start-line="341" selection-start-column="51" selection-end-line="341" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#19629#0#Blade" />
-            <element signature="e#0#19690#0#Blade" />
-            <element signature="e#0#19629#0#Blade" />
-            <element signature="e#0#19705#0#Blade" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-488">
@@ -847,8 +936,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="90" column="93" selection-start-line="90" selection-start-column="93" selection-end-line="90" selection-end-column="93" />
+        <state relative-caret-position="112">
+          <caret line="87" column="78" selection-start-line="87" selection-start-column="78" selection-end-line="87" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="346" column="16" selection-start-line="346" selection-start-column="16" selection-end-line="346" selection-end-column="16" />
         </state>
       </provider>
     </entry>

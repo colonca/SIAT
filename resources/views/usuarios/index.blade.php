@@ -42,13 +42,23 @@
                 </div>
                 <div class="icon-and-text-button-demo">
                     @if(session()->has('PAG_MODULOS'))
-                        <a  href="{{route('modulos.index')}}" type="button" class="btn btn-primary btn-lg  waves-effect" > <i class="material-icons">view_module</i><span>MÓDULOS</span></a>
+                    <a  href="{{route('modulos.index')}}" type="button" class="btn btn-primary btn-lg  waves-effect" > <i class="material-icons">view_module</i><span>MÓDULOS</span></a>
                     @endif
+                    @if(session()->has('PAG_PAGINAS'))
                     <a  href="{{route('paginas.index')}}" type="button" class="btn bg-deep-orange btn-lg  waves-effect" > <i class="material-icons">pages</i><span>PÁGINAS</span></a>
+                    @endif
+                    @if(session()->has('PAG_GRUPOS_ROLES'))
                     <a  href="{{route('grupos.index')}}" type="button" class="btn bg-green btn-lg  waves-effect" > <i class="material-icons">group</i><span>GRUPOS O ROLES</span></a>
+                    @endif
+                    @if(session()->has('PAG_PRIVILEGIOS'))
                     <a  href="{{route('privilegios')}}" type="button" class="btn bg-brown btn-lg waves-effect" > <i class="material-icons">desktop_access_disabled</i><span>PRIVILEGIOS</span></a>
+                    @endif
+                    @if(session()->has('PAG_LISTA_USUARIOS'))
                     <a  href="{{route('usuarios.index')}}" type="button" class="btn bg-teal btn-lg  waves-effect" > <i class="material-icons">list</i><span>LISTADO USUARIOS</span></a>
-                    <a  href="#" type="button" class="btn bg-red  btn-lg  waves-effect"> <i class="material-icons">book</i><span>MANUAL DE USUARIOS</span></a>
+                    @endif
+                    @if(session()->has('PAG_USUARIO_NUEVO'))
+                    <a  href="#" type="button" class="btn bg-red  btn-lg  waves-effect"> <i class="material-icons">book</i><span>NUEVO USUARIO</span></a>
+                    @endif
                 </div>
             </div>
         </div>
