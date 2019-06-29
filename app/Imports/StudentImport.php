@@ -26,7 +26,8 @@ class StudentImport implements ToModel
             'periodo_cronologico'=> $row[8] == '' ? 0 : $row[8],
             'promedio_general'=> $row[9] == '' ? 0 : $row[9],
             'promedio_semestral'=> $row[10] == '' ? 0 : $row[10],
-            'estado'=> $row[11]
+            'estado'=> $row[11],
+            'contraseña' => $row[0]
         ]);
     }
 }

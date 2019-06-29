@@ -338,14 +338,16 @@
                     </ul>
                 </li>
                 @endif
-                
+
+                @if(session()->has('MOD_ESTUDIANTES'))
                 <li>
                     <a href="{{route('estudiantes.index')}}">
                         <i class="material-icons">face</i>
                         <span>Estudiantes</span>
                     </a>
                 </li>
-                  @if(session()->has('MOD_CARGAR_INFORMACIóN'))
+                @endif
+                @if(session()->has('MOD_CARGAR_INFORMACIóN'))
                     <li>
                         <a href="{{route('loaders')}}">
                             <i class="material-icons">note_add</i>
@@ -353,16 +355,15 @@
                         </a>
                     </li>
                   @endif
-                <!--@if(session()->has('MOD_USUARIOS'))-->
 
-                <!---@endif-->
+                @if(session()->has('MOD_USUARIOS'))
                 <li>
                     <a href="{{route('users')}}">
                         <i class="material-icons">people</i>
                         <span>Usuarios</span>
                     </a>
                 </li>
-                        
+             @endif
                         
             </ul>
         </div>

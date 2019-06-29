@@ -11,7 +11,7 @@ class Estudiante extends Model
 
     protected $fillable = [
         'cedula','nombres','programa','direccion','email','telefono','celular',
-         'periodo_academico','periodo_cronologico','promedio_general','promedio_semestral','estado'
+         'periodo_academico','periodo_cronologico','promedio_general','promedio_semestral','estado','contraseña'
     ];
 
     public function scopeCedula($query,$cedula){

@@ -38,7 +38,10 @@ Route::resource('estudiantes','EstudianteController');
 Route::post('mensageIndividual','MessageController@store');
 
 //citas
-Route::get('/citas',function(){
+Route::get('estudiante/login',function(){
     return view('citas.agendar_cita');
 });
-Route::get('cita/estudiante/{id}','CitaController@estudiante');
+Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante');
+Route::get('citas/estudiante/contraseña','CitaController@editNuevaContraseña')->name('estudianteContraseña');
+Route::post('citas/estudiante/Actualizarcontrasena','CitaController@updateContrasena')->name('actualizarContraseña');
+Route::get('citas/estudiante/agendar','CitaController@cita')->name('agendar');

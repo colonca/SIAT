@@ -5,7 +5,7 @@
     <!--menu de navegacion de la pagina-->
     <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
         <ol class="breadcrumb">
-            <li><a href="{{route('users')}}" style="color: white;">
+            <li><a href="{{route('dashboard')}}" style="color: white;">
                     <i class="material-icons">home</i> inicio
                 </a>
             </li>

@@ -22,36 +22,26 @@ class EstudianteController extends Controller
         $promedio = $request->get('promedio');
         $nombre = $request->get('nombre');
 
-        $estudiantes = Estudiante::orderBy('programa','ASC')
-                        ->cedula($cedula)
-                        ->riesgo($riesgo)
-                        ->programa($programa)
-                        ->promedio($promedio)
-                        ->nombre($nombre)
-                        ->paginate(8);
+        $estudiantes = Estudiante::orderBy('programa', 'ASC')
+            ->cedula($cedula)
+            ->riesgo($riesgo)
+            ->programa($programa)
+            ->promedio($promedio)
+            ->nombre($nombre)
+            ->paginate(8);
 
         $estudiantes->withPath("estudiantes?riesgo=$riesgo&programa=$programa&cedula=$cedula");
 
-        return view('estudiantes.index',compact('estudiantes'));
+        return view('estudiantes.index', compact('estudiantes'));
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //

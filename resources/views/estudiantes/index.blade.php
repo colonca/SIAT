@@ -217,12 +217,14 @@
 @endsection
 
 @section('scripts')
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="{{asset('js/notify.min.js')}}"></script>
     <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
     <script>
         
         $(document).ready(function () {
+
             CKEDITOR.replace( 'editor',
                 {
                     lang: 'es',
