@@ -25,11 +25,21 @@
                     </div>
                     <div class="body">
                         <div class="button-demo">
-                            @if(session()->has('PAG_CARGAR_ESTUDIANTE'))
-                            <a href="{{route('loaderEstudiantes')}}" type="button" class="btn btn-success waves-effect">Cargar Estudiantes</a>
+                            @if(session()->has('PAG_CARGAR_ESTUDIANTES'))
+                            <a href="{{route('loaderEstudiantes')}}" type="button" class="btn btn-primary btn-lg  waves-effect">
+                                <i class="material-icons">
+                                    folder_shared
+                                </i>
+                                Importar Estudiantes
+                            </a>
                             @endif
-                            @if(session()->has('PAG_CARGAR_ASIGNATURA'))
-                            <a href="{{route('loaderAsignaturas')}}" type="button" class="btn btn-success waves-effect">Cargar Asignaturas</a>
+                            @if(session()->has('PAG_CARGAR_ASIGNATURAS'))
+                              <a href="{{route('loaderAsignaturas')}}" type="button" class="btn bg-deep-orange btn-lg  waves-effect">
+                                  <i class="material-icons">
+                                      layers
+                                  </i>
+                                  Importar Asignaturas
+                              </a>
                             @endif
                         </div>
                     </div>

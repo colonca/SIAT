@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cita;
 use App\Estudiante;
 use App\Personal;
 use Illuminate\Http\Request;
@@ -31,10 +32,31 @@ class CitaController extends Controller
 
              foreach ($personal as $persona){
 
-              $horarios = $persona->horarios()->where('dia',1)->get();
+             date_default_timezone_set('America/Bogota');
+             setlocale(LC_TIME,"es_CO");;
+             $fechaFFase = date('Y-m-d');
+             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
+             $dia = strftime('%u',strtotime($nuevafecha));
 
-              if($horarios != null){
+             $horarios = $persona->horarios()->where('dia',$dia)->get();
+
+             $horariosDisponible = [];
+
+             $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
+
+                 $count = Cita::where([
+                     ['personal_id',$persona->id],
+                     ['fecha',strftime('%Y-%m-%e',strtotime($nuevafecha))],
+                     ['hora',$horario->hora]
+                 ])->count();
+
+                 return $count < 4;
+
+             });
+
+              if($horarios->count()!= 0){
                   $psicologos[] = [
+                      'id' => $persona->id,
                       'nombre' => $persona->primer_nombre.' '.$persona->segundo_nombre.' '.$persona->primer_apellido.' '.$persona->segundo_apellido,
                       'horarios' => $horarios,
                   ];
@@ -55,16 +77,46 @@ class CitaController extends Controller
 
     public function cita(){
 
-        $psicologos = DB::table('personal')
-            ->join('horario_personal', 'personal.id', '=', 'horario_personal.personal_id')
-            ->join('horario', 'horario_personal.horario_id', '=', 'horario.id')
-            ->select('personal.primer_nombre','personal.primer_apellido','horario.dia','horario.hora')
-            ->where('tipo_usuario','psicologo')
-            ->get();
+        $personal = Personal::where('tipo_usuario','psicologo')->get();
 
-        dd($psicologos);
+        $psicologos = [];
 
-        return view('citas.estudiante.agendar');
+        foreach ($personal as $persona){
+
+            date_default_timezone_set('America/Bogota');
+            setlocale(LC_TIME,"es_CO");;
+            $fechaFFase = date('Y-m-d');
+            $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
+            $dia = strftime('%u',strtotime($nuevafecha));
+
+            $horarios = $persona->horarios()->where('dia',$dia)->get();
+
+            $horariosDisponible = [];
+
+            $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
+
+                $count = Cita::where([
+                    ['personal_id',$persona->id],
+                    ['fecha',strftime('%Y-%m-%e',strtotime($nuevafecha))],
+                    ['hora',$horario->hora]
+                ])->count();
+
+                return $count < 4;
+
+            });
+
+            if($horarios->count()!= 0){
+                $psicologos[] = [
+                    'id' => $persona->id,
+                    'nombre' => $persona->primer_nombre.' '.$persona->segundo_nombre.' '.$persona->primer_apellido.' '.$persona->segundo_apellido,
+                    'horarios' => $horarios,
+                ];
+            }
+
+
+        }
+
+        return view('citas.estudiante.agendar',compact('psicologos'));
     }
 
     public function editNuevaContraseña()
@@ -95,6 +147,43 @@ class CitaController extends Controller
             return back()->with('error','Las Contraseñas no coinciden');
         }
 
+    }
+
+    public function agendar(Request $request){
+
+        //validaciones
+
+       $cita = new Cita();
+       $cita->personal_id = $request->get('personal_id');
+       $cita->estudiante_id = session('estudiante')->cedula;
+       $cita->fecha =  $request->get('fecha');
+       $cita->hora = $request->get('hora');
+
+       $queryCita = Cita::where([
+                     ['estudiante_id',$cita->estudiante_id],
+                     ['fecha',$cita->fecha],
+                     ['estado','=','PENDIENTE']
+                   ])->first();
+
+       if($queryCita == null){
+
+           $cita->save();
+           return response()->json([
+               'status' => 'ok'
+           ]);
+
+       }else{
+           return response()->json([
+               'status' => 'error',
+               'message' => 'Usted ya ha Agendado una Cita Anteriormente para este dia'
+           ]);
+       }
+
+    }
+
+    public function historialCitas(){
+        $citas = Cita::where('estudiante_id',session('estudiante')->cedula)->orderBy('fecha')->get();
+        return view('citas.estudiante.list',compact('citas'));
     }
 
 }

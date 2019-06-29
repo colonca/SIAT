@@ -344,7 +344,7 @@
                     </ul>
                 </li>
                 @endif
-                
+
                 @if(session()->has('MOD_ESTUDIANTES'))
                 <li>
                     <a href="{{route('estudiantes.index')}}">

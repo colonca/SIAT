@@ -120,7 +120,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{route('citas')}}">
                                     <i class="material-icons" style="margin-top: -2px">content_paste</i>
                                     <span>Historial de Citas</span>
                                 </a>

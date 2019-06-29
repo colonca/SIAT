@@ -27,4 +27,8 @@ class Personal extends Model
         return $this->belongsToMany(Horario::class,'horario_personal','personal_id','horario_id');
     }
 
+    public function citas(){
+        return $this->hasMany(Cita::class,'personal_id');
+    }
+
 }
