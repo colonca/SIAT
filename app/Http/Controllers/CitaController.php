@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Cita;
 use App\Estudiante;
 use App\Personal;
+use App\Utiles\Festivos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -30,38 +31,39 @@ class CitaController extends Controller
 
             $psicologos = [];
 
-             foreach ($personal as $persona){
+            foreach ($personal as $persona){
 
-             date_default_timezone_set('America/Bogota');
-             setlocale(LC_TIME,"es_CO");;
-             $fechaFFase = date('Y-m-d');
-             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-             $dia = strftime('%u',strtotime($nuevafecha));
+                date_default_timezone_set('America/Bogota');
+                setlocale(LC_TIME,"es_CO");;
+                $fechaFFase = date('Y-m-d');
+                $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
+                $dia = strftime('%d',strtotime($nuevafecha));
+                $mes = strftime('%m',strtotime($nuevafecha));
 
-             $horarios = $persona->horarios()->where('dia',$dia)->get();
+                $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
-             $horariosDisponible = [];
+                $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
 
-             $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
+                    $count = Cita::where([
+                        ['personal_id',$persona->id],
+                        ['fecha',strftime('%Y-%m-%d',strtotime($nuevafecha))],
+                        ['hora',$horario->hora]
+                    ])->count();
 
-                 $count = Cita::where([
-                     ['personal_id',$persona->id],
-                     ['fecha',strftime('%Y-%m-%e',strtotime($nuevafecha))],
-                     ['hora',$horario->hora]
-                 ])->count();
+                    return $count < 4;
 
-                 return $count < 4;
+                });
 
-             });
+                $festivo = new Festivos();
+                $festivo->festivos();
+                if($horarios->count() != 0 and !$festivo->esFestivo($dia ,$mes)){
 
-              if($horarios->count()!= 0){
-                  $psicologos[] = [
-                      'id' => $persona->id,
-                      'nombre' => $persona->primer_nombre.' '.$persona->segundo_nombre.' '.$persona->primer_apellido.' '.$persona->segundo_apellido,
-                      'horarios' => $horarios,
-                  ];
-              }
-
+                    $psicologos[] = [
+                        'id' => $persona->id,
+                        'nombre' => $persona->primer_nombre.' '.$persona->segundo_nombre.' '.$persona->primer_apellido.' '.$persona->segundo_apellido,
+                        'horarios' =>  $horarios
+                    ];
+                }
 
             }
 
@@ -87,17 +89,16 @@ class CitaController extends Controller
             setlocale(LC_TIME,"es_CO");;
             $fechaFFase = date('Y-m-d');
             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-            $dia = strftime('%u',strtotime($nuevafecha));
+            $dia = strftime('%d',strtotime($nuevafecha));
+            $mes = strftime('%m',strtotime($nuevafecha));
 
-            $horarios = $persona->horarios()->where('dia',$dia)->get();
-
-            $horariosDisponible = [];
+            $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
             $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
 
                 $count = Cita::where([
                     ['personal_id',$persona->id],
-                    ['fecha',strftime('%Y-%m-%e',strtotime($nuevafecha))],
+                    ['fecha',strftime('%Y-%m-%d',strtotime($nuevafecha))],
                     ['hora',$horario->hora]
                 ])->count();
 
@@ -105,14 +106,16 @@ class CitaController extends Controller
 
             });
 
-            if($horarios->count()!= 0){
+            $festivo = new Festivos();
+            $festivo->festivos();
+            if($horarios->count() != 0 and !$festivo->esFestivo($dia ,$mes)){
+
                 $psicologos[] = [
                     'id' => $persona->id,
                     'nombre' => $persona->primer_nombre.' '.$persona->segundo_nombre.' '.$persona->primer_apellido.' '.$persona->segundo_apellido,
-                    'horarios' => $horarios,
+                    'horarios' =>  $horarios
                 ];
             }
-
 
         }
 

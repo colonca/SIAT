@@ -6,16 +6,19 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Auth;
 
 class MessageIndividual extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $msg;
+    public $asunto;
 
-    public function __construct($msg)
+    public function __construct($msg,$asunto)
     {
         $this->msg = $msg;
+        $this->asunto = $asunto;
     }
 
     /**
@@ -25,6 +28,7 @@ class MessageIndividual extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.message');
+        return $this->view('emails.message')
+            ->subject($this->asunto)->with('name','PEBI');
     }
 }

@@ -52,7 +52,7 @@
                                             </span>
                                             <div class="form-line">
                                                 <input type="hidden" id="id"  name="id">
-                                                <input type="hidden" name="fecha" id="fecha" value="{{strftime('%Y-%m-%e',strtotime($nuevafecha))}}">
+                                                <input type="hidden" name="fecha" id="fecha" value="{{strftime('%Y-%m-%d',strtotime($nuevafecha))}}">
                                                 <input type="text" id="hora"  name="hora" class="form-control date" placeholder="" disabled required>
                                             </div>
                                         </div>
@@ -72,11 +72,10 @@
 
                                     <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
                                         <div class="panel-group" id="accordion_10" role="tablist" aria-multiselectable="true">
-                                            @if(count($psicologos) ==0 )
+                                            @if(count($psicologos) == 0 )
                                                 <div class="col-md-12" style="display: flex; justify-content: center;align-items: center;">
                                                     <p class="col-red">No hay psicologos disponibles para la fecha</p>
                                                 </div>
-
                                             @endif
                                             <?php
                                                 $i = 1;

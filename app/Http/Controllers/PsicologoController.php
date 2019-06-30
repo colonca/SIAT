@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Contacto_Emergencias;
+use App\Grupo_Usuario;
 use App\Horario;
 use App\Personal;
 use App\Psicologo;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -89,9 +91,25 @@ class PsicologoController extends Controller
 
             $persona->horarios()->attach($horarios);
 
+            $role = Grupo_Usuario::where('nombre','psicologo')->first();
+
+            if($role != null){
+
+                $usuario = new User();
+                $usuario->cedula = $persona->cedula;
+                $usuario->email = $persona->email;
+                $usuario->password = bcrypt($persona->cedula);
+                $usuario->nombre =  $persona->primer_nombre . ' '.$persona->primer_apellido;
+                $usuario->grupo_usuario_id = $role->id;
+
+                $usuario->save();
+
+            }
+
             return response()->json([
                 'status' => 'ok'
             ]);
+
         }else {
             return response()->json([
                 'status' => 'fail',
@@ -127,6 +145,8 @@ class PsicologoController extends Controller
         $persona->horarios()->detach();
         $psicologo = Psicologo::where('cedula',$persona->cedula)->get()->first();
         $psicologo->delete();
+        $usuario =  User::where('cedula',$persona->cedula)->get()->first();
+        $usuario->delete();
         $persona->delete();
     }
 
