@@ -40,8 +40,8 @@ class LoginController extends Controller {
 
             if($grupo->nombre == 'admin'){
                 return  redirect()->route('dashboard');
-            }else if($grupo->nombr == 'psicologo'){
-                return  redirect()->route('dashboard');
+            }else if($grupo->nombre == "psicologo"){
+                return  redirect()->route('dashboard_psicologo');
             }
             
 
