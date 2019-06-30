@@ -42,3 +42,7 @@ Route::get('/citas',function(){
     return view('citas.agendar_cita');
 });
 Route::get('cita/estudiante/{id}','CitaController@estudiante');
+
+
+//psicologos 
+Route::get('dashboard_psicologo','HomeController@indexPsicologo')->name('dashboard');
