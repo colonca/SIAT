@@ -37,7 +37,14 @@ class LoginController extends Controller {
                 session()->put(strtoupper($item->nombre),strtoupper($item->nombre));
             });
 
-            return  redirect()->route('dashboard');
+
+            if($grupo->nombre == "psicologo"){
+                dd($grupo->nombre);
+            }else{
+                return  redirect()->route('dashboard');
+            }
+
+
 
         }
 

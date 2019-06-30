@@ -11,11 +11,11 @@ class MessageController extends Controller
     public function store(){
 
         \request()->validate([
-            'destino' => 'required'
+            'destino' => 'required',
+            'asunto' => 'required'
         ]);
 
-
-        Mail::to(\request()->get('destino'))->queue(new MessageIndividual(\request()->get('mensaje')));
+        Mail::to(\request()->get('destino'))->queue(new MessageIndividual(\request()->get('mensaje'),\request()->get('asunto')));
 
         return 'mensage enviado';
     }
