@@ -41,9 +41,24 @@ Route::post('mensageIndividual','MessageController@store');
 Route::get('estudiante/login',function(){
     return view('citas.agendar_cita');
 });
+Route::get('cita/estudiante/{id}','CitaController@estudiante');
+
+
+//psicologos 
+Route::get('dashboard_psicologo','HomeController@indexPsicologo')->name('dashboard_psicologo');
+
+//Citas
 Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante');
 Route::get('citas/estudiante/contraseña','CitaController@editNuevaContraseña')->name('estudianteContraseña');
 Route::post('citas/estudiante/Actualizarcontrasena','CitaController@updateContrasena')->name('actualizarContraseña');
 Route::get('citas/estudiante/agendar','CitaController@cita')->name('agendar');
 Route::post('citas/estudiante/agendar','CitaController@agendar')->name('agendarcita');
+
 Route::get('citas/estudiante/citas','CitaController@historialCitas')->name('citas');
+
+
+//Intervenciones Individuales
+Route::resource('intervenciones_individuales','IntervencionIndividualController');
+
+
+

@@ -16,6 +16,10 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    public function indexPsicologo(){
+        return view('usuarios.rol_usuarios.psicologos.index');
+    }
+
     /**
      * Show the application dashboard.
      *
