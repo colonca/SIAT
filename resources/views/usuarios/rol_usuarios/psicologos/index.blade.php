@@ -15,7 +15,7 @@
                                 <i class="material-icons">equalizer</i>
                             </div>
                             <div class="content">
-                                <div class="text">BOUNCE RATE</div>
+                                <div class="text">INTERVENCIONES MES ACTUAL</div>
                                 <div class="number">62%</div>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                                 <i class="material-icons">group</i>
                             </div>
                             <div class="content">
-                                <div class="text">INT. GRUPALES</div>
+                                <div class="text">CITAS NO ASISTIDAS MES ACTUAL</div>
                                 <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20">1225</div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                                 <i class="material-icons">assignment_turned_in</i>
                             </div>
                             <div class="content">
-                                <div class="text">INT. INDIVIDUALES</div>
+                                <div class="text">CITAS DEL DIA</div>
                                 <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">257</div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                 <i class="material-icons">account_circle</i>
                             </div>
                             <div class="content">
-                                <div class="text">ESTUDIANTES A.R.</div>
+                                <div class="text">CITAS NO ASISTIDAS</div>
                                 <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">243</div>
                             </div>
                         </div>
@@ -205,7 +205,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <link href='{{asset('packages/daygrid/main.css')}}' rel='stylesheet' />
 <link href='{{asset('packages/timegrid/main.css')}}' rel='stylesheet' />
 <link href='{{asset('packages/list/main.css')}}' rel='stylesheet' />
-
 
 
 <style>
