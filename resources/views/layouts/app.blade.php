@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon-->
-    <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('images/logo-upc.png')}}" type="">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -362,13 +362,14 @@
                     </li>
                   @endif
 
-                @if(session()->has('MOD_USUARIOS'))
+                
                 <li>
                     <a href="{{route('users')}}">
                         <i class="material-icons">people</i>
                         <span>Usuarios</span>
                     </a>
                 </li>
+
              @endif
              <!--@if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))-->
               <!--@endif-->
@@ -378,8 +379,7 @@
                      <span>Intervnecion Individual</span>
                  </a>
              </li>
-         
-                        
+                                 
             </ul>
         </div>
         <!-- #Menu -->
