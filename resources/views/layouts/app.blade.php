@@ -361,7 +361,8 @@
                         </a>
                     </li>
                   @endif
-
+ 
+                  @if(session()->has('MOD_USUARIOS'))
                 
                 <li>
                     <a href="{{route('users')}}">
@@ -369,20 +370,17 @@
                         <span>Usuarios</span>
                     </a>
                 </li>
-<<<<<<< HEAD
              @endif
              <!--@if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))-->
               <!--@endif-->
+              
              <li>
-             <a href="{{route('intervenciones_individuales.index')}}">
+                 <a href="{{route('intervenciones_individuales.index')}}">
                      <i class="material-icons">people</i>
                      <span>Intervnecion Individual</span>
                  </a>
              </li>
          
-=======
-             
->>>>>>> faabd1850cae79dc25f9bbc7d72c50b4839f2fee
                         
             </ul>
         </div>
