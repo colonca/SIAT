@@ -15,4 +15,8 @@ class Cita extends Model
         return $this->belongsTo(Personal::class);
     }
 
+    public function estudiante(){
+        return $this->belongsTo(Estudiante::class,'estudiante_id','cedula');
+    }
+
 }

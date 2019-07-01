@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/logo-upc.png')}}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'PEBI') }}</title>
 
     <!-- Favicon-->
     <link rel="icon" href="{{asset('images/logo-upc.png')}}" type="">
@@ -362,7 +362,7 @@
                     </li>
                   @endif
 
-                
+                @if(session()->has('MOD_USUARIOS'))
                 <li>
                     <a href="{{route('users')}}">
                         <i class="material-icons">people</i>
