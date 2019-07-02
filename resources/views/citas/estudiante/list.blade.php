@@ -86,7 +86,7 @@
                                     </a>
                                 @endif
                                 @if($cita->estado == 'PENDIENTE')
-                                    <a class="col-blue" title="cancelar cita" style="cursor: pointer">
+                                    <a class="col-red" title="cancelar cita" style="cursor: pointer" onclick="cancelar(event,'{{$cita->id}}','{{$cita->fecha}}')">
                                         <i class="tinny material-icons green-text">done_all</i>
                                     </a>
                                 @endif
@@ -112,8 +112,16 @@
             });
         });
 
-        function eliminar(event,id){
+        function cancelar(event,id,fecha){
             event.preventDefault();
+            let fechaActual = new Date();
+            let fechadeComparacion = new Date(fecha);
+            fechaActual.getDay();
+            fechaActual.getDate();
+            fechadeComparacion.getDay();
+            fechadeComparacion.getDate();
+            console.log(fechaActual+'-'+fechadeComparacion);
+
             Swal.fire({
                 title: 'Estas segur@?',
                 text: "no podras revertilo!",
@@ -125,7 +133,7 @@
                 cancelButtonText:'cancelar'
             }).then((result) => {
                 if (result.value) {
-                    let url = 'grupos/'+id;
+                   /* let url = 'grupos/'+id;
                     axios.delete(url).then(result => {
                         Swal.fire(
                             'Eliminado!',
@@ -134,7 +142,7 @@
                         ).then(result => {
                             location.reload();
                         });
-                    });
+                    });*/
                 }
             })
         }

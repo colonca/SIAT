@@ -215,6 +215,9 @@ class CitaController extends Controller
                case 'PERDIDA':
                                    $color = '#E91E63';
                                    break;
+               case 'CANCELADA':
+                                   $color = '#FF0404';
+                                   break;
            }
 
            $fecha =  $cita->fecha.'T';

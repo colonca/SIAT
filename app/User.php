@@ -21,6 +21,6 @@ class User extends Authenticatable
     ];
 
     public function role(){
-       return $this->belongsTo(Grupo_Usuario::class, 'grupo_usuario_id','id');
+        return $this->belongsTo(Grupo_Usuario::class, 'grupo_usuario_id','id');
     }
 }

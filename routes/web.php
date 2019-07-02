@@ -17,7 +17,7 @@ Route::post('loaders/estudiantes','LoaderExcelController@loadEstudiantes')->name
 
 
 //usuarios
-Route::get('users','GruposUsuariosController@index')->name('users');
+Route::get('users','GruposUsuariosController@index')->name('users');//renombrar
 Route::resource('usuarios','UsuarioController');
 Route::resource('paginas','PaginaController');
 Route::resource('modulos','ModuloController');

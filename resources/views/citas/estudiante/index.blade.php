@@ -8,10 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/logo-upc.png')}}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'PEBI') }}</title>
 
     <!-- Favicon-->
-    <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('images/logo-upc.png')}}" type="">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
