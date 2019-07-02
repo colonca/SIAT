@@ -369,12 +369,12 @@
                         <span>Usuarios</span>
                     </a>
                 </li>
-
              @endif
              <!--@if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))-->
               <!--@endif-->
+              
              <li>
-             <a href="{{route('intervenciones_individuales.index')}}">
+                 <a href="{{route('intervenciones_individuales.index')}}">
                      <i class="material-icons">people</i>
                      <span>Intervnecion Individual</span>
                  </a>
