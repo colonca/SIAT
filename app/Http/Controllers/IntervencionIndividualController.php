@@ -26,7 +26,7 @@ class IntervencionIndividualController extends Controller
      */
     public function create()
     {
-        //
+        return view('personal.psicologos.admin.create');
     }
 
     /**
