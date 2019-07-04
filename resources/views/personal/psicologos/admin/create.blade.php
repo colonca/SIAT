@@ -33,7 +33,7 @@
 
         <div class="body">
             <form id="formulario" method="POST">
-                <h3>DATOS DEL ESTUDIANTE</h3>
+                <h3>Datos del Estudiante</h3>
                 <fieldset>
                     <div class="row clearfix">
                         <div class="col-md-12">
@@ -91,9 +91,9 @@
                                             </div>
                                         </div>
                                     </div>
-                        </div>
+                                </div>
 
-                        <div class="col-md-12">
+                                <div class="col-md-12">
                                     <div class="col-md-3">
                                         <b>Estado Civil</b>
                                         <div class="input-group">
@@ -126,15 +126,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-                        </div>
+                                        </div>
 
-                        <div class="col-md-12">
+                                        <div class="col-md-12">
                                             <div class="col-md-4">
                                                 <b>¿Trabaja?</b>
-                                                <div class="form-check-inline"><br>                                                    
-                                                    <input name="respuesta" type="radio" class="form-check-input" id="radio_1" checked="">
+                                                <div class="form-check-inline"><br>
+                                                    <input name="respuesta" type="radio" class="form-check-input"
+                                                        id="radio_1" checked="">
                                                     <label for="radio_1">Si</label>
-                                                    <input name="respuesta" type="radio" id="radio_2" class="form-check-input">
+                                                    <input name="respuesta" type="radio" id="radio_2"
+                                                        class="form-check-input">
                                                     <label for="radio_2">No</label>
                                                 </div>
                                             </div>
@@ -150,7 +152,21 @@
                                                 </div>
                                             </div>
 
-                        </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="col-md-4">
+                                                <b>Tipo de familia en la que vive</b>                                             
+                                            </div>
+                                            <div class="col-md-4">
+                                                <select name="tipo_Familia" class="form-control show-tick">
+                                                    <option>MONOPORANTERAL</option>
+                                                    <option>NUCLEAR</option>
+                                                    <option>EXTENSA</option>
+                                                    <option>INDIVIDUAL</option>
+                                                </select>
+                                            </div>
+                                        </div>
                     </div>
                 </fieldset>
 
@@ -193,69 +209,70 @@
                         </div>
 
                         <div class="col-md-4">
-                                <b>Promedio Acumulado</b>
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">assessment</i>
-                                    </span>
-                                    <div class="form-line">
-                                        <input type="text" name="promedioA">
-                                    </div>
+                            <b>Promedio Acumulado</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">assessment</i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" name="promedioA">
                                 </div>
                             </div>
-    
-                            <div class="col-md-4">
-                                <b>Promedio Semestral</b>
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">assessment</i>
-                                    </span>
-                                    <div class="form-line">
-                                        <input type="text" name="promedioS">
-                                    </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <b>Promedio Semestral</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">assessment</i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" name="promedioS">
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <b>Riesgo</b>
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">bookmark_border</i>
-                                    </span>
-                                    <div class="form-line">
-                                        <input type="text" name="riesgo">
-                                    </div>
+                        </div>
+                        <div class="col-md-4">
+                            <b>Riesgo</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">bookmark_border</i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" name="riesgo">
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"><b>La relación con sus compañeros de clases es: </b>
+                            <div class="form-check-inline">
+                                <br>
+                                <input name="respuesta" type="radio" class="form-check-input" id="radio_3" checked="">
+                                <label for="radio_3">Mala</label>
+                                <input name="respuesta" type="radio" id="radio_4" class="form-check-input">
+                                <label for="radio_4">Regular</label>
+                                <input name="respuesta" type="radio" id="radio_5" class="form-check-input">
+                                <label for="radio_5">Buena</label>
                             </div>
 
-                            <div class="col-md-6"><b>La relación con sus compañeros de clases es: </b>
-                                    <div class="form-check-inline">
-                                            <br>
-                                            <input name="respuesta" type="radio" class="form-check-input"id="radio_3" checked="">
-                                            <label for="radio_3">Mala</label>
-                                            <input name="respuesta" type="radio" id="radio_4" class="form-check-input">
-                                            <label for="radio_4">Regular</label>
-                                            <input name="respuesta" type="radio" id="radio_5" class="form-check-input">
-                                            <label for="radio_5">Buena</label>
-                                    </div>                                    
-                                         
-                            </div>
+                        </div>
 
-                                <div class="col-md-6">
-                                    <b>La relación con sus docentes de clases es: </b>
-                                    <div class="input-group">
-                                            <div class="form-check-inline">
-                                                    <br>
-                                                    <input name="respuesta" type="radio" class="form-check-input"id="radio_6" checked="">
-                                                    <label for="radio_6">Mala</label>
-                                                    <input name="respuesta" type="radio" id="radio_7" class="form-check-input">
-                                                    <label for="radio_7">Regular</label>
-                                                    <input name="respuesta" type="radio" id="radio_8" class="form-check-input">
-                                                    <label for="radio_8">Buena</label>
-                                            </div>      
-                   
-                                    </div>
+                        <div class="col-md-6">
+                            <b>La relación con sus docentes de clases es: </b>
+                            <div class="input-group">
+                                <div class="form-check-inline">
+                                    <br>
+                                    <input name="respuesta" type="radio" class="form-check-input" id="radio_6"
+                                        checked="">
+                                    <label for="radio_6">Mala</label>
+                                    <input name="respuesta" type="radio" id="radio_7" class="form-check-input">
+                                    <label for="radio_7">Regular</label>
+                                    <input name="respuesta" type="radio" id="radio_8" class="form-check-input">
+                                    <label for="radio_8">Buena</label>
                                 </div>
-    
+
+                            </div>
+                        </div>
+
 
 
 
@@ -264,93 +281,98 @@
 
                 </fieldset>
 
-                <h3>Terms & Conditions - Finish</h3>
+                <h3>Motivo de Consulta y Antecedentes</h3>
+                <fieldset>
+                    
+                </fieldset>
+
+                <h3>Impresión Diagnostica y Plan de Acción</h3>
                 <fieldset>
                     <input id="acceptTerms-2" name="acceptTerms" type="checkbox" required>
                     <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
                 </fieldset>
             </form>
 
+        </div>
     </div>
-</div>
 
 
 
 
-@endsection
+    @endsection
 
 
-@section('scripts')
+    @section('scripts')
 
-<script src="{{asset('js/jquery.validate.min.js')}}"></script>
-<script src="{{asset('js/jquery.steps-1.1.0/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('js/jquery.steps-1.1.0/jquery.steps.min.js')}}"></script>
 
-<script>
+    <script>
 
-    var form = $('#formulario').show();
-    form.steps({
-        headerTag: 'h3',
-        bodyTag: 'fieldset',
-        transitionEffect: 'slideLeft',
-        onInit: function (event, currentIndex) {
-            $.AdminBSB.input.activate();
+        var form = $('#formulario').show();
+        form.steps({
+            headerTag: 'h3',
+            bodyTag: 'fieldset',
+            transitionEffect: 'slideLeft',
+            onInit: function (event, currentIndex) {
+                $.AdminBSB.input.activate();
 
-            //Set tab width
-            var $tab = $(event.currentTarget).find('ul[role="tablist"] li');
-            var tabCount = $tab.length;
-            $tab.css('width', (100 / tabCount) + '%');
+                //Set tab width
+                var $tab = $(event.currentTarget).find('ul[role="tablist"] li');
+                var tabCount = $tab.length;
+                $tab.css('width', (100 / tabCount) + '%');
 
-            //set button waves effect
-            setButtonWavesEffect(event);
-        },
-        onStepChanging: function (event, currentIndex, newIndex) {
-            if (currentIndex > newIndex) { return true; }
+                //set button waves effect
+                setButtonWavesEffect(event);
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                if (currentIndex > newIndex) { return true; }
 
-            if (currentIndex < newIndex) {
-                form.find('.body:eq(' + newIndex + ') label.error').remove();
-                form.find('.body:eq(' + newIndex + ') .error').removeClass('error');
+                if (currentIndex < newIndex) {
+                    form.find('.body:eq(' + newIndex + ') label.error').remove();
+                    form.find('.body:eq(' + newIndex + ') .error').removeClass('error');
+                }
+
+                form.validate().settings.ignore = ':disabled,:hidden';
+                return form.valid();
+            },
+            onStepChanged: function (event, currentIndex, priorIndex) {
+                setButtonWavesEffect(event);
+            },
+            onFinishing: function (event, currentIndex) {
+                form.validate().settings.ignore = ':disabled';
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex) {
+                console.log($('#formulario').serialize());
             }
-
-            form.validate().settings.ignore = ':disabled,:hidden';
-            return form.valid();
-        },
-        onStepChanged: function (event, currentIndex, priorIndex) {
-            setButtonWavesEffect(event);
-        },
-        onFinishing: function (event, currentIndex) {
-            form.validate().settings.ignore = ':disabled';
-            return form.valid();
-        },
-        onFinished: function (event, currentIndex) {
-            console.log($('#formulario').serialize());
-        }
-    });
-
-
-
-    function setButtonWavesEffect(event) {
-        $(event.currentTarget).find('[role="menu"] li a').removeClass('waves-effect');
-        $(event.currentTarget).find('[role="menu"] li:not(.disabled) a').addClass('waves-effect');
-    }
-
-</script>
-
-<script>
-    $(function () {
-        //Datetimepicker plugin
-        //Bootstrap datepicker plugin
-
-        $('.datepicker_component').datepicker({
-            autoclose: true,
-            dateFormat: 'yyyy/mm/dd'
         });
-        //
-
-    });
-</script>
 
 
 
+        function setButtonWavesEffect(event) {
+            $(event.currentTarget).find('[role="menu"] li a').removeClass('waves-effect');
+            $(event.currentTarget).find('[role="menu"] li:not(.disabled) a').addClass('waves-effect');
+        }
+
+    </script>
+
+    <script>
+        $(function () {
+            //Datetimepicker plugin
+            //Bootstrap datepicker plugin
+
+            $('.datepicker_component').datepicker({
+                autoclose: true,
+                dateFormat: 'yyyy/mm/dd'
+            });
+            //
+
+        });
+    </script>
 
 
-@endsection
+
+
+
+    @endsection
