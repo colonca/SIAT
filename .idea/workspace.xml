@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_30_231424_create_intervenciones_individuales_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/privilegios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/privilegios.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/modulos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/modulos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/modulos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/modulos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/modulos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/modulos/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/paginas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/paginas/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/paginas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/paginas/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/paginas/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/paginas/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\Proyectos\SIAT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,14 +23,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1224">
+            <state relative-caret-position="-672">
               <caret line="93" column="70" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="70" />
               <folding>
                 <element signature="e#40#69#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7383">
+              <caret line="6" column="53" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -196,7 +184,6 @@
         <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" />
         <option value="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_03_181941_create_docente_permanencia_table.php" />
         <option value="$PROJECT_DIR$/app/DocentePermanencia.php" />
@@ -206,6 +193,7 @@
         <option value="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php" />
+        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" />
       </list>
     </option>
   </component>
@@ -295,7 +283,7 @@
       <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="18" />
     <option name="width" value="1346" />
@@ -342,6 +330,30 @@
               <item name="SIAT" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="psicologos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="personal" type="462c0819:PsiDirectoryNode" />
+              <item name="psicologos" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
@@ -479,12 +491,12 @@
       <workItem from="1562087159393" duration="9365000" />
       <workItem from="1562101482799" duration="533000" />
       <workItem from="1562106662648" duration="3977000" />
-      <workItem from="1562160494082" duration="10378000" />
+      <workItem from="1562160494082" duration="11031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="485384000" />
+    <option name="totallyTimeSpent" value="486037000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,7 +508,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33661118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -843,20 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="27" column="131" selection-start-line="27" selection-start-column="131" selection-end-line="27" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_03_181941_create_docente_permanencia_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -938,11 +936,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
+        <state relative-caret-position="-672">
           <caret line="93" column="70" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="70" />
           <folding>
             <element signature="e#40#69#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7383">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="53" />
         </state>
       </provider>
     </entry>
