@@ -53,8 +53,8 @@ Route::get('citas/estudiante/contraseña','CitaController@editNuevaContraseña')
 Route::post('citas/estudiante/Actualizarcontrasena','CitaController@updateContrasena')->name('actualizarContraseña');
 Route::get('citas/estudiante/agendar','CitaController@cita')->name('agendar');
 Route::post('citas/estudiante/agendar','CitaController@agendar')->name('agendarcita');
-
 Route::get('citas/estudiante/citas','CitaController@historialCitas')->name('citas');
+Route::get('citas/estudiante/citasAgendadas','CitaController@citasAgnedadas');
 
 
 //Intervenciones Individuales

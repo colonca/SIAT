@@ -7,6 +7,7 @@ use App\Estudiante;
 use App\Personal;
 use App\Utiles\Festivos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class CitaController extends Controller
@@ -187,6 +188,47 @@ class CitaController extends Controller
     public function historialCitas(){
         $citas = Cita::where('estudiante_id',session('estudiante')->cedula)->orderBy('fecha')->get();
         return view('citas.estudiante.list',compact('citas'));
+    }
+
+    public function citasAgnedadas()
+    {
+
+       $personal =  Personal::where('cedula',Auth::user()->cedula)->first();
+
+       $citas = Cita::where([
+           ['personal_id',$personal->id],
+       ])->get();
+
+       $event = [];
+
+       foreach ($citas as $cita){
+
+           $color = '';
+
+           switch ($cita->estado){
+               case 'PENDIENTE':
+                                   $color = '#1299DA';
+                                   break;
+               case 'ATENDIDO':
+                                   $color = '#257e4a';
+                                   break;
+               case 'PERDIDA':
+                                   $color = '#E91E63';
+                                   break;
+           }
+
+           $fecha =  $cita->fecha.'T';
+           $fecha .=strlen($cita->hora) == 2 ? $cita->hora.':00':'0'.$cita->hora.':00';
+           $event[] = [
+               'title'=> $cita->estudiante->nombres,
+               'start' =>$fecha,
+               'color' => $color
+           ];
+       }
+
+
+       return response()->json($event);
+
     }
 
 }
