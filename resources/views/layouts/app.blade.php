@@ -297,7 +297,7 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
                         <li role="separator" class="divider"></li>
                           <!--<li></li>-->
                         <li role="separator" class="divider"></li>
@@ -329,7 +329,7 @@
                         @endif
                         @if(session()->has('PAG_DOCENTES_DE_PERMANENCIA'))
                         <li>
-                            <a href="{{route('loaders')}}">
+                            <a href="{{route('docentes_permanencia.index')}}">
                                 <span>Docentes de Permanencia</span>
                             </a>
                         </li>
@@ -370,15 +370,14 @@
                     </a>
                 </li>
              @endif
-             <!--@if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))-->
-              <!--@endif-->
-              
+            @if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))
              <li>
                  <a href="{{route('intervenciones_individuales.index')}}">
                      <i class="material-icons">people</i>
-                     <span>Intervnecion Individual</span>
+                     <span>Intervneción Individual</span>
                  </a>
              </li>
+           @endif
                                  
             </ul>
         </div>

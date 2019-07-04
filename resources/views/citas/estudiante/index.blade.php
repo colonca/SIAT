@@ -1,3 +1,4 @@
+@if(session()->has('estudiante'))
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -208,5 +209,7 @@
 </body>
 
 </html>
-
+@else
+    <?php header('location',route('loginEstudiante'));?>
+@endif
 

@@ -51,7 +51,7 @@
                     <a  href="{{route('usuarios.index')}}" type="button" class="btn bg-teal btn-lg  waves-effect" > <i class="material-icons">list</i><span>LISTADO USUARIOS</span></a>
                     @endif
                     @if(session()->has('PAG_USUARIO_NUEVO'))
-                    <a  href="#" type="button" class="btn bg-red  btn-lg  waves-effect"> <i class="material-icons">book</i><span>NUEVO USUARIO</span></a>
+                    <a  href="{{route('usuarios.create')}}" type="button" class="btn bg-red  btn-lg  waves-effect"> <i class="material-icons">book</i><span>NUEVO USUARIO</span></a>
                     @endif
                 </div>
             </div>

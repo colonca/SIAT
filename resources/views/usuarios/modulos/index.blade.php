@@ -9,8 +9,15 @@
                     <i class="material-icons">home</i> inicio
                 </a>
             </li>
+            <li><a href="{{route('users')}}" style="color: white;">
+                    <i class="material-icons">perm_identity</i> Usuarios
+                </a>
+            </li>
             <li><a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Modulos
+                    <i class="material-icons">
+                        view_module
+                    </i>
+                    Modulos
                 </a>
             </li>
         </ol>

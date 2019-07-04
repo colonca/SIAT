@@ -5,7 +5,12 @@
     <!--menu de navegacion de la pagina-->
     <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
         <ol class="breadcrumb">
-            <li><a href="{{route('users')}}" style="color: white;">
+            <li>
+                @if(Auth()->user()->role->nombre == 'psicologo')
+                    <a href="{{route('dashboard_psicologo')}}" style="color: white;">
+                @else
+                    <a href="{{route('dashboard')}}" style="color: white;">
+                @endif
                     <i class="material-icons">home</i> inicio
                 </a>
             </li>

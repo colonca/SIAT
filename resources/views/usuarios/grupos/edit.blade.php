@@ -9,13 +9,23 @@
                     <i class="material-icons">home</i> inicio
                 </a>
             </li>
+            <li><a href="{{route('users')}}" style="color: white;">
+                    <i class="material-icons">perm_identity</i> Usuarios
+                </a>
+            </li>
             <li><a href="{{route('grupos.index')}}" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Grupo de Usuarios
+                    <i class="material-icons">
+                        group_work
+                    </i>
+                    Grupo de Usuarios
                 </a>
             </li>
             <li>
                 <a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i>Actualizando Grupo
+                    <i class="material-icons">
+                        update
+                    </i>
+                    Actualizando Grupo
                 </a>
             </li>
         </ol>

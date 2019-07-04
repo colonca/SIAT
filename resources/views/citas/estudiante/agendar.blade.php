@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="header">
                         <div class="row">
-                            <h1 style="margin-left: 10px;">Agendar Cita</h1>
+                            <h1 style="margin-left: 10px;">Solicitar Cita</h1>
                         </div>
                     </div>
                     <div class="body">

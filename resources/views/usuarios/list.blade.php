@@ -10,11 +10,14 @@
                 </a>
             </li>
             <li><a href="{{route('users')}}" style="color: white;">
-                    <i class="material-icons">home</i> Usuarios
+                    <i class="material-icons">perm_identity</i> Usuarios
                 </a>
             </li>
             <li><a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Lista de Usuarios
+                    <i class="material-icons">
+                        supervised_user_circle
+                    </i>
+                    Lista de Usuarios
                 </a>
             </li>
         </ol>
@@ -52,6 +55,7 @@
                         <th>Nombre</th>
                         <th>Correo Electronico</th>
                         <th>Grupo o Role</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -61,6 +65,18 @@
                             <td>{{$usuario->nombre}}</td>
                             <td>{{$usuario->email}}</td>
                             <td>{{$usuario->role->nombre}}</td>
+                            <td>
+                                <a href="" onclick="eliminar(event,{{$usuario->cedula}})" class="btn btn-danger btn-sm">
+                                    <i class="material-icons">
+                                        delete
+                                    </i>
+                                </a>
+                                <a href="{{route('usuarios.edit',$usuario->cedula)}}" class="btn btn-warning btn-sm">
+                                    <i class="material-icons">
+                                        update
+                                    </i>
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -95,11 +111,11 @@
                 cancelButtonText:'cancelar'
             }).then((result) => {
                 if (result.value) {
-                    let url = 'grupos/'+id;
+                    let url = 'usuarios/'+id;
                     axios.delete(url).then(result => {
                         Swal.fire(
                             'Eliminado!',
-                            'el grupo se a eliminado correctamente.',
+                            'el Usuario se a eliminado correctamente.',
                             'success'
                         ).then(result => {
                             location.reload();

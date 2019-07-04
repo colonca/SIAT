@@ -5,17 +5,27 @@
     <!--menu de navegacion de la modulo-->
     <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
         <ol class="breadcrumb">
-            <li><a href="{{route('users')}}" style="color: white;">
+            <li><a href="{{route('dashboard')}}" style="color: white;">
                     <i class="material-icons">home</i> inicio
                 </a>
             </li>
+            <li><a href="{{route('users')}}" style="color: white;">
+                    <i class="material-icons">perm_identity</i> Usuarios
+                </a>
+            </li>
             <li><a href="{{route('grupos.index')}}" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Grupo de Usuarios
+                    <i class="material-icons">
+                        group_work
+                    </i>
+                    Grupo de Usuarios
                 </a>
             </li>
             <li>
                 <a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i>Datos del Grupo de Usuario
+                    <i class="material-icons">
+                        remove_red_eye
+                    </i>
+                    Datos del Grupo de Usuario
                 </a>
             </li>
         </ol>

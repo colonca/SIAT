@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIntervencionesIndividualesTable extends Migration
+class CreateDocentePermanenciaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateIntervencionesIndividualesTable extends Migration
      */
     public function up()
     {
+        Schema::create('docente_permanencia', function (Blueprint $table) {
 
-        Schema::create('intervenciones_individuales', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->
-            $table->timestamps();
+            $table->string('cedula',12)->unique();
+            $table->foreign('cedula')->references('cedula')->on('personal');
+
         });
     }
 
@@ -28,6 +29,6 @@ class CreateIntervencionesIndividualesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('intervenciones_individuales');
+        Schema::dropIfExists('docente_permanencia');
     }
 }

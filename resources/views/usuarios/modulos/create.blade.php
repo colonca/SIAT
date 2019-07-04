@@ -5,17 +5,27 @@
     <!--menu de navegacion de la pagina-->
     <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
         <ol class="breadcrumb">
-            <li><a href="{{route('users')}}" style="color: white;">
+            <li><a href="{{route('dashboard')}}" style="color: white;">
                     <i class="material-icons">home</i> inicio
                 </a>
             </li>
+            <li><a href="{{route('users')}}" style="color: white;">
+                    <i class="material-icons">perm_identity</i> Usuarios
+                </a>
+            </li>
             <li><a href="{{route('modulos.index')}}" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Grupo de Modulos
+                    <i class="material-icons">
+                        view_module
+                    </i>
+                    Modulos
                 </a>
             </li>
             <li>
                 <a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i>Nueva Modulo
+                    <i class="material-icons">
+                        insert_link
+                    </i>
+                    Nueva Modulo
                 </a>
             </li>
         </ol>

@@ -27,10 +27,13 @@ Route::get('privilegios/paginas/{id}','Grupo_UsuarioController@searhPaginas');
 Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
 
 
-//psicologos
+//psicologos_gestion
+Route::get('dashboard_psicologo','HomeController@indexPsicologo')->name('dashboard_psicologo');
 Route::resource('psicologos','PsicologoController');
 Route::get('horarios/{id}','PsicologoController@horarios');
 
+//Docentes de permanencia
+Route::resource('docentes_permanencia','DocentePermanenciaController');
 
 //estudiantes
 Route::resource('estudiantes','EstudianteController');
@@ -40,12 +43,9 @@ Route::post('mensageIndividual','MessageController@store');
 //citas
 Route::get('estudiante/login',function(){
     return view('citas.agendar_cita');
-});
+})->name('loginEstudiante');
+
 Route::get('cita/estudiante/{id}','CitaController@estudiante');
-
-
-//psicologos 
-Route::get('dashboard_psicologo','HomeController@indexPsicologo')->name('dashboard_psicologo');
 
 //Citas
 Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante');
@@ -55,6 +55,7 @@ Route::get('citas/estudiante/agendar','CitaController@cita')->name('agendar');
 Route::post('citas/estudiante/agendar','CitaController@agendar')->name('agendarcita');
 Route::get('citas/estudiante/citas','CitaController@historialCitas')->name('citas');
 Route::get('citas/estudiante/citasAgendadas','CitaController@citasAgnedadas');
+Route::post('citas/estudiante/cancelarCita','CitaController@cancelarCita');
 
 
 //Intervenciones Individuales

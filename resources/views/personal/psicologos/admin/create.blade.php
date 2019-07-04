@@ -2,6 +2,25 @@
 
 @section('content')
 
+<div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
+        <ol class="breadcrumb">
+            <li><a href="{{route('dashboard_psicologo')}}" style="color: white;">
+                    <i class="material-icons">home</i> inicio
+                </a>
+            </li>
+            <li>
+                <a href="{{route('intervenciones_individuales.index')}}" style="color: white;">
+                    <i class="material-icons">perm_identity</i> Intervenciones
+                </a>
+            </li>
+            <li>
+                <a href="" style="color: white;">
+                    <i class="material-icons">perm_identity</i> Nueva Intervención
+                </a>
+            </li>
+
+        </ol>
+    </div>
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

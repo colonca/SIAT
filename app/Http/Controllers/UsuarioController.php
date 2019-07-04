@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class UsuarioController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $usuarios = User::all();
@@ -72,7 +77,9 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario =  User::find($id);
+        $roles= Grupo_Usuario::all();
+        return view('usuarios.edit',compact('roles','usuario'));
     }
 
     /**
@@ -84,7 +91,14 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario =  User::find($id);
+
+        $usuario->fill($request->all());
+
+        $usuario->save();
+
+        return redirect()->route('usuarios.edit',$usuario->cedula)
+            ->with('info','Datos Guardados Correctamente');
     }
 
     /**
@@ -95,6 +109,8 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario =  User::find($id);
+        $usuario->delete();
     }
+
 }

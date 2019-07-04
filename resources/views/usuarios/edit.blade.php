@@ -10,7 +10,7 @@
                 </a>
             </li>
             <li><a href="{{route('users')}}" style="color: white;">
-                    <i class="material-icons">perm_identity</i>  usuarios
+                    <i class="material-icons">perm_identity</i> usuarios
                 </a>
             </li>
             <li><a href="{{route('usuarios.index')}}" style="color: white;">
@@ -23,9 +23,9 @@
             <li>
                 <a href="" style="color: white;">
                     <i class="material-icons">
-                        insert_link
+                        update
                     </i>
-                    Nuevo Usuario
+                    Actualizando Usuario
                 </a>
             </li>
         </ol>
@@ -54,43 +54,61 @@
             <div class="header container">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <h2>
-                        Crear un Nuevo Usuario
+                        Actualizar Usuario
                     </h2>
                 </div>
             </div>
             <div class="body table-responsive">
-                <form action="{{route('usuarios.store')}}" method="POST">
+                <form action="{{route('usuarios.update',$usuario->cedula)}}" method="post">
                     @csrf
-
+                    {{ method_field('PATCH') }}
                     <div class="form-group">
                         <label for="" class="form-control">Numero de identificación</label>
                         <div class="form-line">
-                            <input name ="cedula" type="text" class="form-control" placeholder="Ingresa el nombre del modulo" required>
+                            <input name ="cedula" type="text" class="form-control" placeholder="Ingresa el nombre del modulo" required value="{{$usuario->cedula}}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="form-control">Nombre</label>
                         <div class="form-line">
-                            <input name ="nombres" type="text" class="form-control" placeholder="Ingresa el nombre del modulo" required>
+                            <input name ="nombres" type="text" class="form-control" placeholder="Ingresa el nombre del modulo" required value="{{$usuario->nombre}}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="form-control">Correo Electronico</label>
                         <div class="form-line">
-                            <input name ="email" type="text" class="form-control" placeholder="Breve descripción del Modulo">
+                            <input name ="email" type="text" class="form-control" placeholder="Breve descripción del Modulo" value="{{$usuario->email}}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="" class="form-control">Selecione el Grupo o Role del Usuario</label>
                         <select name="role" id="" class="selectpicker form-control"  data-live-search="true" data-size="10" required>
-                            <option value="">Seleciones Una Opcion</option>
+                            <option value="">Selecione una Opcion...</option>
                             @foreach($roles as $role)
-                                <option value="{{$role->id}}">{{$role->nombre}}</option>
+                                @if($role->id == $usuario->grupo_usuario_id)
+                                    <option value="{{$role->id}}" selected>{{$role->nombre}}</option>
+                                @else
+                                    <option value="{{$role->id}}">{{$role->nombre}}</option>
+                                @endif
                             @endforeach
                         </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="form-control">Nueva Contraseña</label>
+                        <div class="form-line">
+                            <input name ="password" type="password" class="form-control" placeholder="contraseña">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="form-control">Confirmar Contraseña</label>
+                        <div class="form-line">
+                            <input name ="confirmarpassword" type="password" class="form-control" placeholder="contraseña">
+                        </div>
                     </div>
 
                     <div class="form-group">

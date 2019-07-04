@@ -234,4 +234,10 @@ class CitaController extends Controller
 
     }
 
+    public function cancelarCita (Request $request){
+        $cita = Cita::find($request->get('id'));
+        $cita->estado = 'CANCELADA';
+        $cita->save();
+    }
+
 }

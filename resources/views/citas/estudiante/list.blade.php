@@ -73,6 +73,11 @@
                                         {{$cita->estado}}
                                     </P>
                                 @endif
+                                @if($cita->estado == 'CANCELADA')
+                                    <P class="col-red ">
+                                        {{$cita->estado}}
+                                    </P>
+                                @endif
                             </td>
                             <td>
                                 @if($cita->estado == 'ATENDIDO')
@@ -113,39 +118,55 @@
         });
 
         function cancelar(event,id,fecha){
+
             event.preventDefault();
+
             let fechaActual = new Date();
             let fechadeComparacion = new Date(fecha);
             fechaActual.getDay();
             fechaActual.getDate();
             fechadeComparacion.getDay();
             fechadeComparacion.getDate();
-            console.log(fechaActual+'-'+fechadeComparacion);
 
-            Swal.fire({
-                title: 'Estas segur@?',
-                text: "no podras revertilo!",
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Si, eliminarlo!',
-                cancelButtonText:'cancelar'
-            }).then((result) => {
-                if (result.value) {
-                   /* let url = 'grupos/'+id;
-                    axios.delete(url).then(result => {
-                        Swal.fire(
-                            'Eliminado!',
-                            'el grupo se a eliminado correctamente.',
-                            'success'
-                        ).then(result => {
-                            location.reload();
-                        });
-                    });*/
+
+            if(fechaActual.getDay() == (fechadeComparacion.getDay()+1) && fechaActual.getDate() == fechadeComparacion.getDate()) {
+
+                $.notify('no es posible cancelar la cita el mismo dia');
+
+            }else if(fechaActual.getDay() > (fechadeComparacion.getDay()+1) || fechaActual.getDate() > fechadeComparacion.getDate()){
+
+                $.notify('no es posible cancelar la cita');
+
+            }else{
+                Swal.fire({
+                    title: 'Estas segur@ que deseas cancelar la cita?',
+                    text: "no podras revertilo!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si',
+                    cancelButtonText:'cancelar'
+                }).then((result) => {
+                    if (result.value) {
+                        let url = '{{url('citas/estudiante/cancelarCita')}}';
+                         axios.post(url,{
+                             id: id,
+                         }).then(result => {
+                             Swal.fire(
+                                 'Cancelada!',
+                                 'La cita se ha cancelado correctamente.',
+                                 'success'
+                             ).then(result => {
+                                 location.reload();
+                             });
+                         });
+                    }
+                    })
                 }
-            })
-        }
+            }
+
+
 
     </script>
 @endsection
