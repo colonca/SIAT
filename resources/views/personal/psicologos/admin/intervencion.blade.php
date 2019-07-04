@@ -11,7 +11,7 @@
             </div>
             
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <a href="{{route('intervenciones_individuales.create')}}" class="btn btn-success pull-right">Agregar Nueva Intervención</a>
+            <a href="{{route('intervenciones_individuales.create')}}" class="btn btn-success pull-right"><i class="material-icons">fiber_new</i><span>Nueva Historia Psicológica</span></a>
             </div>
 
         </div>
