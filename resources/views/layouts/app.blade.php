@@ -345,6 +345,31 @@
                 </li>
                 @endif
 
+                
+                <li onclick="">
+                    <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                        <i class="material-icons">equalizer</i>
+                        <span>Reportes</span>
+                    </a>
+                    <ul class="ml-menu" style="display: none;">
+                        
+                        <li>
+                            <a href="{{route('reporte_individual')}}">
+                                <i class="material-icons">assessment</i>
+                                <span>Intervenciones Individuales</span>
+                            </a>
+                        </li> 
+
+                        <li>
+                            <a href="{{route('reporte_Estudiante')}}">
+                                <i class="material-icons">assessment</i>
+                                <span>Estudiantes</span>
+                            </a>
+                        </li> 
+                    </ul>
+                </li>
+    
+
                 @if(session()->has('MOD_ESTUDIANTES'))
                 <li>
                     <a href="{{route('estudiantes.index')}}">

@@ -65,5 +65,9 @@ Route::resource('seguimientos','SeguimientoController');
 Route::resource('intervenciones_individuales','IntervencionIndividualController');
 Route::get('reporte/intervencion_individual/{id}','IntervencionIndividualController@pdfIntervencionIndividual')->name('pdf_intervencion_individual');
 
+//reportes
+Route::get('reportes/intervencion_individual','ReportesController@reporteIntervencionIndividual')->name('reporte_individual');
+Route::get('reportes/Estudiantes','ReportesController@reporte_Estudiante')->name('reporte_Estudiante');
+
 
 
