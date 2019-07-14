@@ -61,5 +61,9 @@ Route::post('citas/estudiante/cancelarCita','CitaController@cancelarCita');
 //Intervenciones Individuales
 Route::resource('intervenciones_individuales','IntervencionIndividualController');
 
+//reportes
+Route::get('reportes/intervencion_individual','ReportesController@reporteIntervencionIndividual')->name('reporte_individual');
+Route::get('reportes/Estudiantes','ReportesController@reporte_Estudiante')->name('reporte_Estudiante');
+
 
 
