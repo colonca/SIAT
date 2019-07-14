@@ -374,7 +374,7 @@
              <li>
                  <a href="{{route('intervenciones_individuales.index')}}">
                      <i class="material-icons">people</i>
-                     <span>Intervneción Individual</span>
+                     <span>Intervención Individual</span>
                  </a>
              </li>
            @endif

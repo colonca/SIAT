@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Estudiante;
+use App\Utiles\Procedimientos;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class StudentImport implements ToModel
@@ -27,7 +28,8 @@ class StudentImport implements ToModel
             'promedio_general'=> $row[9] == '' ? 0 : $row[9],
             'promedio_semestral'=> $row[10] == '' ? 0 : $row[10],
             'estado'=> $row[11],
-            'contraseña' => $row[0]
+            'contraseña' => $row[0],
+            'periodo' => Procedimientos::periodoDelAnhoActual()
         ]);
     }
 }

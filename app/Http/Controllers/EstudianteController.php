@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Estudiante;
+use App\Utiles\Procedimientos;
 use Illuminate\Http\Request;
 
 class EstudianteController extends Controller
@@ -28,11 +29,24 @@ class EstudianteController extends Controller
             ->programa($programa)
             ->promedio($promedio)
             ->nombre($nombre)
+            ->periodo(Procedimientos::periodoDelAnhoActual())
             ->paginate(8);
 
         $estudiantes->withPath("estudiantes?riesgo=$riesgo&programa=$programa&cedula=$cedula");
 
         return view('estudiantes.index', compact('estudiantes'));
+
+    }
+
+    public function consultarEstudiante($id){
+
+
+        $estudiante  =  Estudiante::where([
+            ['cedula',$id],
+            ['periodo',Procedimientos::periodoDelAnhoActual()]
+        ])->first();
+
+        return json_encode($estudiante);
 
     }
 
@@ -91,4 +105,5 @@ class EstudianteController extends Controller
     {
         //
     }
+
 }

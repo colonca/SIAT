@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Grupo_Usuario;
 use App\Http\Controllers\Controller;
+use App\Utiles\Procedimientos;
 use function foo\func;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;

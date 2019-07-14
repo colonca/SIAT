@@ -13,13 +13,13 @@ class CreateCitasTable extends Migration
 
             $table->bigIncrements('id');
             $table->bigInteger('personal_id')->unsigned();
-            $table->string('estudiante_id');
+            $table->bigInteger('estudiante_id')->unsigned();
             $table->date('fecha');
             $table->integer('hora')->unsigned();
             $table->enum('estado',['ATENDIDO','PERDIDA','PENDIENTE','CANCELADA'])->default('PENDIENTE');
 
             $table->foreign('personal_id')->references('id')->on('personal');
-            $table->foreign('estudiante_id')->references('cedula')->on('estudiantes');
+            $table->foreign('estudiante_id')->references('id')->on('estudiantes');
             $table->timestamps();
 
         });

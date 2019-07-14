@@ -6,7 +6,9 @@ use App\Cita;
 use App\Estudiante;
 use App\Personal;
 use App\Utiles\Festivos;
+use App\Utiles\Procedimientos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -23,9 +25,14 @@ class CitaController extends Controller
         $usuario = $request->get('usuario');
         $contraseña = $request->get('contraseña');
 
-        $estudiante  = Estudiante::where([['cedula',$usuario],['contraseña',$contraseña]])->first();
+        $estudiante  = Estudiante::where([
+            ['cedula',$usuario],
+            ['contraseña',$contraseña],
+            ['periodo',Procedimientos::periodoDelAnhoActual()]
+        ])->first();
 
         if($estudiante!=null){
+
             session()->put('estudiante',$estudiante);
 
             $personal = Personal::where('tipo_usuario','psicologo')->get();
@@ -38,7 +45,7 @@ class CitaController extends Controller
                 setlocale(LC_TIME,"es_CO");;
                 $fechaFFase = date('Y-m-d');
                 $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-                $dia = strftime('%d',strtotime($nuevafecha));
+                $dia = strftime('%u',strtotime($nuevafecha));
                 $mes = strftime('%m',strtotime($nuevafecha));
 
                 $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
@@ -90,7 +97,7 @@ class CitaController extends Controller
             setlocale(LC_TIME,"es_CO");;
             $fechaFFase = date('Y-m-d');
             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-            $dia = strftime('%d',strtotime($nuevafecha));
+            $dia = strftime('%u',strtotime($nuevafecha));
             $mes = strftime('%m',strtotime($nuevafecha));
 
             $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
@@ -141,7 +148,7 @@ class CitaController extends Controller
         if($contraseña == $confirmacionContraseña){
 
             $usuario = $request->get('cedula');
-            $estudiante = Estudiante::where('cedula',$usuario)->first();
+            $estudiante = Estudiante::where([['cedula',$usuario],['periodo',Procedimientos::periodoDelAnhoActual()]])->first();
             $estudiante->contraseña = $contraseña;
             $estudiante->save();
 
@@ -159,7 +166,7 @@ class CitaController extends Controller
 
        $cita = new Cita();
        $cita->personal_id = $request->get('personal_id');
-       $cita->estudiante_id = session('estudiante')->cedula;
+       $cita->estudiante_id = session()->get('estudiante')->id;
        $cita->fecha =  $request->get('fecha');
        $cita->hora = $request->get('hora');
 
@@ -185,9 +192,15 @@ class CitaController extends Controller
 
     }
 
-    public function historialCitas(){
-        $citas = Cita::where('estudiante_id',session('estudiante')->cedula)->orderBy('fecha')->get();
-        return view('citas.estudiante.list',compact('citas'));
+    public function historialCitas()
+    {
+        $estudiantes = Estudiante::where('cedula', session('estudiante')->cedula)->get();
+
+        foreach ($estudiantes as $estudiante){
+           $citasEstudiante[] = (Cita::where('estudiante_id',$estudiante->id)->orderBy('fecha')->get());
+        }
+
+        return view('citas.estudiante.list',compact('citasEstudiante'));
     }
 
     public function citasAgnedadas()

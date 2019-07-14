@@ -5,8 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Utiles/Procedimientos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/intervencion_individual.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SIAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SIAT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Cita.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cita.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Estudiante.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estudiante.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Imports/StudentImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Imports/StudentImport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Personal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Personal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_29_230639_create_estudiantes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_29_230639_create_estudiantes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_21_200724_create_personal_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_21_200724_create_personal_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_21_202409_create_horario_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_21_202409_create_horario_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_27_182329_add_contraseña_to_estudiantes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_27_182329_add_contraseña_to_estudiantes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_29_062435_create_citas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_29_062435_create_citas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\Proyectos\SIAT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,59 +50,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-672">
-              <caret line="93" column="70" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="70" />
+            <state relative-caret-position="510">
+              <caret line="164" column="40" lean-forward="true" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SeguimientoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
               <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
+                <element signature="e#40#71#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Seguimineto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7383">
-              <caret line="6" column="53" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/personal/docentesPermanencia/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/personal/docentesPermanencia/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="266" column="51" selection-start-line="266" selection-start-column="51" selection-end-line="266" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/personal/docentesPermanencia/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
+            <state relative-caret-position="276">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -83,8 +83,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="1518">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1702">
+              <caret line="389" column="41" selection-start-line="389" selection-start-column="41" selection-end-line="389" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -93,22 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>impor</find>
-      <find>import</find>
-      <find>Pagina</find>
-      <find>paginas</find>
-      <find>pagina</find>
-      <find>logo</find>
-      <find>sendlo</find>
-      <find>notify</find>
-      <find>logou</find>
-      <find>sign</find>
-      <find>addAc</find>
-      <find>modulo</find>
-      <find>tboo</find>
-      <find>hora</find>
-      <find>correo</find>
-      <find>celular</find>
       <find>td.day</find>
       <find>down</find>
       <find>td</find>
@@ -123,6 +116,22 @@
       <find>locale-se</find>
       <find>profile</find>
       <find>Psicologo</find>
+      <find>identific</find>
+      <find>nombre</find>
+      <find>celular</find>
+      <find>semest</find>
+      <find>fecha</find>
+      <find>antecedentes</find>
+      <find>antecedente</find>
+      <find>trabaja</find>
+      <find>anteceden</find>
+      <find>relacion</find>
+      <find>Datos</find>
+      <find>anteced</find>
+      <find>cel</find>
+      <find>celula</find>
+      <find>eSCOJ</find>
+      <find>antec</find>
     </findStrings>
     <replaceStrings>
       <replace>./fonts/</replace>
@@ -143,56 +152,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/citas/estudiante/nuevaContraseña.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" />
-        <option value="$PROJECT_DIR$/resources/views/citas/agendar_cita.blade.php" />
-        <option value="$PROJECT_DIR$/app/Personal.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_29_064336_update_estado_to_citas.php" />
-        <option value="$PROJECT_DIR$/resources/views/loaders/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" />
-        <option value="$PROJECT_DIR$/app/Mail/MessageIndividual.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" />
-        <option value="$PROJECT_DIR$/app/Utiles/Festivos.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_30_231424_create_intervenciones_individuales_table.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Cita.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/rol_usuarios/psicologos/index.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_29_062435_create_citas_table.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/privilegios.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/modulos/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/modulos/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/modulos/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/paginas/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/paginas/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/paginas/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/grupos/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" />
-        <option value="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_03_181941_create_docente_permanencia_table.php" />
         <option value="$PROJECT_DIR$/app/DocentePermanencia.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/personal/docentesPermanencia/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_27_182329_add_contraseña_to_estudiantes.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_21_202409_create_horario_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Imports/StudentImport.php" />
+        <option value="$PROJECT_DIR$/app/Utiles/Procedimientos.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
+        <option value="$PROJECT_DIR$/app/Estudiante.php" />
+        <option value="$PROJECT_DIR$/app/Cita.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/ImpresionDiagnostica.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" />
+        <option value="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_29_062435_create_citas_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_07_05_143551_create_intervencion_individual_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/create.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_20_180527_create_contacto_emergencia_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_29_230639_create_estudiantes_table.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_21_200724_create_personal_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/app/Personal.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_07_06_183211_add_columns_to_interncion_individual.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_07_12_031644_create_segiminetos_table.php" />
+        <option value="$PROJECT_DIR$/app/Segimineto.php" />
+        <option value="$PROJECT_DIR$/app/IntervencionIndividual.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_07_12_031644_create_seguiminetos_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/form1.html" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/intervncion_individual.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" />
+        <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/intervencion_individual.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SeguimientoController.php" />
         <option value="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" />
       </list>
     </option>
@@ -281,6 +290,11 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -295,6 +309,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,48 +338,12 @@
             <path>
               <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
               <item name="SIAT" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-              <item name="psicologos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-              <item name="psicologos" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,19 +356,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\psicologos\admin" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\database\migrations" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\citas\estudiante" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\public\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\docentesPermanencia" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\public\images\users" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\psicologos" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\usuarios\grupos" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\usuarios\modulos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\citas\estudiante" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\public\images" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\public" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -409,7 +388,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.CitaController.php">
+  <component name="RunManager" selected="JavaScript Debug.IntervencionIndividualController.php">
+    <configuration name="IntervencionIndividualController.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/Http/Controllers/IntervencionIndividualController.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/resources/views/estudiantes/index.blade.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -422,6 +404,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.IntervencionIndividualController.php" />
         <item itemvalue="PHP Script.CitaController.php" />
         <item itemvalue="JavaScript Debug.index.blade.php" />
       </list>
@@ -492,11 +475,25 @@
       <workItem from="1562101482799" duration="533000" />
       <workItem from="1562106662648" duration="3977000" />
       <workItem from="1562160494082" duration="11031000" />
+      <workItem from="1562281481819" duration="14083000" />
+      <workItem from="1562335913342" duration="11838000" />
+      <workItem from="1562431559338" duration="12541000" />
+      <workItem from="1562548011422" duration="5192000" />
+      <workItem from="1562638185309" duration="236000" />
+      <workItem from="1562645942271" duration="926000" />
+      <workItem from="1562716084918" duration="1405000" />
+      <workItem from="1562757830623" duration="2919000" />
+      <workItem from="1562780494206" duration="6190000" />
+      <workItem from="1562776143883" duration="1902000" />
+      <workItem from="1562870381356" duration="21207000" />
+      <workItem from="1562940742217" duration="12028000" />
+      <workItem from="1563051018605" duration="7069000" />
+      <workItem from="1563138222277" duration="1264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486037000" />
+    <option name="totallyTimeSpent" value="584837000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,8 +506,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33661118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41679275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -532,7 +530,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28441754" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3517398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -574,17 +572,91 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_27_182329_add_contraseña_to_estudiantes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="640" column="13" selection-start-line="640" selection-start-column="13" selection-end-line="640" selection-end-column="13" />
+        <state relative-caret-position="322">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_29_062435_create_citas_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Imports/StudentImport.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="432">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="63" />
+          <folding>
+            <element signature="e#31#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Utiles/Procedimientos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Utiles/Festivos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1679">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="819" column="13" selection-start-line="819" selection-start-column="13" selection-end-line="819" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+          <folding>
+            <element signature="e#3690#3713#0#HTML" expanded="true" />
+            <element signature="e#4052#4075#0#HTML" expanded="true" />
+            <element signature="e#4416#4439#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/Store.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#38#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ImpresionDiagnostica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_211339_create_psicologo_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="14" selection-end-column="76" />
           <folding>
             <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
@@ -593,368 +665,363 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Estudiante.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cita.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Personal.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/citas/agendar_cita.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="67" column="26" lean-forward="true" selection-start-line="67" selection-start-column="26" selection-end-line="196" selection-end-column="34" />
-          <folding>
-            <element signature="e#2192#11030#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="204" column="13" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/nuevaContraseña.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModuloController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="39" column="2" lean-forward="true" selection-start-line="39" selection-start-column="2" selection-end-line="40" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Grupo_UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="58" column="89" selection-start-line="58" selection-start-column="70" selection-end-line="58" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/rol_usuarios/edit.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="67" lean-forward="true" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="99" column="65" selection-start-line="99" selection-start-column="65" selection-end-line="99" selection-end-column="65" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/grupos/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/grupos/privilegios.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/paginas/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/modulos/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding>
-            <element signature="e#590#611#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/modulos/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding>
-            <element signature="e#588#609#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/modulos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding>
-            <element signature="e#588#609#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/paginas/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/paginas/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/paginas/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/grupos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="-20">
+          <caret line="57" column="44" lean-forward="true" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        <state relative-caret-position="920">
+          <caret line="139" column="52" selection-start-line="139" selection-start-column="52" selection-end-line="139" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/rol_usuarios/psicologos/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/grupos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2162">
-          <caret line="94" column="19" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="1081">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="e#23#63#0#PHP" expanded="true" />
+            <element signature="e#40#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CitaController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModuloController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="176" column="14" lean-forward="true" selection-start-line="176" selection-start-column="14" selection-end-line="176" selection-end-column="14" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="138">
+          <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/modulos/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Modulo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="124" column="27" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="124" selection-end-column="27" />
+        <state relative-caret-position="386">
+          <caret line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_29_062435_create_citas_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="156" column="46" lean-forward="true" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/estudiantes/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5700">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2208">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/citas/agendar_cita.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_03_181941_create_docente_permanencia_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="230">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_211339_create_psicologo_table.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_29_230639_create_estudiantes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_20_180527_create_contacto_emergencia_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="43" />
           <folding>
             <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Psicologo.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_200724_create_personal_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="437">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php">
+    <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="478">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_21_202409_create_horario_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="776" column="20" selection-start-line="776" selection-start-column="20" selection-end-line="776" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="41" column="88" selection-start-line="37" selection-start-column="11" selection-end-line="41" selection-end-column="88" />
           <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3519">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_06_183211_add_columns_to_interncion_individual.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7613">
-          <caret line="331" column="72" selection-start-line="331" selection-start-column="72" selection-end-line="331" selection-end-column="72" />
+        <state relative-caret-position="3744">
+          <caret line="376" column="57" lean-forward="true" selection-start-line="376" selection-start-column="57" selection-end-line="376" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/DocentePermanencia.php">
+    <entry file="file://$PROJECT_DIR$/app/Personal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="24" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/docentesPermanencia/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_05_143551_create_intervencion_individual_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
+        <state relative-caret-position="345">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Pagina.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/form2.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/form1.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/form3.html" />
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="233" column="47" selection-start-line="233" selection-start-column="47" selection-end-line="233" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/css/main.css" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/legacy.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1033">
+          <caret line="607" column="18" lean-forward="true" selection-start-line="607" selection-start-column="18" selection-end-line="607" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/logoU.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CitaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="60" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="e#332#374#0#PHP" />
+            <element signature="e#4075#4181#0#PHP" />
+            <element signature="e#4187#4991#0#PHP" />
+            <element signature="e#7461#7624#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cita.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_12_031644_create_seguiminetos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/reportes/intervencion_individual.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="147" column="77" selection-start-line="147" selection-start-column="77" selection-end-line="147" selection-end-column="77" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#887#893#0#HTML" expanded="true" />
+            <element signature="e#1005#1011#0#HTML" expanded="true" />
+            <element signature="e#1167#1173#0#HTML" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#1486#1492#0#HTML" expanded="true" />
+            <element signature="e#1509#1515#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2089#2095#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2281#2287#0#HTML" expanded="true" />
+            <element signature="e#2655#2661#0#HTML" expanded="true" />
+            <element signature="e#2505#2511#0#HTML" expanded="true" />
+            <element signature="e#2669#2675#0#HTML" expanded="true" />
+            <element signature="e#2784#2790#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#6;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2940#2946#0#HTML" expanded="true" />
+            <element signature="e#3760#3766#0#HTML" expanded="true" />
+            <element signature="e#3821#3827#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#tr#9;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4341#4347#0#HTML" expanded="true" />
+            <element signature="e#4524#4530#0#HTML" expanded="true" />
+            <element signature="e#4551#4557#0#HTML" expanded="true" />
+            <element signature="e#4394#4400#0#HTML" expanded="true" />
+            <element signature="e#4716#4722#0#HTML" expanded="true" />
+            <element signature="e#4617#4623#0#HTML" expanded="true" />
+            <element signature="e#4749#4755#0#HTML" expanded="true" />
+            <element signature="e#4713#4719#0#HTML" expanded="true" />
+            <element signature="e#4809#4815#0#HTML" expanded="true" />
+            <element signature="e#4780#4786#0#HTML" expanded="true" />
+            <element signature="e#4953#4959#0#HTML" expanded="true" />
+            <element signature="e#5027#5033#0#HTML" expanded="true" />
+            <element signature="e#5042#5048#0#HTML" expanded="true" />
+            <element signature="e#5225#5231#0#HTML" expanded="true" />
+            <element signature="e#5297#5303#0#HTML" expanded="true" />
+            <element signature="e#5312#5318#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#tr#15;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5520#5526#0#HTML" expanded="true" />
+            <element signature="e#5638#5644#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#tr#21;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6143#6149#0#HTML" expanded="true" />
+            <element signature="e#6266#6272#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#tr#27;n#table#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6771#6777#0#HTML" expanded="true" />
+            <element signature="e#6894#6900#1#HTML" expanded="true" />
+            <element signature="n#tr#1;n#table#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#7573#7579#0#HTML" expanded="true" />
+            <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8643#8649#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#tr#11;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#11;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#1;n#th#0;n#tr#11;n#table#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#tr#1;n#table#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#14278#14284#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#table#0;n#div#0;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/IntervencionIndividual.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#40#59#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Seguimineto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="1518">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/docentesPermanencia/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+        <state relative-caret-position="-1702">
+          <caret line="389" column="41" selection-start-line="389" selection-start-column="41" selection-end-line="389" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/docentesPermanencia/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SeguimientoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="266" column="51" selection-start-line="266" selection-start-column="51" selection-end-line="266" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-672">
-          <caret line="93" column="70" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="70" />
+        <state relative-caret-position="115">
+          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
           <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
+            <element signature="e#40#71#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7383">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="53" />
+        <state relative-caret-position="510">
+          <caret line="164" column="40" lean-forward="true" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
         </state>
       </provider>
     </entry>

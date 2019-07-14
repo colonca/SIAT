@@ -10,7 +10,7 @@ class Estudiante extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'cedula','nombres','programa','direccion','email','telefono','celular',
+        'cedula','nombres','programa','direccion','email','telefono','celular','periodo',
          'periodo_academico','periodo_cronologico','promedio_general','promedio_semestral','estado','contraseña'
     ];
 
@@ -37,6 +37,12 @@ class Estudiante extends Model
     public function scopeNombre($query,$nombre){
         if($nombre)
             return $query->where('nombres','LIKE',"%$nombre%");
+    }
+
+
+    public function scopePeriodo($query,$periodo){
+        if($periodo)
+            return $query->where('periodo',$periodo);
     }
 
 }

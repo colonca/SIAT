@@ -17,7 +17,7 @@ class AddContraseñaToEstudiantes extends Migration
     public function down()
     {
         Schema::table('estudiantes', function (Blueprint $table) {
-            $table->dropColumn();
+            $table->dropColumn('contraseña');
         });
     }
 
