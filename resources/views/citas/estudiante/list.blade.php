@@ -49,54 +49,56 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($citas as $cita)
-                        <tr>
-                            <td>
-                                {{$cita->personal->primer_nombre.' '.$cita->personal->segundo_nombre
-                                .' '.$cita->personal->primer_apellido.' '.$cita->personal->segundo_apellido}}
-                            </td>
-                            <td>{{$cita->fecha}}</td>
-                            <td>{{$cita->hora}}:00</td>
-                            <td>
-                                @if($cita->estado == 'ATENDIDO')
-                                    <p  class="col-green">
-                                        {{$cita->estado}}
-                                    </p>
-                                @endif
-                                @if($cita->estado == 'PERDIDA')
-                                    <p class="col-red">
-                                        {{$cita->estado}}
-                                    </p>
-                                @endif
-                                @if($cita->estado == 'PENDIENTE')
-                                    <P class="col-blue ">
-                                        {{$cita->estado}}
-                                    </P>
-                                @endif
-                                @if($cita->estado == 'CANCELADA')
-                                    <P class="col-red ">
-                                        {{$cita->estado}}
-                                    </P>
-                                @endif
-                            </td>
-                            <td>
-                                @if($cita->estado == 'ATENDIDO')
-                                    <a class="col-green" title="cancelar cita" style="cursor: pointer">
-                                        <i class="tinny material-icons green-text">done_all</i>
-                                    </a>
-                                @endif
-                                @if($cita->estado == 'PERDIDA')
-                                    <a class="col-red" title="cancelar cita" style="cursor: pointer">
-                                        <i class="tinny material-icons green-text">done_all</i>
-                                    </a>
-                                @endif
-                                @if($cita->estado == 'PENDIENTE')
-                                    <a class="col-red" title="cancelar cita" style="cursor: pointer" onclick="cancelar(event,'{{$cita->id}}','{{$cita->fecha}}')">
-                                        <i class="tinny material-icons green-text">done_all</i>
-                                    </a>
-                                @endif
-                            </td>
-                        </tr>
+                    @foreach($citasEstudiante as $citas)
+                        @foreach($citas as $cita)
+                            <tr>
+                                <td>
+                                    {{$cita->personal->primer_nombre.' '.$cita->personal->segundo_nombre
+                                    .' '.$cita->personal->primer_apellido.' '.$cita->personal->segundo_apellido}}
+                                </td>
+                                <td>{{$cita->fecha}}</td>
+                                <td>{{$cita->hora}}:00</td>
+                                <td>
+                                    @if($cita->estado == 'ATENDIDO')
+                                        <p  class="col-green">
+                                            {{$cita->estado}}
+                                        </p>
+                                    @endif
+                                    @if($cita->estado == 'PERDIDA')
+                                        <p class="col-red">
+                                            {{$cita->estado}}
+                                        </p>
+                                    @endif
+                                    @if($cita->estado == 'PENDIENTE')
+                                        <P class="col-blue ">
+                                            {{$cita->estado}}
+                                        </P>
+                                    @endif
+                                    @if($cita->estado == 'CANCELADA')
+                                        <P class="col-red ">
+                                            {{$cita->estado}}
+                                        </P>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($cita->estado == 'ATENDIDO')
+                                        <a class="col-green" title="cancelar cita" style="cursor: pointer">
+                                            <i class="tinny material-icons green-text">done_all</i>
+                                        </a>
+                                    @endif
+                                    @if($cita->estado == 'PERDIDA')
+                                        <a class="col-red" title="cancelar cita" style="cursor: pointer">
+                                            <i class="tinny material-icons green-text">done_all</i>
+                                        </a>
+                                    @endif
+                                    @if($cita->estado == 'PENDIENTE')
+                                        <a class="col-red" title="cancelar cita" style="cursor: pointer" onclick="cancelar(event,'{{$cita->id}}','{{$cita->fecha}}')">
+                                            <i class="tinny material-icons green-text">done_all</i>
+                                        </a>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
                     @endforeach
                     </tbody>
                 </table>

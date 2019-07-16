@@ -37,11 +37,14 @@ Route::resource('docentes_permanencia','DocentePermanenciaController');
 
 //estudiantes
 Route::resource('estudiantes','EstudianteController');
+Route::post('estudiantes/save','EstudianteController@save')->name('estudiantes_save');
+Route::get('estudiante/{id}','EstudianteController@consultarEstudiante');
+
 //correo a contacto
 Route::post('mensageIndividual','MessageController@store');
 
 //citas
-Route::get('estudiante/login',function(){
+Route::get('login/estudiante',function(){
     return view('citas.agendar_cita');
 })->name('loginEstudiante');
 
@@ -59,11 +62,17 @@ Route::post('citas/estudiante/cancelarCita','CitaController@cancelarCita');
 
 
 //Intervenciones Individuales
+Route::resource('seguimientos','SeguimientoController');
 Route::resource('intervenciones_individuales','IntervencionIndividualController');
+Route::get('reporte/intervencion_individual/{id}','IntervencionIndividualController@pdfIntervencionIndividual')->name('pdf_intervencion_individual');
 
 //reportes
 Route::get('reportes/intervencion_individual','ReportesController@reporteIntervencionIndividual')->name('reporte_individual');
 Route::get('reportes/Estudiantes','ReportesController@reporte_Estudiante')->name('reporte_Estudiante');
+
+//periodo Academico
+Route::resource('periodoa','PeriodoacademicoController');
+Route::delete('periodoa/delete/{id}','PeriodoacademicoController@destroy');
 
 
 

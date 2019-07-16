@@ -6,15 +6,13 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateEstudiantesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('estudiantes', function (Blueprint $table) {
-            $table->string('cedula', 16)->primary();
+
+            $table->bigIncrements('id');
+            $table->string('cedula', 16);
             $table->string('nombres',100);
             $table->string('programa',65);
             $table->string('direccion',100)->nullable();
@@ -26,7 +24,10 @@ class CreateEstudiantesTable extends Migration
             $table->float('promedio_general')->nullable();
             $table->float('promedio_semestral')->nullable();
             $table->string('estado',20)->nullable();
+            $table->bigInteger('periodo_id')->unsigned();
+            $table->foreign('periodo_id')->references('id')->on('periodoacademicos');
             $table->timestamps();
+
         });
     }
 

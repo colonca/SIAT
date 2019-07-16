@@ -46,68 +46,76 @@
                 </div>
             </div>
             <div class="body table-responsive">
-                <div class="card">
-                    <div class="body container">
-                        <h3 class="col-blue-grey m-b-20">Filtrar</h3>
-                        <form action="{{route('estudiantes.index')}}" method="get">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <b>Riesgo</b>
-                                            <select name="riesgo" id="" class="form-group">
-                                                <option value="">Selecione...</option>
-                                                <option value="Riesgo Bajo">Riesgo Bajo</option>
-                                                <option value="super Bajo">Riesgo super Bajo</option>
-                                                <option value="Riesgo Medio">Riesgo Medio</option>
-                                                <option value="Alto">Riesgo Alto</option>
-                                                <option value="super Alto">Riesgo Super Alto</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b>Programa</b>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                                <input type="text" name="programa" class="form-control date" placeholder="criterio de busqueda para el programa">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b>Cedula</b>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                                <input type="text" name="cedula" class="form-control date" placeholder="criterio de busqueda para el Alumno">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="col-md-6">
-                                        <b>Nombres</b>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                                <input type="text" name="nombre" class="form-control date" placeholder="criterio de busqueda para el Alumno">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <b>Promedio</b>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                                <input type="text" name="promedio" class="form-control date" placeholder="promedio">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 m-b--110">
-                                    <button type="submit" class="btn  btn-block btn-success ">Buscar</button>
+
+                <h3 class="col-blue-grey m-b-20">Filtrar</h3>
+                <form action="{{route('estudiantes.index')}}" method="get">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <b>Riesgo</b>
+                                    <select name="riesgo" id="" class="form-group">
+                                        <option value="">Selecione...</option>
+                                        <option value="Riesgo Bajo">Riesgo Bajo</option>
+                                        <option value="super Bajo">Riesgo super Bajo</option>
+                                        <option value="Riesgo Medio">Riesgo Medio</option>
+                                        <option value="Alto">Riesgo Alto</option>
+                                        <option value="super Alto">Riesgo Super Alto</option>
+                                    </select>
                                 </div>
                             </div>
-
-                        </form>
+                            <div class="col-md-3">
+                                <b>Programa</b>
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="text" name="programa" class="form-control date" placeholder="criterio de busqueda para el programa">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <b>Cedula</b>
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="text" name="cedula" class="form-control date" placeholder="criterio de busqueda para el Alumno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <b>Periodo</b>
+                                    <select name="periodo" id="" class="form-group">
+                                        <option value="">Selecione...</option>
+                                        @foreach($periodos as $periodo)
+                                            <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-6">
+                                <b>Nombres</b>
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="text" name="nombre" class="form-control date" placeholder="criterio de busqueda para el Alumno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <b>Promedio</b>
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input type="text" name="promedio" class="form-control date" placeholder="promedio">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 m-b--110">
+                            <button type="submit" class="btn  btn-block btn-success ">Buscar</button>
+                        </div>
                     </div>
-                </div>
+                </form>
+
                 <table class="table table-condensed table-bordered table-striped" id="grupos">
                     <thead>
                     <tr>

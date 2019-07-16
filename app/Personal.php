@@ -8,7 +8,6 @@ class Personal extends Model
 {
     protected  $table = 'personal';
 
-
     protected  $fillable =  [
         'cedula','primer_nombre','segundo_nombre',
         'primer_apellido','segundo_apellido','fecha_nacimiento',
