@@ -40,7 +40,7 @@
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset('css/all-themes.min.css')}}" rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
 
 
     @yield('styles')
@@ -461,6 +461,8 @@
 <script src="{{asset('js/notifications.js')}}"></script>
 
 <script src="{{asset('js/jquery.dataTables.js')}}"></script>
+
+<script src="{{asset('js/dataTables.bootstrap.js')}}"></script>
 
 <script src="{{asset('js/notify.min.js')}}"></script>
 

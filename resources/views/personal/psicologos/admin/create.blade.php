@@ -35,7 +35,7 @@
             <form id="formulario" method="POST">
                 <h3>Datos del Personales del Estudiante</h3>
                 <fieldset>
-                        <div class="row clearfix">
+                    <div class="row clearfix">
                                 <div class="col-md-6">
                                     <b>No. Historia Psicológica</b>
                                     <div class="input-group">
