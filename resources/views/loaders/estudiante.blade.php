@@ -34,7 +34,7 @@
                 </div>
                 <div class="body">
                     <div class="alert alert-success">
-                        <strong>Detalles: </strong>  Recuerde Que el archivo debe estar en el formato correcto para que se puede realizar el cargue correctamente en la base de datos.
+                        <strong>Detalles: </strong>  Recuerde que el archivo debe estar en el formato correcto para que se pueda cargar correctamente en la base de datos.
                         <a onclick="showEjemplo(event)" href="javascript:void(0);" class="alert-link">Ver Ejemplo</a></a>.
                     </div>
                     <div class="row clearfix">

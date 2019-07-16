@@ -47,6 +47,7 @@
                                                  <input type="text" name="no_historia" class="form-control">
                                          </div>
                                      </div>
+
                                 </div>
         
                                 <div class="col-md-4">
