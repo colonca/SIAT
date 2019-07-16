@@ -167,6 +167,9 @@
              }else{
                  $('#exampleModalCenter').modal('hide');
                  $.notify('seguimiento registrado correctamente','success');
+                 setTimeout(function () {
+                      window.location.reload();
+                 },3000);
              }
            });
 

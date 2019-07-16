@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Estudiante;
+use App\Periodoacademico;
 use App\Utiles\Procedimientos;
 use Illuminate\Http\Request;
 
@@ -22,24 +23,26 @@ class EstudianteController extends Controller
         $cedula = $request->get('cedula');
         $promedio = $request->get('promedio');
         $nombre = $request->get('nombre');
+        $periodo = $request->get('periodo');
 
         $estudiantes = Estudiante::orderBy('programa', 'ASC')
             ->cedula($cedula)
             ->riesgo($riesgo)
             ->programa($programa)
             ->promedio($promedio)
+            ->periodo($periodo)
             ->nombre($nombre)
-            ->periodo(Procedimientos::periodoDelAnhoActual())
             ->paginate(8);
 
-        $estudiantes->withPath("estudiantes?riesgo=$riesgo&programa=$programa&cedula=$cedula");
+        $periodos = Periodoacademico::all();
 
-        return view('estudiantes.index', compact('estudiantes'));
+        $estudiantes->withPath("estudiantes?riesgo=$riesgo&programa=$programa&cedula=$cedula&periodo=$periodo&nombre=$nombre");
+
+        return view('estudiantes.index', compact('estudiantes','periodos'));
 
     }
 
     public function consultarEstudiante($id){
-
 
         $estudiante  =  Estudiante::where([
             ['cedula',$id],
@@ -53,43 +56,56 @@ class EstudianteController extends Controller
 
     public function create()
     {
-        //
+       $periodos = Periodoacademico::all();
+        return view('estudiantes.create',compact('periodos'));
     }
 
-    public function store(Request $request)
+    public function save(Request $request)
     {
-        //
+
+        $queryEstudiante = Estudiante::where([
+            ['cedula',$request->get('cedula')],
+            ['periodo_id',$request->get('periodo')]
+        ])->first();
+
+        if($queryEstudiante){
+            return redirect()->route('estudiantes.create')
+                ->with('error','El estudiante ya se encuentra registrado para el periodo actual');
+        }
+
+        $estudiante =  new Estudiante();
+        $estudiante->cedula = $request->get('cedula');
+        $estudiante->nombres = $request->get('nombres');
+        $estudiante->programa = $request->get('programa');
+        $estudiante->direccion = $request->get('direccion');
+        $estudiante->telefono = $request->get('telefono');
+        $estudiante->celular = $request->get('celular');
+        $estudiante->email =  $request->get('email');
+        $estudiante->periodo_academico = $request->get('periodo_academico');
+        $estudiante->periodo_cronologico = $request->get('periodo_cronologico');
+        $estudiante->promedio_general = $request->get('promedio_general');
+        $estudiante->promedio_semestral = $request->get('promedio_semestral');
+        $estudiante->contraseña = bcrypt($request->get('cedula'));
+        $estudiante->periodo_id = $request->get('periodo');
+        $estudiante->save();
+
+        return redirect()->route('estudiantes.create')
+        ->with('info','Datos Guardados Correctamente');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //

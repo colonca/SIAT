@@ -30,7 +30,7 @@ class SeguimientoController extends Controller
 
         $intervencion = IntervencionIndividual::find($request->get('intervencion_id'));
 
-        if($intervencion->seguimientos->count() < 4){
+        if($intervencion->seguimientos->count() <= 2){
             $seguimiento = new Seguimineto();
             $seguimiento->descripcion = $request->get('descripcion');
             $seguimiento->fecha =  $request->get('fecha');

@@ -44,6 +44,15 @@
                                 {!! Form::label('file', 'Agregar Archivo de Excel') !!}
                                 {!! Form::file('file',null, ['required' => 'true','class' => 'form-control','id' => 'file']) !!}
                             </div>
+                            <div class="form-group">
+                                {!! Form::label('periodo', 'Periodo Academico') !!}
+                                <select name="periodo" id="periodo" required>
+                                    <option value="" >por favor, elije una opcion</option>
+                                    @foreach($periodos as $periodo)
+                                        <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
                             <div class="form-group" id="check" style="display: none">
                                 <img src="{{asset('images/checkedvalid.gif')}}" alt="" width="80px" height="80px">
@@ -99,19 +108,24 @@
                btn.disabled = true;
                let spinner = document.getElementById('spinner');
                let check = document.getElementById('check');
-               spinner.style.display = 'block';
                let form  = document.getElementById('form');
                let datos = new FormData(form);
-               axios.post('{{route('loaderestudiante')}}',datos).then(response => {
-                    spinner.style.display = 'none';
-                    check.style.display = 'block';
-                    setTimeout(function () {
-                        check.style.display = 'none';
-                        btn.disabled = false;
-                    },3000);
+               if($('#periodo').val()==''){
+                 $.notify('por favor selecione el periodo');
+               }else{
+                   spinner.style.display = 'block';
+                   axios.post('{{route('loaderestudiante')}}',datos).then(response => {
+                       spinner.style.display = 'none';
+                       check.style.display = 'block';
+                       setTimeout(function () {
+                           check.style.display = 'none';
+                           btn.disabled = false;
+                       },3000);
 
-                    location.href = "{{route('loaders')}}";
-               });
+                       location.href = "{{route('loaders')}}";
+                   });
+               }
+
            }
     </script>
 @endsection

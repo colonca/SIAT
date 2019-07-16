@@ -8,11 +8,15 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class StudentImport implements ToModel
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+
+    public $periodo;
+
+    public function __construct($periodo)
+    {
+       $this->periodo = $periodo;
+    }
+
+
     public function model(array $row)
     {
         return new Estudiante([
@@ -29,7 +33,7 @@ class StudentImport implements ToModel
             'promedio_semestral'=> $row[10] == '' ? 0 : $row[10],
             'estado'=> $row[11],
             'contraseña' => $row[0],
-            'periodo' => Procedimientos::periodoDelAnhoActual()
+            'periodo_id' => $this->periodo
         ]);
     }
 }

@@ -201,11 +201,11 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          FECHA:
+                          FECHA:  {{$intervencion->seguimientos->count() >= 1 ? $intervencion->seguimientos[0]->fecha : ''}}
                       </th>
                   </tr>
                   <tr>
-                      <td colspan="2" height="150px">&nbsp;</td>
+                      <td colspan="2" height="150px">&nbsp;{{$intervencion->seguimientos->count() >= 1 ? $intervencion->seguimientos[0]->descripcion : ''}}</td>
                   </tr>
                   <tr>
                       <td align="left" colspan="2">&nbsp;FIRMA DEL ESTUDIANTE:</td>
@@ -224,11 +224,11 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          FECHA:
+                          FECHA: {{$intervencion->seguimientos->count() >= 2 ? $intervencion->seguimientos[1]->fecha : ''}}
                       </th>
                   </tr>
                   <tr>
-                      <td colspan="2" height="150px">&nbsp;</td>
+                      <td colspan="2" height="150px">&nbsp;{{$intervencion->seguimientos->count() >= 2 ? $intervencion->seguimientos[1]->descripcion : ''}}</td>
                   </tr>
                   <tr>
                       <td align="left" colspan="2">&nbsp;FIRMA DEL ESTUDIANTE:</td>
@@ -270,10 +270,10 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          FECHA:
+                          FECHA:{{$intervencion->seguimientos->count() == 3 ? $intervencion->seguimientos[2]->fecha : ''}}
                       </th>
                   <tr>
-                      <td colspan="2" height="150px">&nbsp;</td>
+                      <td colspan="2" height="150px">&nbsp;{{$intervencion->seguimientos->count() == 3 ? $intervencion->seguimientos[2]->descripcion : ''}}</td>
                   </tr>
                   <tr>
                       <td align="left" colspan="2">&nbsp;FIRMA DEL ESTUDIANTE:</td>

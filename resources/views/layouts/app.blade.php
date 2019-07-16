@@ -323,7 +323,7 @@
                             @if(session()->has('PAG_PSICOLOGOS'))
                         <li>
                             <a href="{{route('psicologos.index')}}">
-                                <span>Psicologos</span>
+                                <span>Talleristas</span>
                             </a>
                         </li>
                         @endif
@@ -403,6 +403,12 @@
                  </a>
              </li>
            @endif
+                <li>
+                    <a href="{{route('periodoa.index')}}">
+                        <i class="material-icons">people</i>
+                        <span>Periodos Academicos</span>
+                    </a>
+                </li>
                                  
             </ul>
         </div>

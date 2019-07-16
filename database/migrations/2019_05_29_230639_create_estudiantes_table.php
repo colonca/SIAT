@@ -24,7 +24,8 @@ class CreateEstudiantesTable extends Migration
             $table->float('promedio_general')->nullable();
             $table->float('promedio_semestral')->nullable();
             $table->string('estado',20)->nullable();
-            $table->string('periodo',6)->nullable();
+            $table->bigInteger('periodo_id')->unsigned();
+            $table->foreign('periodo_id')->references('id')->on('periodoacademicos');
             $table->timestamps();
 
         });
