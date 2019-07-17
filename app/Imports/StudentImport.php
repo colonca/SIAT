@@ -3,15 +3,20 @@
 namespace App\Imports;
 
 use App\Estudiante;
+use App\Utiles\Procedimientos;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class StudentImport implements ToModel
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+
+    public $periodo;
+
+    public function __construct($periodo)
+    {
+       $this->periodo = $periodo;
+    }
+
+
     public function model(array $row)
     {
         return new Estudiante([
@@ -27,7 +32,8 @@ class StudentImport implements ToModel
             'promedio_general'=> $row[9] == '' ? 0 : $row[9],
             'promedio_semestral'=> $row[10] == '' ? 0 : $row[10],
             'estado'=> $row[11],
-            'contraseña' => $row[0]
+            'contraseña' => $row[0],
+            'periodo_id' => $this->periodo
         ]);
     }
 }

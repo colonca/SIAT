@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Estudiante;
 use App\Exceptions\LoaderException;
 use App\Imports\StudentImport;
+use App\Periodoacademico;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
@@ -19,7 +20,8 @@ class LoaderExcelController extends Controller
     }
 
     public function viewEstudiantes(){
-       return view('loaders.estudiante');
+        $periodos = Periodoacademico::all();
+       return view('loaders.estudiante',compact('periodos'));
     }
 
     public function loadEstudiantes(Request $request){
@@ -35,7 +37,7 @@ class LoaderExcelController extends Controller
 
                $ruta = $request->file('file')->getRealPath();
 
-               Excel::import(new StudentImport,$ruta);
+               Excel::import(new StudentImport($request->get('periodo')),$ruta);
 
                return response([
                     'success' => true
