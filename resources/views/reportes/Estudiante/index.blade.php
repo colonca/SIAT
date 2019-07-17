@@ -21,30 +21,31 @@
                                     <th>Riesgo Alto</th>
                                     <th>Riesgo Medio</th>
                                     <th>Riesgo Bajo</th>
-                                    <th>Riesgo Súper Bajo</th>
+                                    <th>Riesgo Super Bajo</th>
                                     <th>Total General</th>
                                 </tr>
                             </thead>
                             <tfoot class="bg-cyan">
-                                    <th>Total General</th>
-                                    <th>55</th>
-                                    <th>731</th>
-                                    <th>7340</th>
-                                    <th>2427</th>
-                                    <th>1867</th>
-                                    <th>12420</th>
-
+                            <th>Total General</th>
+                            <th>{{$totales[0]}}</th>
+                            <th>{{$totales[1]}}</th>
+                            <th>{{$totales[2]}}</th>
+                            <th>{{$totales[3]}}</th>
+                            <th>{{$totales[4]}}</th>
+                            <th>{{$totales[0]+$totales[1]+$totales[2]+$totales[3]+$totales[4]}}</th>
                             </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>2016-1</td>
-                                    <td>55</td>
-                                    <td>731</td>
-                                    <td>7340</td>
-                                    <td>2427</td>
-                                    <td>1867</td>
-                                    <td>12420</td>
-                                </tr>
+                              @foreach($datos as $dato)
+                                  <tr>
+                                      <td>{{$dato['periodo']}}</td>
+                                      <td>{{$dato['Riesgo super alto']}}</td>
+                                      <td>{{$dato['Alto']}}</td>
+                                      <td>{{$dato['Riesgo Medio']}}</td>
+                                      <td>{{$dato['Riesgo Bajo']}}</td>
+                                      <td>{{$dato['Riesgo super Bajo']}}</td>
+                                      <td>{{$dato['Riesgo super alto']+$dato['Alto']+$dato['Riesgo Medio']+$dato['Riesgo Bajo']+$dato['Riesgo super Bajo']}}</td>
+                                  </tr>
+                              @endforeach
                             </tbody>
                         </table>
                 </div>   
@@ -56,7 +57,7 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <h2>GRÁFICO DE LINEA</h2>
+                <h2><center>ESTUDIANTES CLASIFICADOS POR NIVEL DE RIESGO-LINEA</center></h2>
             </div>
             <div class="body">
                 <canvas id="line_chart" height="150"></canvas>
@@ -68,7 +69,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <h2>GRÁFICO DE BARRAS</h2>
+                <h2><center>ESTUDIANTES CLASIFICADOS POR NIVEL DE RIESGO-BARRAS</center></h2>
             </div>
             <div class="body">
                 <canvas id="bar_chart" height="150"></canvas>
@@ -117,56 +118,32 @@
                                         </tr>
                                     </thead>
                                     <tfoot class="bg-cyan">
-                                            <th>Total General</th>
-                                            <th>55</th>
-                                            <th>731</th>
-                                            <th>7340</th>
-                                            <th>2427</th>
-                                            <th>1867</th>
-                                            <th>12420</th>
-        
+                                    <th>Total General</th>
+                                    <th>{{$totales[0]}}</th>
+                                    <th>{{$totales[1]}}</th>
+                                    <th>{{$totales[2]}}</th>
+                                    <th>{{$totales[3]}}</th>
+                                    <th>{{$totales[4]}}</th>
+                                    <th>{{$totales[0]+$totales[1]+$totales[2]+$totales[3]+$totales[4]}}</th>
                                     </tfoot>
                                     <tbody>
+                                    @foreach($datosPrograma as $dato)
                                         <tr>
-                                            <td>2016-1</td>
-                                            <td>55</td>
-                                            <td>731</td>
-                                            <td>7340</td>
-                                            <td>2427</td>
-                                            <td>1867</td>
-                                            <td>12420</td>
+                                            <td>{{$dato['programa']}}</td>
+                                            <td>{{$dato['Riesgo super alto']}}</td>
+                                            <td>{{$dato['Alto']}}</td>
+                                            <td>{{$dato['Riesgo Medio']}}</td>
+                                            <td>{{$dato['Riesgo Bajo']}}</td>
+                                            <td>{{$dato['Riesgo super Bajo']}}</td>
+                                            <td>{{$dato['Riesgo super alto']+$dato['Alto']+$dato['Riesgo Medio']+$dato['Riesgo Bajo']+$dato['Riesgo super Bajo']}}</td>
                                         </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                         </div>   
                 </div>
             </div>
         </div>
-        
-            <!-- Line Chart -->
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>GRÁFICO DE LINEA</h2>
-                    </div>
-                    <div class="body">
-                        <canvas id="line_chart2" height="150"></canvas>
-                    </div>
-                </div>
-            </div>
-        
-              <!-- Bar Chart -->
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>GRÁFICO DE BARRAS</h2>
-                    </div>
-                    <div class="body">
-                        <canvas id="bar_chart2" height="150"></canvas>
-                    </div>
-                </div>
-            </div>  
-
 
 @endsection
 
@@ -255,39 +232,66 @@ $(document).ready(function() {
 
 
 <script>
-
+var periodo;
 $(function () {
-    new Chart(document.getElementById("line_chart").getContext("2d"), getChartJs('line'));
-    new Chart(document.getElementById("bar_chart").getContext("2d"), getChartJs('bar'));
-    new Chart(document.getElementById("line_chart2").getContext("2d"), getChartJs('line'));
-    new Chart(document.getElementById("bar_chart2").getContext("2d"), getChartJs('bar'));
+
+    axios.get('{{url('reportes/Periodos')}}')
+        .then(response => {
+            datos = response.data;
+            new Chart(document.getElementById("line_chart").getContext("2d"), getChartJs('line',datos));
+            new Chart(document.getElementById("bar_chart").getContext("2d"), getChartJs('bar',datos));
+        });
 });
 
-function getChartJs(type) {
+function getChartJs(type,datos) {
     var config = null;
 
     if (type === 'line') {
         config = {
             type: 'line',
             data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                labels: datos.periodos,
                 datasets: [{
-                    label: "My First dataset",
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    borderColor: 'rgba(0, 188, 212, 0.75)',
-                    backgroundColor: 'rgba(0, 188, 212, 0.3)',
-                    pointBorderColor: 'rgba(0, 188, 212, 0)',
-                    pointBackgroundColor: 'rgba(0, 188, 212, 0.9)',
+                    label: "Riesgo Super Alto",
+                    data: datos.riesgoSuperAlto,
+                    borderColor: 'rgba(68, 114, 196, 0.75)',
+                    backgroundColor: 'rgba(68, 114, 196, 0.3)',
+                    pointBorderColor: 'rgba(68, 114, 196, 0)',
+                    pointBackgroundColor: 'rgba(68, 114, 196, 0.9)',
                     pointBorderWidth: 1
                 }, {
-                        label: "My Second dataset",
-                        data: [28, 48, 40, 19, 86, 27, 90],
-                        borderColor: 'rgba(233, 30, 99, 0.75)',
-                        backgroundColor: 'rgba(233, 30, 99, 0.3)',
-                        pointBorderColor: 'rgba(233, 30, 99, 0)',
-                        pointBackgroundColor: 'rgba(233, 30, 99, 0.9)',
+                        label: "Riesgo Alto",
+                        data: datos.riesgoAlto,
+                        borderColor: 'rgba(237, 125, 49, 0.75)',
+                        backgroundColor: 'rgba(237, 125, 49, 0.3)',
+                        pointBorderColor: 'rgba(237, 125, 49, 0)',
+                        pointBackgroundColor: 'rgba(237, 125, 49, 0.9)',
                         pointBorderWidth: 1
-                    }]
+                    },{
+                    label: "Riesgo Medio",
+                    data: datos.riesgoMedio,
+                    borderColor: 'rgba(165, 165, 165, 0.75)',
+                    backgroundColor: 'rgba(165, 165, 165, 0.3)',
+                    pointBorderColor: 'rgba(165, 165, 165, 0)',
+                    pointBackgroundColor: 'rgba(165, 165, 165, 0.9)',
+                    pointBorderWidth: 1
+                },{
+                    label: "Riesgo Bajo",
+                    data: datos.riegoBajo,
+                    borderColor: 'rgba(255, 192, 0, 0.75)',
+                    backgroundColor: 'rgba(255, 192, 0, 0.3)',
+                    pointBorderColor: 'rgba(255, 192, 0, 0)',
+                    pointBackgroundColor: 'rgba(255, 192, 0, 0.9)',
+                    pointBorderWidth: 1
+                },{
+                    label: "Riesgo Super Bajo",
+                    data: datos.riesgoSuperBajo,
+                    borderColor: 'rgba(68, 114, 196, 0.75)',
+                    backgroundColor: 'rgba(68, 114, 196, 0.3)',
+                    pointBorderColor: 'rgba(68, 114, 196, 0)',
+                    pointBackgroundColor: 'rgba(68, 114, 196, 0.9)',
+                    pointBorderWidth: 1
+                }]
             },
             options: {
                 responsive: true,
@@ -299,16 +303,29 @@ function getChartJs(type) {
         config = {
             type: 'bar',
             data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                labels: datos.periodos,
                 datasets: [{
-                    label: "My First dataset",
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    backgroundColor: 'rgba(0, 188, 212, 0.8)'
+                    label: "Riesgo Super Alto",
+                    data:datos.riesgoSuperAlto,
+                    backgroundColor: 'rgba(68, 114, 196, 0.8)'
                 }, {
-                        label: "My Second dataset",
-                        data: [28, 48, 40, 19, 86, 27, 90],
-                        backgroundColor: 'rgba(233, 30, 99, 0.8)'
-                    }]
+                        label: "Riesgo Alto",
+                        data: datos.riesgoAlto,
+                        backgroundColor: 'rgba(237, 125, 49, 0.8)'
+                    },{
+
+                        label: "Riesgo Medio",
+                        data: datos.riesgoMedio,
+                        backgroundColor: 'rgba(165, 165, 165, 0.8)'
+                },{
+                    label: "Riesgo Bajo",
+                    data: datos.riegoBajo,
+                    backgroundColor: 'rgba(255, 192, 0, 0.8)'
+                },{
+                    label: "Riesgo Super Bajo",
+                    data: datos.riesgoSuperBajo,
+                    backgroundColor: 'rgba(68, 114, 196, 0.8)'
+                }]
             },
             options: {
                 responsive: true,

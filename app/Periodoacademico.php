@@ -14,4 +14,8 @@ class Periodoacademico extends Model {
             //
     ];
 
+    public function estudiantes(){
+        return $this->hasMany(Estudiante::class,'periodo_id','id');
+    }
+
 }
