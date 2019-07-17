@@ -63,7 +63,9 @@ Route::resource('intervenciones_individuales','IntervencionIndividualController'
 
 //reportes
 Route::get('reportes/intervencion_individual','ReportesController@reporteIntervencionIndividual')->name('reporte_individual');
+Route::get('reportes/intervencion_general','ReportesController@reporteIntervencionIndividualGeneral')->name('reportes_Generales');
 Route::get('reportes/Estudiantes','ReportesController@reporte_Estudiante')->name('reporte_Estudiante');
+Route::get('reportes/Impresion_Diagnostica','ReportesController@reporteImpresionDiagnostica')->name('reporte_Diagnostico');
 
 
 
