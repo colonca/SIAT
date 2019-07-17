@@ -16,6 +16,18 @@ class ReportesController extends Controller
 
      }
 
+     public function reporteIntervencionIndividualGeneral(){
+           
+      return view('reportes.intervencion_individual.reporte_General');
+
+   }
+
+   public function reporteImpresionDiagnostica(){
+           
+      return view('reportes.intervencion_individual.r_impresion_Diagnostica');
+
+   }
+
      
      public function reporte_Estudiante(){
            
