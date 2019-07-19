@@ -18,4 +18,8 @@ class Periodoacademico extends Model {
         return $this->hasMany(Estudiante::class,'periodo_id','id');
     }
 
+    public function intervencionesIndividuales(){
+        return $this->hasMany(IntervencionIndividual::class,'periodo_id','id');
+    }
+
 }

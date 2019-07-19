@@ -6,6 +6,7 @@ use App\Estudiante;
 use App\Periodoacademico;
 use App\Utiles\Procedimientos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EstudianteController extends Controller
 {
@@ -34,23 +35,34 @@ class EstudianteController extends Controller
             ->nombre($nombre)
             ->paginate(8);
 
+        $programas= DB::table('estudiantes')
+            ->select('programa')
+            ->distinct()->get();
+
         $periodos = Periodoacademico::all();
 
         $estudiantes->withPath("estudiantes?riesgo=$riesgo&programa=$programa&cedula=$cedula&periodo=$periodo&nombre=$nombre");
 
-        return view('estudiantes.index', compact('estudiantes','periodos'));
+        return view('estudiantes.index', compact('estudiantes','periodos','programas'));
 
     }
 
     public function consultarEstudiante($id){
 
+        $fechaFFase = date('Y-m-d');
+
+        $periodo = Periodoacademico::where([
+            ['fechainicioclases','<=',$fechaFFase],
+            ['fechafinclases','>=',$fechaFFase]
+        ])->first();
+
+
         $estudiante  =  Estudiante::where([
             ['cedula',$id],
-            ['periodo',Procedimientos::periodoDelAnhoActual()]
+            ['periodo_id',$periodo->id]
         ])->first();
 
         return json_encode($estudiante);
-
     }
 
 

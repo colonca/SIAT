@@ -67,9 +67,12 @@
                             <div class="col-md-3">
                                 <b>Programa</b>
                                 <div class="input-group">
-                                    <div class="form-line">
-                                        <input type="text" name="programa" class="form-control date" placeholder="criterio de busqueda para el programa">
-                                    </div>
+                                    <select name="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
+                                        <option value="">por favor, elejir para filtrar</option>
+                                        @foreach($programas as $programa)
+                                            <option value="{{$programa->programa}}">{{$programa->programa}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-3">

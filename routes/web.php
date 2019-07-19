@@ -68,8 +68,12 @@ Route::get('reporte/intervencion_individual/{id}','IntervencionIndividualControl
 
 //reportes
 Route::get('reportes/intervencion_individual','ReportesController@reporteIntervencionIndividual')->name('reporte_individual');
+Route::get('reportes/intervencion_general','ReportesController@reporteIntervencionIndividualGeneral')->name('reportes_Generales');
 Route::get('reportes/Estudiantes','ReportesController@reporte_Estudiante')->name('reporte_Estudiante');
+Route::get('reportes/Impresiones/{programa}/{periodo}','ReportesController@reporte_periodo')->name('reporte_impresion');
+
 Route::get('reportes/Periodos','ReportesController@getDatos')->name('periodo_datos');
+Route::get('reportes/Impresion_Diagnostica','ReportesController@reporteImpresionDiagnostica')->name('reporte_Diagnostico');
 
 //periodo Academico
 Route::resource('periodoa','PeriodoacademicoController');

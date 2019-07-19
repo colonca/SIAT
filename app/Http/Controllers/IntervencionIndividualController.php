@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Estudiante;
 use App\ImpresionDiagnostica;
 use App\IntervencionIndividual;
+use App\Periodoacademico;
 use App\Personal;
 use App\User;
 use App\Utiles\Procedimientos;
@@ -23,10 +24,12 @@ class IntervencionIndividualController extends Controller
 
     public function index()
     {
+
+
         $personal = Personal::where('cedula', Auth::user()->cedula)->first();
         $intervenciones = IntervencionIndividual::where([
-            ['cedula',"63495286"],
-            ['periodo',Procedimientos::periodoDelAnhoActual()]
+            ['cedula',Auth::user()->cedula],
+            ['periodo_id',Procedimientos::periodoDelAnhoActual()]
         ])->get();
 
         return view('personal.psicologos.admin.intervencion',compact('intervenciones'));
@@ -41,9 +44,10 @@ class IntervencionIndividualController extends Controller
 
     public function store(Request $request)
     {
+
         $currentIntervencion = IntervencionIndividual::where([
             ['estudiante_id',$request->get('estudiante_id')],
-            ['periodo',Procedimientos::periodoDelAnhoActual()]
+            ['periodo_id',Procedimientos::periodoDelAnhoActual()]
         ])->first();
 
         if($currentIntervencion){
@@ -74,7 +78,7 @@ class IntervencionIndividualController extends Controller
         $intervencion->plan_de_accion = $request->get('plan');
         $intervencion->antecedentes_personales = $request->get('antecedentesPersonales');
         $intervencion->antecedentes_familiares = $request->get('antecedentesfamiliares');
-        $intervencion->periodo = Procedimientos::periodoDelAnhoActual();
+        $intervencion->periodo_id = Procedimientos::periodoDelAnhoActual();
 
         $intervencion->save();
 

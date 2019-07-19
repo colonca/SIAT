@@ -18,7 +18,8 @@ class AddColumnsToInterncionIndividual extends Migration
             $table->string('antecedentes_familiares')->nullable();
             $table->string('plan_de_accion');
             $table->string('tipo_de_familia_desc');
-            $table->string('periodo',9);
+            $table->bigInteger('periodo_id')->unsigned();
+            $table->foreign('periodo_id')->references('id')->on('periodoacademicos')->onDelete('CASCADE');
         });
     }
 
@@ -34,7 +35,7 @@ class AddColumnsToInterncionIndividual extends Migration
             $table->dropColumn('antecedentes_familiares');
             $table->dropColumn('plan_de_accion');
             $table->dropColumn('tipo_de_familia_desc');
-            $table->dropColumn('periodo',9);
+            $table->dropColumn('periodo_id');
         });
     }
 }

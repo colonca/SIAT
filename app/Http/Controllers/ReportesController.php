@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Estudiante;
+use App\ImpresionDiagnostica;
+use App\IntervencionIndividual;
 use App\Periodoacademico;
+use App\Personal;
+use App\Seguimineto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,6 +22,44 @@ class ReportesController extends Controller
         return view('reportes.intervencion_individual.index');
 
      }
+
+     public function reporteIntervencionIndividualGeneral(Request $request){
+
+       $talleristas = Personal::where('tipo_usuario','psicologo')->get();
+       $periodos = Periodoacademico::all();
+
+       $intervenciones = IntervencionIndividual::orderBy('periodo_id','ASC')
+                         ->cedula($request->get('tallerista'))
+                         ->periodo($request->get('periodo'))
+                         ->get();
+
+
+      return view('reportes.intervencion_individual.reporte_General',compact('intervenciones','talleristas','periodos'));
+
+    }
+
+     public function reporteImpresionDiagnostica(Request $request){
+
+     $periodos = Periodoacademico::all();
+     $programas= DB::table('estudiantes')
+         ->select('programa')
+         ->distinct()->get();
+
+     if($request->exists('programa') and $request->exists('periodo')){
+
+         $impresionesDiagnosticas = ImpresionDiagnostica::whereHas('intervenciones',function($query) use($request){
+             $query->whereHas('estudiante',function ($query) use($request){
+                 $query->where('programa',$request->get('programa'));
+             })->periodo($request->get('periodo'));
+         })->get();
+
+
+     }else{
+         $impresionesDiagnosticas = ImpresionDiagnostica::all();
+     }
+
+      return view('reportes.intervencion_individual.r_impresion_Diagnostica',compact('periodos','programas','impresionesDiagnosticas'));
+   }
 
      public function reporte_Estudiante(){
 
@@ -178,5 +220,42 @@ class ReportesController extends Controller
          ]);
      }
 
+     public function reporte_periodo($programa,$periodo){
+
+         if($programa){
+             $impresionesDiagnosticas = ImpresionDiagnostica::whereHas('intervenciones',function($query) use($periodo,$programa){
+                 $query->whereHas('estudiante',function ($query) use($programa){
+                     $query->where('programa',$programa);
+                 })->periodo($periodo);
+             })->get();
+         }else{
+             $impresionesDiagnosticas = ImpresionDiagnostica::periodo($periodo)
+             ->get();
+         }
+
+
+         if(count($impresionesDiagnosticas)>0){
+
+             foreach ($impresionesDiagnosticas as $impresion){
+
+                 $datos[] = [
+                     'impresion' => $impresion->descripcion,
+                     'cantidad' => $impresion->intervenciones->count()
+                 ];
+
+                 $datosGrafica[] = $impresion->intervenciones->count();
+                 $datosTitle[] = $impresion->descripcion;
+             }
+
+             return response()->json([
+                 'status' => 'ok',
+                 'datos' => $datos,
+                 'grafica'=>$datosGrafica,
+                 'title' => $datosTitle
+             ]);
+
+         }
+
+     }
 
 }

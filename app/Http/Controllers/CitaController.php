@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cita;
 use App\Estudiante;
+use App\Periodoacademico;
 use App\Personal;
 use App\Utiles\Festivos;
 use App\Utiles\Procedimientos;
@@ -24,11 +25,16 @@ class CitaController extends Controller
 
         $usuario = $request->get('usuario');
         $contraseña = $request->get('contraseña');
+        $fechaFFase = date('Y-m-d');
+        $periodo = Periodoacademico::where([
+            ['fechainicioclases','<=',$fechaFFase],
+            ['fechafinclases','>=',$fechaFFase]
+        ])->first();
 
         $estudiante  = Estudiante::where([
             ['cedula',$usuario],
             ['contraseña',$contraseña],
-            ['periodo',Procedimientos::periodoDelAnhoActual()]
+            ['periodo_id',$periodo->id]
         ])->first();
 
         if($estudiante!=null){

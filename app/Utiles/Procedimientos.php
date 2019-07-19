@@ -4,16 +4,21 @@
 namespace App\Utiles;
 
 
+use App\Periodoacademico;
+
 class Procedimientos
 {
 
     public static function periodoDelAnhoActual(){
 
-        $fecha = date('Y-m-d');
-        $mes = strftime('%m',strtotime($fecha));
-        $anho = strftime('%Y',strtotime($fecha));
+        $fechaFFase = date('Y-m-d');
 
-        return $mes <= 7 ? $anho.'-1' : $anho.'-2';
+        $periodo = Periodoacademico::where([
+            ['fechainicioclases','<=',$fechaFFase],
+            ['fechafinclases','>=',$fechaFFase]
+        ])->first();
+
+        return $periodo->id;
 
     }
 

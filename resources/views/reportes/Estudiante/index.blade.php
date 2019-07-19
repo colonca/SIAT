@@ -143,8 +143,7 @@
                         </div>   
                 </div>
             </div>
-        </div>
-
+    </div>
 @endsection
 
 
@@ -295,7 +294,9 @@ function getChartJs(type,datos) {
             },
             options: {
                 responsive: true,
-                legend: false
+                legend: {
+                    display: true
+                }
             }
         }
     }
@@ -329,7 +330,9 @@ function getChartJs(type,datos) {
             },
             options: {
                 responsive: true,
-                legend: false
+                legend: {
+                    display: true
+                }
             }
         }
     }
