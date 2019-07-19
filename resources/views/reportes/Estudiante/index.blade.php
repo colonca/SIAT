@@ -84,7 +84,7 @@
                     
                 </div>
                 <div class="body">
-                    <div class="row">
+                    <!--<div class="row">
                         <form id="form_filtro" method="POST">                               
                             <div class="col-md-8">
                                 <b>Periodo Académico</b>
@@ -102,7 +102,7 @@
                                 <button type="button" class="btn btn-primary m-t-15 waves-effect">Filtrar</button>
                             </div>                                    
                         </form><br>
-                    </div>                  
+                    </div>  -->
                         
                         <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover" id="tabla_Informes2">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Estudiante;
 use App\Grupo_Usuario;
 use App\Http\Controllers\Controller;
 use App\Utiles\Procedimientos;
@@ -38,10 +39,10 @@ class LoginController extends Controller {
                 session()->put(strtoupper($item->nombre),strtoupper($item->nombre));
             });
 
-
-
             if($grupo->nombre == 'admin'){
+
                 return  redirect()->route('dashboard');
+
             }else if($grupo->nombre == "psicologo"){
                 return  redirect()->route('dashboard_psicologo');
             }

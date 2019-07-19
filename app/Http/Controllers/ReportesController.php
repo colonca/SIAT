@@ -16,7 +16,7 @@ class ReportesController extends Controller
      public function __construct(){
          $this->middleware('auth');
      }
-
+     
      public function reporteIntervencionIndividual(){
            
         return view('reportes.intervencion_individual.index');
@@ -233,9 +233,7 @@ class ReportesController extends Controller
              ->get();
          }
 
-
          if(count($impresionesDiagnosticas)>0){
-
              foreach ($impresionesDiagnosticas as $impresion){
 
                  $datos[] = [
@@ -246,14 +244,12 @@ class ReportesController extends Controller
                  $datosGrafica[] = $impresion->intervenciones->count();
                  $datosTitle[] = $impresion->descripcion;
              }
-
              return response()->json([
                  'status' => 'ok',
                  'datos' => $datos,
                  'grafica'=>$datosGrafica,
                  'title' => $datosTitle
              ]);
-
          }
 
      }

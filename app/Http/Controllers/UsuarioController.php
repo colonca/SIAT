@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Grupo_Usuario;
+use App\Personal;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsuarioController extends Controller
 {
@@ -20,11 +22,6 @@ class UsuarioController extends Controller
         return view('usuarios.list',compact('usuarios'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $roles= Grupo_Usuario::all();
@@ -58,23 +55,11 @@ class UsuarioController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $usuario =  User::find($id);
@@ -82,13 +67,7 @@ class UsuarioController extends Controller
         return view('usuarios.edit',compact('roles','usuario'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $usuario =  User::find($id);
@@ -101,12 +80,6 @@ class UsuarioController extends Controller
             ->with('info','Datos Guardados Correctamente');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $usuario =  User::find($id);
@@ -115,7 +88,9 @@ class UsuarioController extends Controller
 
     public function profile()
     {
-        return view('usuarios.perfil.perfil');
+        $personal = Personal::where('cedula',Auth::user()->cedula)->first();
+
+        return view('usuarios.perfil.perfil',compact('personal'));
     }
 
 }

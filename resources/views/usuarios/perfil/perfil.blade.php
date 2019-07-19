@@ -14,7 +14,7 @@
                     <!--información del usuario-->
                     <div class="content-area">
                         <h3>NOMBRE DE LA PERSONA TRAIDA DE LA BASE DE DATOS</h3>
-                        <p>ROL O PERFIL DE LA PERSONA</p>
+                        <p>{{strtoupper(Auth::user()->role->nombre)}}</p>
                     </div>
                 </div>
                 <div class="profile-footer">
@@ -32,28 +32,28 @@
                                                     <label for="NameSurname" class="col-sm-2 control-label">Usuario</label>
                                                     <div class="col-sm-4">
                                                         <div class="form-line focused">
-                                                            <input type="text" class="form-control" id="nombre_Usuario" name="nombre_Usuario" placeholder="Nombre de Usuario" required="">
+                                                            <input type="text" class="form-control" id="nombre_Usuario" name="nombre_Usuario" placeholder="Nombre de Usuario" required="" value="{{Auth::user()->nombre}}">
                                                         </div>
                                                     </div>
 
                                                     <label for="Email" class="col-sm-2 control-label">Correo</label>
                                                     <div class="col-sm-4">
                                                         <div class="form-line focused">
-                                                            <input type="email" class="form-control" id="Email" name="Email" placeholder="Correo">
+                                                            <input type="email" class="form-control" id="Email" name="Email" placeholder="Correo" value="{{Auth::user()->email}}">
                                                         </div>
                                                     </div>
 
                                                     <label for="NameSurname" class="col-sm-2 control-label">Teléfono</label>
                                                     <div class="col-sm-4">
                                                         <div class="form-line focused">
-                                                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ejemplo: xxxxxx" required="">
+                                                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ejemplo: xxxxxx" required="" value="{{$personal == null ? '': $personal->telefono}}">
                                                         </div>
                                                     </div>
 
                                                     <label for="Email" class="col-sm-2 control-label">Dirección</label>
                                                     <div class="col-sm-4">
                                                         <div class="form-line focused">
-                                                            <input type="text" class="form-control" id="l" name="Email" placeholder="Direción">
+                                                            <input type="text" class="form-control" id="l" name="Email" placeholder="Direción" value="{{$personal == null? '': $personal->direccion}}">
                                                         </div>
                                                     </div>
                                                 </div>

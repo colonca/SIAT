@@ -16,7 +16,7 @@
                             </div>
                             <div class="content">
                                 <div class="text">INTERVENCIONES MES ACTUAL</div>
-                                <div class="number">62%</div>
+                                <div class="number">{{$itervencionesMes}}</div>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                             </div>
                             <div class="content">
                                 <div class="text">CITAS NO ASISTIDAS MES ACTUAL</div>
-                                <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20">1225</div>
+                                <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20">{{$mesActual}}</div>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="content">
                                 <div class="text">CITAS DEL DIA</div>
-                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">257</div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">{{$diaActual}}</div>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="content">
                                 <div class="text">CITAS NO ASISTIDAS</div>
-                                <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">243</div>
+                                <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">{{$citasPerdidas}}</div>
                             </div>
                         </div>
                     </div>

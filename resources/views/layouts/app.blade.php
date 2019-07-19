@@ -150,7 +150,7 @@
                 </li>
                 @endif
 
-                
+                @if(session()->has('MOD_REPORTES'))
                 <li onclick="">
                     <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
                         <i class="material-icons">equalizer</i>
@@ -173,7 +173,7 @@
                         </li> 
                     </ul>
                 </li>
-    
+                @endif
 
                 @if(session()->has('MOD_ESTUDIANTES'))
                 <li>
@@ -191,6 +191,16 @@
                         </a>
                     </li>
                   @endif
+                @if(session()->has('MOD_PERIODOS_ACADEMICOS'))
+                    <li>
+                        <a href="{{route('periodoa.index')}}">
+                            <i class="material-icons">
+                                timeline
+                            </i>
+                            <span>Periodos Academicos</span>
+                        </a>
+                    </li>
+                @endif
 
                 @if(session()->has('MOD_USUARIOS'))
                 <li>
@@ -208,14 +218,17 @@
                  </a>
              </li>
            @endif
+
+            @if(session()->has('MOD_CITAS_AGENDADAS'))
                 <li>
-                    <a href="{{route('periodoa.index')}}">
-                        <i class="material-icons">people</i>
-                        <span>Periodos Academicos</span>
+                    <a href="{{route('citas_agendadas')}}">
+                        <i class="material-icons">
+                            card_membership
+                        </i>
+                        <span>Citas Agendadas</span>
                     </a>
                 </li>
-                
-                                 
+            @endif
             </ul>
         </div>
         <!-- #Menu -->

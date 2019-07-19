@@ -15,7 +15,7 @@
                                 <i class="material-icons">equalizer</i>
                             </div>
                             <div class="content">
-                                <div class="text">BOUNCE RATE</div>
+                                <div class="text">En Desarrollo</div>
                                 <div class="number">62%</div>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                                 <i class="material-icons">group</i>
                             </div>
                             <div class="content">
-                                <div class="text">INT. GRUPALES</div>
+                                <div class="text">En Desarrollo</div>
                                 <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20">1225</div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="content">
                                 <div class="text">INT. INDIVIDUALES</div>
-                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">257</div>
+                                <div class="number count-to" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">{{$intervenciones}}</div>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="content">
                                 <div class="text">ESTUDIANTES A.R.</div>
-                                <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">243</div>
+                                <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">{{$estudiantes}}</div>
                             </div>
                         </div>
                     </div>
@@ -97,82 +97,14 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
-    defaultDate: '2019-06-12',
+    defaultDate: '{{Date('Y-m-d')}}',
     locale: initialLocaleCode,
     buttonIcons: false, // show the prev/next text
     weekNumbers: true,
     navLinks: true, // can click day/week names to navigate views
     editable: true,
     eventLimit: true, // allow "more" link when too many events
-    events: [
-      {
-        title: 'All Day Event',
-        start: '2019-06-01',
-        color: '#257e4a'
-      },
-      {
-        title: 'Long Event',
-        start: '2019-06-07',
-        end: '2019-06-10',
-        color: '#257e4a'
-      },
-      {
-        groupId: 999,
-        title: 'Repeating Event',
-        start: '2019-06-09T16:00:00',
-        color: '#257e4a'
-      },
-      {
-        groupId: 999,
-        title: 'Repeating Event',
-        start: '2019-06-16T16:00:00',
-        color: '#257e4a'
-      },
-      {
-        title: 'Conference',
-        start: '2019-06-11',
-        end: '2019-06-13',
-        color: '#257e4a'
-      },
-      {
-        title: 'Meeting',
-        start: '2019-06-12T10:30:00',
-        end: '2019-06-12T12:30:00',
-        color: '#257e4a'
-      },
-      {
-        title: 'Lunch',
-        start: '2019-06-12T12:00:00',
-        color: '#257e4a'
-      },
-      {
-        title: 'Meeting',
-        start: '2019-06-12T14:30:00',
-        color: '#257e4a'
-      },
-      {
-        title: 'Happy Hour',
-        start: '2019-06-12T17:30:00',
-        color: '#257e4a'
-      },
-      {
-        title: 'Dinner',
-        start: '2019-06-12T20:00:00',
-        color: '#257e4a'
-
-      },
-      {
-        title: 'Birthday Party',
-        start: '2019-06-13T07:00:00',
-        color: '#257e4a'
-      },
-      {
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2019-06-28',
-        color: '#257e4a'
-      }
-    ]
+    events: '{{url('citas/citasTotales')}}'
   });
 
   calendar.render();
@@ -183,15 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
     optionEl.value = localeCode;
     optionEl.selected = localeCode == initialLocaleCode;
     optionEl.innerText = localeCode;
-    localeSelectorEl.appendChild(optionEl);
   });
 
-  // when the selected option changes, dynamically change the calendar option
-  localeSelectorEl.addEventListener('change', function() {
-    if (this.value) {
-      calendar.setOption('locale', this.value);
-    }
-  });
+  // when the selected option changes, dynamically change the calendar optio
 
 });
 
@@ -205,8 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <link href='{{asset('packages/daygrid/main.css')}}' rel='stylesheet' />
 <link href='{{asset('packages/timegrid/main.css')}}' rel='stylesheet' />
 <link href='{{asset('packages/list/main.css')}}' rel='stylesheet' />
-
-
 
 <style>
 

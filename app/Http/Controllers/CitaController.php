@@ -11,6 +11,7 @@ use App\Utiles\Procedimientos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 
 class CitaController extends Controller
@@ -51,16 +52,16 @@ class CitaController extends Controller
                 setlocale(LC_TIME,"es_CO");;
                 $fechaFFase = date('Y-m-d');
                 $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-                $dia = strftime('%u',strtotime($nuevafecha));
-                $mes = strftime('%m',strtotime($nuevafecha));
+                $dia = strftime('%u',strtotime($fechaFFase));
+                $mes = strftime('%m',strtotime($fechaFFase));
 
                 $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
-                $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
+                $horarios = $horarios->filter(function ($horario) use ($persona,$fechaFFase){
 
                     $count = Cita::where([
                         ['personal_id',$persona->id],
-                        ['fecha',strftime('%Y-%m-%d',strtotime($nuevafecha))],
+                        ['fecha',strftime('%Y-%m-%d',strtotime($fechaFFase))],
                         ['hora',$horario->hora]
                     ])->count();
 
@@ -103,16 +104,16 @@ class CitaController extends Controller
             setlocale(LC_TIME,"es_CO");;
             $fechaFFase = date('Y-m-d');
             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-            $dia = strftime('%u',strtotime($nuevafecha));
-            $mes = strftime('%m',strtotime($nuevafecha));
+            $dia = strftime('%u',strtotime($fechaFFase));
+            $mes = strftime('%m',strtotime($fechaFFase));
 
             $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
-            $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
+            $horarios = $horarios->filter(function ($horario) use ($persona,$fechaFFase){
 
                 $count = Cita::where([
                     ['personal_id',$persona->id],
-                    ['fecha',strftime('%Y-%m-%d',strtotime($nuevafecha))],
+                    ['fecha',strftime('%Y-%m-%d',strtotime($fechaFFase))],
                     ['hora',$horario->hora]
                 ])->count();
 
@@ -167,9 +168,7 @@ class CitaController extends Controller
     }
 
     public function agendar(Request $request){
-
         //validaciones
-
        $cita = new Cita();
        $cita->personal_id = $request->get('personal_id');
        $cita->estudiante_id = session()->get('estudiante')->id;
@@ -253,10 +252,86 @@ class CitaController extends Controller
 
     }
 
+    public function citasTotales()
+    {
+
+        $citas = Cita::all();
+
+        $event = [];
+
+        foreach ($citas as $cita){
+
+            $color = '';
+
+            switch ($cita->estado){
+                case 'PENDIENTE':
+                    $color = '#1299DA';
+                    break;
+                case 'ATENDIDO':
+                    $color = '#257e4a';
+                    break;
+                case 'PERDIDA':
+                    $color = '#E91E63';
+                    break;
+                case 'CANCELADA':
+                    $color = '#FF0404';
+                    break;
+            }
+
+            $personal = Personal::find($cita->personal_id);
+
+            $fecha =  $cita->fecha.'T';
+            $fecha .=strlen($cita->hora) == 2 ? $cita->hora.':00':'0'.$cita->hora.':00';
+            $event[] = [
+                'title'=> $cita->estudiante->nombres,
+                'tallerista' => $personal->primer_nombre." ".$personal->primer_apellido,
+                'start' =>$fecha,
+                'color' => $color
+            ];
+        }
+
+
+        return response()->json($event);
+
+    }
+
+
     public function cancelarCita (Request $request){
         $cita = Cita::find($request->get('id'));
         $cita->estado = 'CANCELADA';
         $cita->save();
+    }
+
+    public function citasTallerista(){
+
+
+        $personal = Personal::where('cedula',Auth::user()->cedula)
+                            ->first();
+
+        $citas = Cita::where(
+            'personal_id',$personal->id
+        )->get();
+
+
+        return view('personal.psicologos.admin.citas',compact('citas'));
+    }
+
+    public function cambiarEstado(Request $request){
+
+         $cita = Cita::find($request->id);
+
+         if($request->estado == 'Atender'){
+            $cita->estado = 'ATENDIDO';
+         }else{
+             $cita->estado = 'PERDIDA';
+         }
+
+         $cita->save();
+
+        return response()->json([
+             'status' => 'ok'
+         ]);
+
     }
 
 }

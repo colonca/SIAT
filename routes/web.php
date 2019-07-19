@@ -59,7 +59,10 @@ Route::get('citas/estudiante/agendar','CitaController@cita')->name('agendar');
 Route::post('citas/estudiante/agendar','CitaController@agendar')->name('agendarcita');
 Route::get('citas/estudiante/citas','CitaController@historialCitas')->name('citas');
 Route::get('citas/estudiante/citasAgendadas','CitaController@citasAgnedadas');
+Route::get('citas/citasTotales','CitaController@citasTotales');
 Route::post('citas/estudiante/cancelarCita','CitaController@cancelarCita');
+Route::get('citas/tallerista/','CitaController@citasTallerista')->name('citas_agendadas');
+Route::Post('citas/cambiar_estado','CitaController@cambiarEstado')->name('cambiar_estado');
 
 
 //Intervenciones Individuales

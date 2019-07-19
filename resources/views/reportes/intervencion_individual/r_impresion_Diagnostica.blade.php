@@ -187,7 +187,7 @@ $(document).ready(function() {
 
 function filtrar(event) {
   event.preventDefault();
-  if($('#programa').val() !== '' || $('#periodo').val() !== ''){
+  if($('#programa').val() !== '' && $('#periodo').val() !== ''){
       let url = '{{url('reportes/Impresiones')}}'+'/'+$('#programa').val()+'/'+$('#periodo').val();
       axios.get(url).then(response=>{
           let datos = response.data;
@@ -205,10 +205,13 @@ function filtrar(event) {
                   i++;
               });
               table.innerHTML = html;
-
               document.getElementById("marcopie2").style.display = 'block';
               document.getElementById("marcopie1").style.display = 'none';
               new Chart(document.getElementById("pie_chart2").getContext("2d"), getChart('pie',datos));
+          }else{
+              let table =  document.getElementById('tabla').innerHTML = '';
+              document.getElementById("marcopie2").style.display = 'none';
+              document.getElementById("marcopie1").style.display = 'none';
           }
 
       });
