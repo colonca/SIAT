@@ -113,4 +113,9 @@ class UsuarioController extends Controller
         $usuario->delete();
     }
 
+    public function profile()
+    {
+        return view('usuarios.perfil.perfil');
+    }
+
 }
