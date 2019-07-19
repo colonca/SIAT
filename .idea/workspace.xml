@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/reporte_General.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReportesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/IntervencionIndividual.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/IntervencionIndividual.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Periodoacademico.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Periodoacademico.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utiles/Procedimientos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utiles/Procedimientos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_29_230639_create_estudiantes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_29_230639_create_estudiantes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_06_183211_add_columns_to_interncion_individual.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_06_183211_add_columns_to_interncion_individual.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/usuarios/perfil/perfil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\Proyectos\SIAT\.idea\shelf/" />
@@ -40,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReportesController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
-              <caret line="231" column="79" lean-forward="true" selection-start-line="231" selection-start-column="79" selection-end-line="231" selection-end-column="79" />
+              <caret line="231" column="79" selection-start-line="231" selection-start-column="79" selection-end-line="231" selection-end-column="79" />
               <folding>
                 <element signature="e#40#59#0#PHP" expanded="true" />
                 <element signature="e#383#514#0#PHP" />
@@ -70,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-5">
-              <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+              <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -78,19 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-              <folding>
-                <element signature="e#2744#5379#0#HTML" />
-                <element signature="e#4513#4535#0#HTML" expanded="true" />
-                <element signature="e#5238#5260#0#HTML" expanded="true" />
-                <element signature="e#6866#7791#0#HTML" />
-                <element signature="e#7869#8794#0#HTML" />
-                <element signature="e#8329#8590#0#HTML" />
-                <element signature="e#9826#10529#0#HTML" />
-                <element signature="e#10093#10786#0#HTML" />
-                <element signature="e#10816#11567#0#HTML" />
-              </folding>
+            <state relative-caret-position="-1215">
+              <caret line="274" column="25" selection-start-line="274" selection-start-column="25" selection-end-line="274" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -207,8 +189,8 @@
         <option value="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" />
-        <option value="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReportesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" />
       </list>
     </option>
   </component>
@@ -351,6 +333,21 @@
               <item name="SIAT" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="reportes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIAT" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="reportes" type="462c0819:PsiDirectoryNode" />
+              <item name="intervencion_individual" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SIAT" type="b2602c69:ProjectViewProjectNode" />
@@ -514,12 +511,12 @@
       <workItem from="1563191585118" duration="35071000" />
       <workItem from="1563289852985" duration="3471000" />
       <workItem from="1563368721455" duration="8074000" />
-      <workItem from="1563397209764" duration="47210000" />
+      <workItem from="1563397209764" duration="47583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="684855000" />
+    <option name="totallyTimeSpent" value="685228000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -534,7 +531,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32526475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32526475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -974,17 +971,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReportesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="231" column="79" lean-forward="true" selection-start-line="231" selection-start-column="79" selection-end-line="231" selection-end-column="79" />
+          <caret line="231" column="79" selection-start-line="231" selection-start-column="79" selection-end-line="231" selection-end-column="79" />
           <folding>
             <element signature="e#40#59#0#PHP" expanded="true" />
             <element signature="e#383#514#0#PHP" />
@@ -997,21 +987,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-          <folding>
-            <element signature="e#2744#5379#0#HTML" />
-            <element signature="e#4513#4535#0#HTML" expanded="true" />
-            <element signature="e#5238#5260#0#HTML" expanded="true" />
-            <element signature="e#6866#7791#0#HTML" />
-            <element signature="e#7869#8794#0#HTML" />
-            <element signature="e#8329#8590#0#HTML" />
-            <element signature="e#9826#10529#0#HTML" />
-            <element signature="e#10093#10786#0#HTML" />
-            <element signature="e#10816#11567#0#HTML" />
-          </folding>
+        <state relative-caret-position="-1215">
+          <caret line="274" column="25" selection-start-line="274" selection-start-column="25" selection-end-line="274" selection-end-column="25" />
         </state>
       </provider>
     </entry>

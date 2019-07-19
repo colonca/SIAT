@@ -25,6 +25,7 @@ Route::resource('grupos','Grupo_UsuarioController');
 Route::get('privilegios','Grupo_UsuarioController@showPrivilegios')->name('privilegios');
 Route::get('privilegios/paginas/{id}','Grupo_UsuarioController@searhPaginas');
 Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
+Route::get('usuario/perfil','UsuarioController@profile')->name('perfil_Usuario');
 
 
 //psicologos_gestion
