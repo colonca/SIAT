@@ -28,15 +28,25 @@ class CitaController extends Controller
         $contraseña = $request->get('contraseña');
         $fechaFFase = date('Y-m-d');
         $periodo = Periodoacademico::where([
-            ['fechainicioclases','<=',$fechaFFase],
-            ['fechafinclases','>=',$fechaFFase]
+            ['fechainicio','<=',$fechaFFase],
+            ['fechafin','>=',$fechaFFase]
         ])->first();
 
-        $estudiante  = Estudiante::where([
+        if($periodo!=null){
+            
+            $estudiante  = Estudiante::where([
             ['cedula',$usuario],
             ['contraseña',$contraseña],
             ['periodo_id',$periodo->id]
         ])->first();
+            
+        }else{
+            
+            return redirect()->route('loginEstudiante')
+                    ->with('error','no se puden ggendar citas para la fecha actual');
+            
+        }
+        
 
         if($estudiante!=null){
 

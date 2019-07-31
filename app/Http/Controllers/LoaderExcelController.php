@@ -36,8 +36,8 @@ class LoaderExcelController extends Controller
                $name = $request->file('file')->getClientOriginalName();
 
                $ruta = $request->file('file')->getRealPath();
-
-               Excel::import(new StudentImport($request->get('periodo')),$ruta);
+          
+               Excel::import(new StudentImport($request->get('periodo')), $request->file('file'));
 
                return response([
                     'success' => true
