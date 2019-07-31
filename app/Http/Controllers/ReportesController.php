@@ -73,6 +73,7 @@ class ReportesController extends Controller
          $riesgoAltototal = 0;
          $riegoSuperAltototal = 0;
          $riegoSuperBajototal = 0;
+         
          foreach ($periodos as $periodo){
              $riegoBajo = 0;
              $riegoMedio = 0;
@@ -167,7 +168,7 @@ class ReportesController extends Controller
              ];
 
          }
-
+              
         return view('reportes.Estudiante.index',compact('datos','totales','periodos','datosPrograma'));
      }
 

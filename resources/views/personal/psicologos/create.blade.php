@@ -118,7 +118,7 @@
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" name="celular" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
+                                                <input type="number" name="celular" maxlength="11" minlength="7"class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
                                             </div>
                                         </div>
                                     </div>
@@ -129,7 +129,7 @@
                                                 <i class="material-icons">phone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" name="telefono" class="form-control mobile-phone-number" placeholder="Ex: +000 (000) 00-00">
+                                                <input type="number" name="telefono" maxlength="10" minlength="7" class="form-control mobile-phone-number" placeholder="Ex: +000 (000) 00-00">
                                             </div>
                                         </div>
                                     </div>
@@ -141,17 +141,6 @@
                                             </span>
                                             <div class="form-line">
                                                 <input type="text" name="direccion" class="form-control money-dollar" placeholder="Ex: callexxD#xx-xxx" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <b>Barrio</b>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">my_location</i>
-                                            </span>
-                                            <div class="form-line">
-                                                <input type="text"  name="barrio" class="form-control money-euro" placeholder="Ex:villa ligia" required>
                                             </div>
                                         </div>
                                     </div>
@@ -235,7 +224,7 @@
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                         <div class="form-line">
-                                            <input type="text" name="celular_parentezco" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
+                                            <input type="number" maxlength="10" minlength="7" name="celular_parentezco" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
                                         </div>
                                     </div>
                                 </div>
