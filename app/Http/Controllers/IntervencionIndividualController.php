@@ -24,12 +24,10 @@ class IntervencionIndividualController extends Controller
 
     public function index()
     {
-
-
         $personal = Personal::where('cedula', Auth::user()->cedula)->first();
+
         $intervenciones = IntervencionIndividual::where([
-            ['cedula',Auth::user()->cedula],
-            ['periodo_id',Procedimientos::periodoDelAnhoActual()]
+            ['cedula',Auth::user()->cedula]
         ])->get();
 
         return view('personal.psicologos.admin.intervencion',compact('intervenciones'));

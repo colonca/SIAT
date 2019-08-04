@@ -46,8 +46,6 @@ class LoginController extends Controller {
             }else if($grupo->nombre == "psicologo"){
                 return  redirect()->route('dashboard_psicologo');
             }
-
-
         }
 
         return back()->withErrors([$this->username() => 'Estas credenciales no coinciden con nuestros registros']);

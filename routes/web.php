@@ -1,6 +1,5 @@
 <?php
 
-
 //login
 Route::get('/', 'Auth\LoginController@showLoginForm')->middleware('guest')->name('/');
 Route::get('login', 'Auth\LoginController@ShowLoginForm');
@@ -26,6 +25,8 @@ Route::get('privilegios','Grupo_UsuarioController@showPrivilegios')->name('privi
 Route::get('privilegios/paginas/{id}','Grupo_UsuarioController@searhPaginas');
 Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
 Route::get('usuario/perfil','UsuarioController@profile')->name('perfil_Usuario');
+Route::get('usuario/cambiar_password','UsuarioController@cambiarPasswordShow')->name('nuevoPassword');
+Route::post('usuario/cambiar_password/finalizar','UsuarioController@updatePassword')->name('updateContrasenia');
 
 
 //psicologos_gestion
@@ -80,7 +81,7 @@ Route::get('reportes/Periodos','ReportesController@getDatos')->name('periodo_dat
 Route::get('reportes/Impresion_Diagnostica','ReportesController@reporteImpresionDiagnostica')->name('reporte_Diagnostico');
 
 //periodo Academico
-Route::resource('periodoa','PeriodoacademicoController');
+Route::resource('periodoa','PeriodoacademicoController')->middleware('auth');
 Route::delete('periodoa/delete/{id}','PeriodoacademicoController@destroy');
 
 

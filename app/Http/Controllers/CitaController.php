@@ -33,20 +33,20 @@ class CitaController extends Controller
         ])->first();
 
         if($periodo!=null){
-            
+
             $estudiante  = Estudiante::where([
             ['cedula',$usuario],
             ['contraseña',$contraseña],
             ['periodo_id',$periodo->id]
         ])->first();
-            
+
         }else{
-            
+
             return redirect()->route('loginEstudiante')
-                    ->with('error','no se puden ggendar citas para la fecha actual');
-            
+                    ->with('error','no se puden agendar citas para la fecha actual');
+
         }
-        
+
 
         if($estudiante!=null){
 
@@ -67,11 +67,11 @@ class CitaController extends Controller
 
                 $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
-                $horarios = $horarios->filter(function ($horario) use ($persona,$fechaFFase){
+                $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
 
                     $count = Cita::where([
                         ['personal_id',$persona->id],
-                        ['fecha',strftime('%Y-%m-%d',strtotime($fechaFFase))],
+                        ['fecha',strftime('%Y-%m-%d',strtotime($nuevafecha))],
                         ['hora',$horario->hora]
                     ])->count();
 
@@ -115,15 +115,15 @@ class CitaController extends Controller
             $fechaFFase = date('Y-m-d');
             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
             $dia = strftime('%u',strtotime($fechaFFase));
-            $mes = strftime('%m',strtotime($fechaFFase));
+            $mes = strftime('%m',strtoti1192745235me($fechaFFase));
 
             $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
-            $horarios = $horarios->filter(function ($horario) use ($persona,$fechaFFase){
+            $horarios = $horarios->filter(function ($horario) use ($persona,$nuevafecha){
 
                 $count = Cita::where([
                     ['personal_id',$persona->id],
-                    ['fecha',strftime('%Y-%m-%d',strtotime($fechaFFase))],
+                    ['fecha',strftime('%Y-%m-%d',strtotime($nuevafecha))],
                     ['hora',$horario->hora]
                 ])->count();
 
@@ -318,10 +318,10 @@ class CitaController extends Controller
         $personal = Personal::where('cedula',Auth::user()->cedula)
                             ->first();
 
-        $citas = Cita::where(
-            'personal_id',$personal->id
-        )->get();
-
+        $citas = Cita::where([
+            ['personal_id',$personal->id],
+            ['fecha',Date('Y-m-d')]
+        ])->get();
 
         return view('personal.psicologos.admin.citas',compact('citas'));
     }
