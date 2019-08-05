@@ -18,8 +18,8 @@ use Faker\Generator as Faker;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'cedula' => '1065848333',
-        'email' => 'colonca1999@gmail.com',
+        'cedula' => '1065133473',
+        'email' => 'daniel.bmez1@gmail.com',
         'password' => bcrypt('secret'), // password
         'grupo_usuario_id' => 1,
         'remember_token' => Str::random(10),
