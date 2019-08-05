@@ -170,7 +170,7 @@
                             <td>{{$estudiante->periodo_cronologico}}</td>
                             <td>{{substr($estudiante->estado,2)}}</td>
                             <td>
-                                <a href="{{route('estudiantes.show',$estudiante->cedula)}}"  class="btn btn-sm btn-info" title="Ver">
+                                <a href="{{route('estudiantes.show',$estudiante->id)}}"  class="btn btn-sm btn-info" title="Ver">
                                     <i class="material-icons">
                                         remove_red_eye
                                     </i>
@@ -252,7 +252,7 @@
         function eliminar(event,id){
             event.preventDefault();
             Swal.fire({
-                title: 'Estas segur@?',
+                title: 'Estas seguro(a)?',
                 text: "no podras revertilo!",
                 type: 'warning',
                 showCancelButton: true,

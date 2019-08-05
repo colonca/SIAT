@@ -7,6 +7,7 @@ use App\Personal;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
@@ -27,7 +28,6 @@ class UsuarioController extends Controller
         $roles= Grupo_Usuario::all();
         return view('usuarios.create',compact('roles'));
     }
-
 
     public function store(Request $request)
     {
@@ -55,9 +55,32 @@ class UsuarioController extends Controller
 
     }
 
-    public function show($id)
+    public function cambiarPasswordShow()
     {
-        //
+       return view('usuarios.perfil.cambiarPassword');
+    }
+
+    public function updatePassword(Request $request){
+
+
+    if (Hash::check($request->get('pass0'), Auth::user()->getAuthPassword())){
+
+         if($request->get('pass2')==$request->get('pass1')){
+
+          $usuario = User::find(Auth::user()->cedula);
+          $usuario->password = Hash::make($request->get('pass2'));
+          $usuario->save();
+
+          return back()->with('info','Exito, contraseña cambiada correctamente');
+
+         }else{
+             return back()->with('error','Las contraseñas ingresada no coinciden.');
+         }
+
+     }else{
+        return back()->with('error','La contraseña actual ingresada no es correcta.');
+     }
+
     }
 
     public function edit($id)
@@ -66,7 +89,6 @@ class UsuarioController extends Controller
         $roles= Grupo_Usuario::all();
         return view('usuarios.edit',compact('roles','usuario'));
     }
-
 
     public function update(Request $request, $id)
     {

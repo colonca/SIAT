@@ -141,7 +141,7 @@
 
             }else{
                 Swal.fire({
-                    title: 'Estas segur@ que deseas cancelar la cita?',
+                    title: 'Estas seguro(a) que deseas cancelar la cita?',
                     text: "no podras revertilo!",
                     type: 'warning',
                     showCancelButton: true,

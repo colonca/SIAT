@@ -52,8 +52,8 @@ class EstudianteController extends Controller
         $fechaFFase = date('Y-m-d');
 
         $periodo = Periodoacademico::where([
-            ['fechainicioclases','<=',$fechaFFase],
-            ['fechafinclases','>=',$fechaFFase]
+            ['fechainicio','<=',$fechaFFase],
+            ['fechafin','>=',$fechaFFase]
         ])->first();
 
 
@@ -109,7 +109,8 @@ class EstudianteController extends Controller
 
     public function show($id)
     {
-        //
+        $estudiante = Estudiante::find($id);
+        
     }
 
 

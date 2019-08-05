@@ -6,7 +6,7 @@
         <!-- Row -->
         <div class="row">
             <!-- Column -->
-         
+
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="row clearfix">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -65,7 +65,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <h2>CALENDARIO</h2>              
+                <h2>CALENDARIO</h2>
             </div>
             <div class="body">
                     <div id='calendar'></div>
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
     },
-    defaultDate: '2019-06-12',
+    defaultDate: '{{Date('Y-m-d')}}',
     locale: initialLocaleCode,
     buttonIcons: false, // show the prev/next text
     weekNumbers: true,
@@ -141,7 +141,7 @@ function cargarEventos(){
           font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
           font-size: 14px;
         }
-      
+
         #top {
           background: #eee;
           border-bottom: 1px solid #ddd;
@@ -149,13 +149,13 @@ function cargarEventos(){
           line-height: 40px;
           font-size: 12px;
         }
-      
+
         #calendar {
           max-width: 900px;
           margin: 40px auto;
           padding: 0 10px;
         }
-      
+
       </style>
 
 @endsection

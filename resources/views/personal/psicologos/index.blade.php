@@ -30,7 +30,7 @@
             </li>
             <li>
                 <a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Psicologos
+                    <i class="material-icons">perm_identity</i> Talleristas
                 </a>
             </li>
         </ol>
@@ -57,7 +57,7 @@
                     </h2>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="{{route('psicologos.create')}}" class="btn btn-success pull-right">Agregar Nuevo psicologo</a>
+                    <a href="{{route('psicologos.create')}}" class="btn btn-success pull-right">Agregar Nuevo Tallerista</a>
                 </div>
             </div>
             <div class="body table-responsive">
@@ -111,13 +111,13 @@
                                      </i>
                                  </a>
 
-                                 <a href="{{route('psicologos.edit',$psicologo->id)}}" class="btn btn-sm btn-warning margin" title="Actualizar">
+                                 <!--<a href="{{route('psicologos.edit',$psicologo->id)}}" class="btn btn-sm btn-warning margin" title="Actualizar">
                                      <i class="material-icons">
                                          update
                                      </i>
-                                 </a>
+                                 </a>-->
 
-                                 <a href="#"  class="btn btn-sm btn-info" onclick="verHorario({{$psicologo->id}})"  title="Ver Horario">
+                                 <a href="#"  class="btn btn-sm btn-warning" onclick="verHorario({{$psicologo->id}})"  title="Ver Horario">
                                      <i class="material-icons">
                                          date_range
                                      </i>
@@ -254,7 +254,7 @@
         function eliminar(event,id){
             event.preventDefault();
             Swal.fire({
-                title: 'Estas segur@?',
+                title: 'Estas seguro(a)?',
                 text: "no podras revertilo!",
                 type: 'warning',
                 showCancelButton: true,

@@ -101,7 +101,7 @@
         function eliminar(event,id){
             event.preventDefault();
             Swal.fire({
-                title: 'Estas segur@?',
+                title: 'Estas seguro(a)?',
                 text: "no podras revertilo!",
                 type: 'warning',
                 showCancelButton: true,

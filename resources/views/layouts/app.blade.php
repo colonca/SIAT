@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <p>Please wait...</p>
+        <p>Por favor espere...</p>
     </div>
 </div>
 <!-- #END# Page Loader -->
@@ -70,11 +70,11 @@
 <!-- Search Bar -->
 <div class="search-bar">
     <div class="search-icon">
-        <i class="material-icons">search</i>
+        <i class="material-icons">Buscar</i>
     </div>
     <input type="text" placeholder="START TYPING...">
     <div class="close-search">
-        <i class="material-icons">close</i>
+        <i class="material-icons">cerrar</i>
     </div>
 </div>
 <!-- #END# Search Bar -->
@@ -99,16 +99,6 @@
             <div class="info-container">
                 <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->nombre}}</div>
                 <div class="email">{{Auth::user()->email}}</div>
-                <div class="btn-group user-helper-dropdown">
-                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                    <ul class="dropdown-menu pull-right">
-                    <li><a href="{{route('perfil_Usuario')}}"><i class="material-icons">person</i>Perfil</a></li>
-                        <li role="separator" class="divider"></li>
-                          <!--<li></li>-->
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{url('logout')}}"><i class="material-icons">input</i>Cerrar Session</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
         <!-- #User Info -->
@@ -116,7 +106,7 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">Navegacion Principal</li>
-                
+
 
                 @if(session()->has('MOD_PERSONAL'))
                 <li onclick="">
@@ -127,21 +117,21 @@
                     <ul class="ml-menu" style="display: none;">
                             @if(session()->has('PAG_PSICOLOGOS'))
                         <li>
-                            <a href="{{route('psicologos.index')}}">
+                            <a href="{{route('psicologos.index')}}" class="waves-effect waves-block">
                                 <span>Talleristas</span>
                             </a>
                         </li>
                         @endif
                         @if(session()->has('PAG_DOCENTES_DE_PERMANENCIA'))
                         <li>
-                            <a href="{{route('docentes_permanencia.index')}}">
+                            <a href="{{route('docentes_permanencia.index')}}" class="waves-effect waves-block">
                                 <span>Docentes de Permanencia</span>
                             </a>
                         </li>
                         @endif
                         @if(session()->has('PAG_TALLERISTAS'))
                         <li>
-                            <a href="{{route('loaders')}}">
+                            <a href="{{route('loaders')}}" class="waves-effect waves-block">
                                 <span>Talleristas</span>
                             </a>
                         </li>
@@ -157,27 +147,27 @@
                         <span>Reportes</span>
                     </a>
                     <ul class="ml-menu" style="display: none;">
-                        
+
                         <li>
-                            <a href="{{route('reporte_individual')}}">
+                            <a href="{{route('reporte_individual')}}" class="waves-effect waves-block">
                                 <i class="material-icons">assessment</i>
                                 <span>Intervenciones Individuales</span>
                             </a>
-                        </li> 
+                        </li>
 
                         <li>
-                            <a href="{{route('reporte_Estudiante')}}">
+                            <a href="{{route('reporte_Estudiante')}}" class="waves-effect waves-block">
                                 <i class="material-icons">assessment</i>
                                 <span>Estudiantes</span>
                             </a>
-                        </li> 
+                        </li>
                     </ul>
                 </li>
                 @endif
 
                 @if(session()->has('MOD_ESTUDIANTES'))
                 <li>
-                    <a href="{{route('estudiantes.index')}}">
+                    <a href="{{route('estudiantes.index')}}" class="waves-effect waves-block">
                         <i class="material-icons">face</i>
                         <span>Estudiantes</span>
                     </a>
@@ -185,7 +175,7 @@
                 @endif
                 @if(session()->has('MOD_CARGAR_INFORMACIóN'))
                     <li>
-                        <a href="{{route('loaders')}}">
+                        <a href="{{route('loaders')}}" class="waves-effect waves-block">
                             <i class="material-icons">note_add</i>
                             <span>Cargar Informacion</span>
                         </a>
@@ -193,7 +183,7 @@
                   @endif
                 @if(session()->has('MOD_PERIODOS_ACADEMICOS'))
                     <li>
-                        <a href="{{route('periodoa.index')}}">
+                        <a href="{{route('periodoa.index')}}" class="waves-effect waves-block">
                             <i class="material-icons">
                                 timeline
                             </i>
@@ -204,7 +194,7 @@
 
                 @if(session()->has('MOD_USUARIOS'))
                 <li>
-                    <a href="{{route('users')}}">
+                    <a href="{{route('users')}}" class="waves-effect waves-block">
                         <i class="material-icons">people</i>
                         <span>Usuarios</span>
                     </a>
@@ -212,7 +202,7 @@
              @endif
             @if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))
              <li>
-                 <a href="{{route('intervenciones_individuales.index')}}">
+                 <a href="{{route('intervenciones_individuales.index')}}" class="waves-effect waves-block">
                      <i class="material-icons">people</i>
                      <span>Intervención Individual</span>
                  </a>
@@ -221,7 +211,7 @@
 
             @if(session()->has('MOD_CITAS_AGENDADAS'))
                 <li>
-                    <a href="{{route('citas_agendadas')}}">
+                    <a href="{{route('citas_agendadas')}}" class="waves-effect waves-block">
                         <i class="material-icons">
                             card_membership
                         </i>
@@ -229,6 +219,18 @@
                     </a>
                 </li>
             @endif
+                <li>
+                    <a href="{{route('nuevoPassword')}}" class="waves-effect waves-block">
+                        <i class="material-icons">lock_open</i>
+                        <span>Cambiar Contraseña</span>
+                    </a>
+                </li>
+              <li>
+                  <a href="{{url('logout')}}" class="waves-effect waves-block">
+                      <i class="material-icons">input</i>
+                     <span>Cerrar Session</span>
+                  </a>
+              </li>
             </ul>
         </div>
         <!-- #Menu -->

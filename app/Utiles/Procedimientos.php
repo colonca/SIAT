@@ -14,11 +14,11 @@ class Procedimientos
         $fechaFFase = date('Y-m-d');
 
         $periodo = Periodoacademico::where([
-            ['fechainicioclases','<=',$fechaFFase],
-            ['fechafinclases','>=',$fechaFFase]
+            ['fechainicio','<=',$fechaFFase],
+            ['fechafin','>=',$fechaFFase]
         ])->first();
 
-        return $periodo->id;
+        return $periodo ? $periodo->id : null;
 
     }
 
