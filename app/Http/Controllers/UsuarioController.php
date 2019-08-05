@@ -90,6 +90,21 @@ class UsuarioController extends Controller
         return view('usuarios.edit',compact('roles','usuario'));
     }
 
+    public function updateUser(Request $request, $id)
+    {
+        $user =  User::find($id);
+
+        $user->fill($request->all());
+
+        $user->save();
+
+        $roles = Grupo_Usuario::all();
+
+        return redirect()->route('users')
+               ->with('info','Usuario Actualizado Correctamente');
+
+    }
+
     public function update(Request $request, $id)
     {
         $usuario =  User::find($id);
@@ -113,6 +128,19 @@ class UsuarioController extends Controller
         $personal = Personal::where('cedula',Auth::user()->cedula)->first();
 
         return view('usuarios.perfil.perfil',compact('personal'));
+    }
+
+    public function operaciones(Request $request){
+
+        $user =  User::find($request->get('id'));
+
+        if($user){
+            $roles = Grupo_Usuario::all();
+            return view('usuarios.operaciones',compact('user','roles'));
+        }else{
+          return back()->with('error','El usuario consultado no se encuentra registrado!');
+        }
+
     }
 
 }

@@ -67,10 +67,9 @@
                             <input name ="descripción" type="text" class="form-control" placeholder="Breve descripcion del grupo" value="{{$grupo->descripcion}}">
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label for="" class="form-control">Selecione los Modulos a los que el Grupo Tendrá Acceso</label>
-                        <select name="modulos[]" id="" class="selectpicker form-control" multiple data-live-search="true" data-size="10">
+                        <label for="" class="form-control">Selecione los Grupos o Roles de Usuario</label>
+                        <select name="grupos[]" id="" class="selectpicker form-control" multiple data-live-search="true" data-size="10">
                             @foreach($modulos as $modulo)
                                 @if($modulosSelecionados->contains(function ($value,$key) use ($modulo){
                                       return $value->id == $modulo->id;
@@ -82,7 +81,6 @@
                             @endforeach
                         </select>
                     </div>
-
                     <div class="form-group">
                         <button type="submit" class="btn btn-lg btn-success m-t-15 waves-effect pull-right">Guardar</button>
                     </div>

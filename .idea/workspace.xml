@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/usuarios/perfil/cambiarPassword.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/usuarios/operaciones.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utiles/Procedimientos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utiles/Procedimientos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_21_200724_create_personal_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_21_200724_create_personal_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/periodos_academicos/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/periodos_academicos/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/rol_usuarios/psicologos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/rol_usuarios/psicologos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -197,7 +186,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -342,7 +331,10 @@
       <workItem from="1563368721455" duration="8074000" />
       <workItem from="1563397209764" duration="63304000" />
       <workItem from="1564867422794" duration="106000" />
-      <workItem from="1564867649310" duration="9522000" />
+      <workItem from="1564867649310" duration="10114000" />
+      <workItem from="1564890735638" duration="3240000" />
+      <workItem from="1564930331717" duration="373000" />
+      <workItem from="1564952170550" duration="6415000" />
     </task>
     <servers />
   </component>

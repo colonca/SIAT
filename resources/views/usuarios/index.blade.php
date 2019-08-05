@@ -2,16 +2,6 @@
 
 @section('content')
 
-    @if(session()->has('info'))
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-primary" role="alert">
-                    {{session('info')}}
-                </div>
-            </div>
-        </div>
-    @endif
-
     <!--menu de navegacion de la pagina-->
     <div class="box-header with-border" style="background-color: rgb(23, 128, 62)">
         <ol class="breadcrumb">
@@ -25,6 +15,27 @@
             </li>
         </ol>
     </div>
+
+    @if(session()->has('error'))
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    {{session('error')}}
+                </div>
+            </div>
+        </div>
+    @endif
+
+    @if(session()->has('info'))
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert">
+                    {{session('info')}}
+                </div>
+            </div>
+        </div>
+    @endif
+
 
     <!--menu de opciones-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -58,6 +69,34 @@
         </div>
     </div>
     <!-- Row -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    MODIFICACIÓN Y ELIMINACIÓN DE USUARIOS
+                </h2>
+            </div>
+            <div class="body">
+                <div class="row clearfix">
+                    <form method="POST" action="{{route('operaciones')}}" accept-charset="UTF-8" class="form-horizontal form-label-left">
+                        @csrf
+                        <div class="col-md-12">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input class="form-control" placeholder="Escriba la identificación a consultar" id="id" name="id" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <input class="btn bg-deep-orange waves-effect btn-block" type="submit" value="CONSULTAR USUARIO">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('scripts')

@@ -27,7 +27,8 @@ Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
 Route::get('usuario/perfil','UsuarioController@profile')->name('perfil_Usuario');
 Route::get('usuario/cambiar_password','UsuarioController@cambiarPasswordShow')->name('nuevoPassword');
 Route::post('usuario/cambiar_password/finalizar','UsuarioController@updatePassword')->name('updateContrasenia');
-
+Route::post('usuarios/operaciones','UsuarioController@operaciones')->name('operaciones');
+Route::post('usuarios/update/{id}','UsuarioController@updateUser')->name('updateUser');
 
 //psicologos_gestion
 Route::get('dashboard_psicologo','HomeController@indexPsicologo')->name('dashboard_psicologo');
