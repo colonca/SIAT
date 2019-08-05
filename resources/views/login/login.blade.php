@@ -47,15 +47,15 @@
 
             <form class="login100-form validate-form" action="{{route('login')}}" method="POST">
                 @csrf
-                <div class="wrap-input100 validate-input m-b-26 {{$errors->has('cedula') ? 'has-error' : '' }}" data-validate="Cedula is required">
+                <div class="wrap-input100 validate-input m-b-26 {{$errors->has('cedula') ? 'has-error' : '' }}" data-validate="Usuario requerido">
                     <span class="label-input100">Cedula</span>
                     <input class="input100" type="text" name="cedula" value="{{ old('cedula') }}" placeholder="Ingresa tu Identificacion">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-18"  data-validate = "Password is required">
-                    <span class="label-input100">Password</span>
-                    <input class="input100" type="password" name="password" placeholder="Enter password">
+                <div class="wrap-input100 validate-input m-b-18"  data-validate = "Clave requerida">
+                    <span class="label-input100">Clave</span>
+                    <input class="input100" type="password" name="password" placeholder="Digite la clave">
                     <span class="focus-input100"></span>
                 </div>
                 <div class="{{$errors->has('cedula') ? 'alert alert-danger' : '' }}">
@@ -68,20 +68,20 @@
                     <div class="contact100-form-checkbox">
                         <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb1">
-                            Remember me
+                            Recuerdame
                         </label>
                     </div>
 
-                    <div>
+                    <!--<div>
                         <a class="btn btn-link" href="#">
                             Forgot Your Password?
                         </a>
-                    </div>
+                    </div>-->
                 </div>
 
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
-                        Login
+                        Iniciar Sesión
                     </button>
                 </div>
             </form>
