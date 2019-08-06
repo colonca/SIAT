@@ -26,7 +26,8 @@ Route::get('privilegios/paginas/{id}','Grupo_UsuarioController@searhPaginas');
 Route::post('privilegios/paginas','Grupo_UsuarioController@guardarPaginas');
 Route::get('usuario/perfil','UsuarioController@profile')->name('perfil_Usuario');
 Route::get('usuario/cambiar_password','UsuarioController@cambiarPasswordShow')->name('nuevoPassword');
-Route::post('usuario/cambiar_password/finalizar','UsuarioController@updatePassword')->name('updateContrasenia');
+Route::post('usuario/cambiar_password/finalizar','UsuarioController@updatePassword')->name('updateContrasenia');//validando la contraseña actual
+Route::post('usuario/cambiar_password_2/finalizar','UsuarioController@updatePassword2')->name('actualizarContrasnia');//sin validar la contraseña solo se envia la nueva contraseña
 Route::post('usuarios/operaciones','UsuarioController@operaciones')->name('operaciones');
 Route::post('usuarios/update/{id}','UsuarioController@updateUser')->name('updateUser');
 

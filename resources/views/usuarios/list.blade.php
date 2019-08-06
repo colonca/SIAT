@@ -43,40 +43,28 @@
                        Usuarios del Sistema
                     </h2>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="{{route('usuarios.create')}}" class="btn btn-success pull-right">Agregar Nuevo Usuario</a>
-                </div>
             </div>
             <div class="body table-responsive">
-                <table class="table table-condensed" id="grupos">
+                <table class="table table-bordered table-condensed table-hover" id="grupos">
                     <thead>
-                    <tr>
+                    <tr class="bg-green text-center">
                         <th>Cedula</th>
                         <th>Nombre</th>
                         <th>Correo Electronico</th>
                         <th>Grupo o Role</th>
-                        <th>Action</th>
+                        <th>Creado</th>
+                        <th>Modificado</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($usuarios as $usuario)
-                        <tr>
+                        <tr >
                             <td>{{$usuario->cedula}}</td>
                             <td>{{$usuario->nombre}}</td>
                             <td>{{$usuario->email}}</td>
                             <td>{{$usuario->role->nombre}}</td>
-                            <td>
-                                <a href="" onclick="eliminar(event,{{$usuario->cedula}})" class="btn btn-danger btn-sm">
-                                    <i class="material-icons">
-                                        delete
-                                    </i>
-                                </a>
-                                <a href="{{route('usuarios.edit',$usuario->cedula)}}" class="btn btn-warning btn-sm">
-                                    <i class="material-icons">
-                                        update
-                                    </i>
-                                </a>
-                            </td>
+                            <td>{{$usuario->created_at}}</td>
+                            <td>{{$usuario->updated_at}}</td>
                         </tr>
                     @endforeach
                     </tbody>

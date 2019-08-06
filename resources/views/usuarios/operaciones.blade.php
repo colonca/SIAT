@@ -114,7 +114,8 @@
                         <h1 class="card-inside-title">DATOS DEL USUARIO</h1>
                         <div class="row clearfix">
                             <div class="col-md-12">
-                                <form method="POST" action="http://jordan.adventistasvalledupar.com/public/usuarios/usuario/contrasenia/cambiar/admin/finalizar?1" accept-charset="UTF-8" class="form-horizontal col-md-12"><input name="_token" type="hidden" value="0fvdDDcGQETdYnPrdLSdT7NvCC4DA7uk272sCJ6r">
+                                <form method="POST" action="{{route('actualizarContrasnia')}}" accept-charset="UTF-8" class="form-horizontal col-md-12" id="formularioPassword">
+                                    @csrf
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <div class="form-line">
@@ -126,7 +127,7 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <label>Escriba la Nueva Contraseña</label>
-                                                <br><input type="password" name="pass1" placeholder="Mínimo 6 caracteres" class="form-control" required="required">
+                                                <br><input type="password" name="pass1" id="pass1" placeholder="Mínimo 6 caracteres" class="form-control" required="required">
                                             </div>
                                         </div>
                                     </div>
@@ -134,14 +135,14 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <label>Vuelva a Escribir La Nueva Contraseña</label>
-                                                <br><input type="password" name="pass2" placeholder="Mínimo 6 caracteres" class="form-control" required="required">
+                                                <br><input type="password" name="pass2" id="pass2" placeholder="Mínimo 6 caracteres" class="form-control" required="required">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <button class="btn bg-indigo waves-effect" type="reset">Limpiar</button>
-                                            <button class="btn bg-green waves-effect" type="submit">Guardar</button>
+                                            <button class="btn bg-green waves-effect" type="submit" onclick="enviar(event)">Guardar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -168,4 +169,24 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+   <script>
+       function enviar(event) {
+         event.preventDefault();
+         const data = $('#formularioPassword').serialize();
+         axios.post('{{url('usuario/cambiar_password_2/finalizar')}}',data)
+             .then(response => {
+                 const data = response.data;
+                 if(data.status == 'ok'){
+                     $.notify(data.info,'success');
+                     $('#formularioPassword #pass1').val('');
+                     $('#formularioPassword #pass2').val('');
+                 }else{
+                     $.notify(data.info);
+                 }
+             });
+       }
+   </script>
 @endsection

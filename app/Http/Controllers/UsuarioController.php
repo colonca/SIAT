@@ -60,6 +60,7 @@ class UsuarioController extends Controller
        return view('usuarios.perfil.cambiarPassword');
     }
 
+    //actualiza la contraseña pidiendo la actual
     public function updatePassword(Request $request){
 
 
@@ -81,6 +82,28 @@ class UsuarioController extends Controller
         return back()->with('error','La contraseña actual ingresada no es correcta.');
      }
 
+    }
+
+    //actualiza la contraseña sin pedir la contraseña actual
+    public function updatePassword2(Request $request){
+
+       if($request->get('pass1')==$request->get('pass2')){
+           $usuario = User::find($request->get('identificacion2'));
+           $usuario->password = Hash::make($request->get('pass2'));
+           $usuario->save();
+
+           return response()->json([
+               'status' => 'ok',
+               'info'=>'contraseña cambiada correctamente'
+           ]);
+
+
+       }else{
+           return response()->json([
+               'status' => 'error',
+               'info'=>'las contraseñas ingresadas no coinciden'
+           ]);
+       }
     }
 
     public function edit($id)
