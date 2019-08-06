@@ -81,34 +81,33 @@
                             </div>
 
                             <div class="col-md-3">
-                                    <div class="form-group">
-                                        <b>Periodo</b>
-                                        <div class="input-group">
-                                            <select name="periodo" id="" class="form-control selectpicker show-tick">
-                                                <option value="">Selecione...</option>
-                                                @foreach($periodos as $periodo)
-                                                    <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
+                                <div class="form-group">
+                                    <b>Periodo</b>
+                                    <div class="input-group">
+                                        <select name="periodo" id="" class="form-control selectpicker show-tick">
+                                            <option value="">Selecione...</option>
+                                            @foreach($periodos as $periodo)
+                                                <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
+                                </div>
                             </div> 
 
                         </div>
                         <div class="col-md-12">  
-                                <div class="col-md-7">
-                                        <b>Programa</b>
-                                        <div class="input-group">
-                                            <select name="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
-                                                <option value="">Seleccione</option>
-                                                @foreach($programas as $programa)
-                                                    <option value="{{$programa->programa}}">{{$programa->programa}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>                           
+                            <div class="col-md-7">
+                                <b>Programa</b>
+                                <div class="input-group">
+                                    <select name="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
+                                        <option value="">Seleccione</option>
+                                        @foreach($programas as $programa)
+                                            <option value="{{$programa->programa}}">{{$programa->programa}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>                          
 
-                        
                             <div class="col-md-3">
                                 <b>Promedio</b>
                                 <div class="input-group">
@@ -119,7 +118,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                    <button type="submit" class="btn  btn-block btn-success "><i class="material-icons">search</i><span>Buscar</span></button>
+                                    <button type="submit" class="btn  btn-block btn-success "><i class="material-icons">search</i><span>Filtrar</span></button>
                             </div>
                         </div>
 
@@ -156,7 +155,7 @@
                             <td class="align-center">{{$estudiante->promedio_general}}</td>
                             <td class="align-center">{{$estudiante->periodo_cronologico}}</td>
                             <td class="font-bold font-underline col-teal">{{substr($estudiante->estado,2)}}</td>
-                            <td>
+                            <td class="align-center">
                                 <a href="{{route('estudiantes.show',$estudiante->id)}}"  class="btn btn-sm btn-info" title="Ver">
                                     <i class="material-icons">
                                         remove_red_eye

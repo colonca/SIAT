@@ -33,7 +33,7 @@ class EstudianteController extends Controller
             ->promedio($promedio)
             ->periodo($periodo)
             ->nombre($nombre)
-            ->paginate(8);
+            ->paginate(5);
 
         $programas= DB::table('estudiantes')
             ->select('programa')
