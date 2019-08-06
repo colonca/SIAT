@@ -258,6 +258,9 @@
 <!-- Jquery Core Js -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 
+<!-- Custom Js -->
+<script src="{{asset('js/admin.js')}}"></script>
+
 <!-- Bootstrap Core Js -->
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
@@ -272,13 +275,11 @@
 <!-- Waves Effect Plugin Js -->
 <script src="{{asset('js/waves.min.js')}}"></script>
 
+
 <script src="{{asset('js/moment.js')}}"></script>
 <script src="{{asset('js/bootstrap-material-datetimepicker.js')}}"></script>
 <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 
-
-<!-- Custom Js -->
-<script src="{{asset('js/admin.js')}}"></script>
 
 <!-- Demo Js -->
 <script src="{{asset('js/demo.js')}}"></script>

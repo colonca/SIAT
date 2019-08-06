@@ -35,140 +35,127 @@
     <!--menu de opciones-->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
-            <div class="header container">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <h2>
-                        Estudiantes
-                    </h2>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="{{route('estudiantes.create')}}" class="btn btn-success pull-right">Agregar Nuevo Estudiante</a>
-                </div>
-            </div>
-            <div class="body table-responsive">
+            <div class="header">
+                <h2>
+                    ESTUDIANTES
+                <a href="{{route('estudiantes.create')}}" class="btn bg-deep-orange waves-effect pull-right"><i class="material-icons">person_add</i><span>Nuevo Estudiante</span></a>
+                </h2>
+                <small>Utilice las siguientes opciones para filtrar su búsqueda.</small>
 
-                <h3 class="col-blue-grey m-b-20">Filtrar</h3>
+            </div>
+            <div class="body">
                 <form action="{{route('estudiantes.index')}}" method="get">
                     <div class="row">
                         <div class="col-md-12">
+                            <div class="col-md-2">
+                                <b>Cédula</b>
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <input type="text" name="cedula" class="form-control date" placeholder="ej: 1065xxx">
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                    <b>Nombres</b>
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <input type="text" name="nombre" class="form-control date" placeholder="Ej: Nahun Montesino">
+                                        </div>
+                                    </div>
+                            </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <b>Riesgo</b>
-                                    <select name="riesgo" id="" class="form-group">
-                                        <option value="">Selecione...</option>
-                                        <option value="Riesgo Bajo">Riesgo Bajo</option>
-                                        <option value="super Bajo">Riesgo super Bajo</option>
-                                        <option value="Riesgo Medio">Riesgo Medio</option>
-                                        <option value="Alto">Riesgo Alto</option>
-                                        <option value="super Alto">Riesgo Super Alto</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <b>Programa</b>
-                                <div class="input-group">
-                                    <select name="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
-                                        <option value="">por favor, elejir para filtrar</option>
-                                        @foreach($programas as $programa)
-                                            <option value="{{$programa->programa}}">{{$programa->programa}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <b>Cedula</b>
-                                <div class="input-group">
-                                    <div class="form-line">
-                                        <input type="text" name="cedula" class="form-control date" placeholder="criterio de busqueda para el Alumno">
+                                    <div class="input-group">
+                                        <select name="riesgo" id="" class="form-control selectpicker show-tick">
+                                            <option value="">Selecione...</option>
+                                            <option value="Riesgo Bajo">Riesgo Bajo</option>
+                                            <option value="super Bajo">Riesgo super Bajo</option>
+                                            <option value="Riesgo Medio">Riesgo Medio</option>
+                                            <option value="Alto">Riesgo Alto</option>
+                                            <option value="super Alto">Riesgo Super Alto</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-3">
-                                <div class="form-group">
-                                    <b>Periodo</b>
-                                    <select name="periodo" id="" class="form-group">
-                                        <option value="">Selecione...</option>
-                                        @foreach($periodos as $periodo)
-                                            <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
+                                    <div class="form-group">
+                                        <b>Periodo</b>
+                                        <div class="input-group">
+                                            <select name="periodo" id="" class="form-control selectpicker show-tick">
+                                                <option value="">Selecione...</option>
+                                                @foreach($periodos as $periodo)
+                                                    <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                            </div> 
+
                         </div>
-                        <div class="col-md-6">
-                            <div class="col-md-6">
-                                <b>Nombres</b>
-                                <div class="input-group">
-                                    <div class="form-line">
-                                        <input type="text" name="nombre" class="form-control date" placeholder="criterio de busqueda para el Alumno">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-12">  
+                                <div class="col-md-7">
+                                        <b>Programa</b>
+                                        <div class="input-group">
+                                            <select name="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
+                                                <option value="">Seleccione</option>
+                                                @foreach($programas as $programa)
+                                                    <option value="{{$programa->programa}}">{{$programa->programa}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>                           
+
+                        
                             <div class="col-md-3">
                                 <b>Promedio</b>
                                 <div class="input-group">
                                     <div class="form-line">
-                                        <input type="text" name="promedio" class="form-control date" placeholder="promedio">
+                                        <input type="text" name="promedio" class="form-control date" placeholder="ej: 3.1" title="Utilice el punto (.) para números decimales">
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-md-2">
+                                    <button type="submit" class="btn  btn-block btn-success "><i class="material-icons">search</i><span>Buscar</span></button>
+                            </div>
                         </div>
-                        <div class="col-md-2 m-b--110">
-                            <button type="submit" class="btn  btn-block btn-success ">Buscar</button>
-                        </div>
+
                     </div>
                 </form>
 
-                <table class="table table-condensed table-bordered table-striped" id="grupos">
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed table-hover" id="grupos">
                     <thead>
-                    <tr>
-                        <th>Cedula</th>
-                        <th width="150px">Nombres</th>
-                        <th width="100px">Programa</th>
-                        <th width="40px">Contacto</th>
-                        <th width="10px">Promedio General</th>
-                        <th width="10px">Periodo Cronologico</th>
-                        <th>Riesgo</th>
-                        <th>Action</th>
+                    <tr class="bg-green">
+                        <th class="align-center">Cédula</th>
+                        <th class="align-center">Nombres</th>
+                        <th class="align-center">Programa</th>
+                        <th class="align-center">Contacto</th>
+                        <th class="align-center">Promedio General</th>
+                        <th class="align-center">Periodo cronológico</th>
+                        <th class="align-center">Riesgo</th>
+                        <th class="align-center">Acción</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($estudiantes as $estudiante)
                         <tr>
-                            <td>{{$estudiante->cedula}}</td>
-                            <td>{{$estudiante->nombres}}</td>
+                            <th class="align-center">{{$estudiante->cedula}}</th>
+                            <td class="font-bold col-blue-grey">{{$estudiante->nombres}}</td>
                             <td>{{$estudiante->programa}}</td>
                             <td>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <div class="input-group">
-                                          <span class="input-group-addon">
-                                                <i class="material-icons">room</i>
-                                            </span>
-                                            {{$estudiante->direccion}}
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="input-group">
-                                          <span class="input-group-addon">
-                                                <i class="material-icons">settings_phone</i>
-                                            </span>
-                                            {{$estudiante->telefono }}
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="input-group">
-                                          <span class="input-group-addon">
-                                                <i class="material-icons">mail_outline</i>
-                                            </span>
-                                            {{$estudiante->email}}
-                                        </div>
-                                    </li>
-                                </ul>
+                                <div class="demo-icon-container">
+                                    <div class="demo-google-material-icon"> <i class="material-icons">room</i> <span class="icon-name">{{$estudiante->direccion}}</span></div>
+                                    <div class="demo-google-material-icon"> <i class="material-icons">call</i> <span class="icon-name">{{$estudiante->telefono }}</span></div>
+                                    <div class="demo-google-material-icon"> <i class="material-icons">mail_outline</i> <span class="icon-name font-underline col-pink">{{$estudiante->email}}</span></div>
+                                </div>
                             </td>
-                            <td>{{$estudiante->promedio_general}}</td>
-                            <td>{{$estudiante->periodo_cronologico}}</td>
-                            <td>{{substr($estudiante->estado,2)}}</td>
+                            <td class="align-center">{{$estudiante->promedio_general}}</td>
+                            <td class="align-center">{{$estudiante->periodo_cronologico}}</td>
+                            <td class="font-bold font-underline col-teal">{{substr($estudiante->estado,2)}}</td>
                             <td>
                                 <a href="{{route('estudiantes.show',$estudiante->id)}}"  class="btn btn-sm btn-info" title="Ver">
                                     <i class="material-icons">
@@ -191,6 +178,7 @@
                     {!!$estudiantes->render()!!}
                     </tbody>
                 </table>
+            </div>
             </div>
         </div>
     </div>

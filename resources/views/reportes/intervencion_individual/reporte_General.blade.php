@@ -21,7 +21,7 @@
                                 <b>Periodo Académico</b>
                                     <div class="input-group">
                                         <select name="periodo" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
-                                            <option value="">por favor, elejir para filtrar</option>
+                                            <option value="">por favor, elegir para filtrar</option>
                                             @foreach($periodos as $periodo)
                                                 <option value="{{$periodo->id}}">{{$periodo->anio.'-'.$periodo->periodo}}</option>
                                             @endforeach
@@ -33,7 +33,7 @@
                                 <b>Tallerista</b>
                                 <div class="input-group">
                                     <select name="tallerista" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
-                                     <option value="">por favor, elejir para filtrar</option>
+                                     <option value="">por favor, elegir para filtrar</option>
                                       @foreach($talleristas as $tallerista)
                                         <option value="{{$tallerista->cedula}}">{{$tallerista->primer_nombre.' '.$tallerista->primer_apellido}}</option>
                                       @endforeach
