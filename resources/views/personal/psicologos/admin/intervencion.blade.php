@@ -17,6 +17,18 @@
         </ol>
     </div>
 
+@if(session()->has('error'))
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="body">
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> {{session('error')}}
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
         <div class="header container">
@@ -70,9 +82,9 @@
                                @endforeach
                             </tbody>
                         </table>
-                </div>                
+                </div>
         </div>
-        
+
 
     </div>
 
@@ -164,6 +176,7 @@
              let data  = response.data;
              if(data.status == 'error'){
                  $.notify(data.message);
+                 history.go(-1);
              }else{
                  $('#exampleModalCenter').modal('hide');
                  $.notify('seguimiento registrado correctamente','success');
@@ -178,7 +191,7 @@
     }
 
 </script>
- 
+
 
 @endsection
 

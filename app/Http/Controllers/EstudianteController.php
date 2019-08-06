@@ -49,18 +49,23 @@ class EstudianteController extends Controller
 
     public function consultarEstudiante($id){
 
+        $periodo = Procedimientos::periodoDelAnhoActual();
+
+        if($periodo==null){
+            return response()->json([
+                'status' => 'error',
+                'message' => 'inscripción fuera de fecha'
+            ]);
+        }
+
         $fechaFFase = date('Y-m-d');
-
-        $periodo = Periodoacademico::where([
-            ['fechainicio','<=',$fechaFFase],
-            ['fechafin','>=',$fechaFFase]
-        ])->first();
-
 
         $estudiante  =  Estudiante::where([
             ['cedula',$id],
-            ['periodo_id',$periodo->id]
+            ['periodo_id',$periodo]
         ])->first();
+
+
 
         return json_encode($estudiante);
     }
@@ -110,7 +115,7 @@ class EstudianteController extends Controller
     public function show($id)
     {
         $estudiante = Estudiante::find($id);
-        
+
     }
 
 

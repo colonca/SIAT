@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/usuarios/operaciones.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/grupos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuarios/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/admin/intervencion.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -335,6 +334,7 @@
       <workItem from="1564890735638" duration="3240000" />
       <workItem from="1564930331717" duration="373000" />
       <workItem from="1564952170550" duration="6415000" />
+      <workItem from="1565051697144" duration="1576000" />
     </task>
     <servers />
   </component>

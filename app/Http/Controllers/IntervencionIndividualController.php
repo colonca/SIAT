@@ -36,8 +36,14 @@ class IntervencionIndividualController extends Controller
 
     public function create()
     {
-        $impresiones = ImpresionDiagnostica::all();
-        return view('personal.psicologos.admin.create',compact('impresiones'));
+        $periodo= Procedimientos::periodoDelAnhoActual();
+
+        if($periodo){
+            $impresiones = ImpresionDiagnostica::all();
+            return view('personal.psicologos.admin.create',compact('impresiones'));
+        }else{
+            return back()->with('error','no se pueden crear nuevas historias clínica para la fecha actual, por favor verifique el limite del periodo actual');
+        }
     }
 
     public function store(Request $request)

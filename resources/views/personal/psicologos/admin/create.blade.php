@@ -49,7 +49,7 @@
                                      </div>
 
                                 </div>
-        
+
                                 <div class="col-md-4">
                                     <b>Fecha</b>
                                     <div class="input-group">
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>-->
 
-                              
+
                                 <div class="col-md-3">
                                         <b>Identificación</b>
                                         <div class="input-group">
@@ -98,7 +98,7 @@
                                                             placeholder="Escoja una fecha..." required>
                                                     </div>
                                                 </div>
-        
+
                                             </div>
                                             <div class="col-md-2">
                                                 <b>Edad</b>
@@ -194,7 +194,7 @@
                                                                 </select>
                                                             </div>
                     </div>
- 
+
                 </fieldset>
 
                 <h3>Datos Académicos del Estudiante</h3>
@@ -348,7 +348,7 @@
                                             @foreach($impresiones as $impresion)
                                                 <option value="{{$impresion->id}}">{{$impresion->descripcion}}</option>
                                             @endforeach
-                                        </select>                                       
+                                        </select>
                                 </div>
                             </div>
 
@@ -361,7 +361,7 @@
                                                     placeholder="Escriba aquí..." required></textarea>
                                             </div>
                                         </div>
-                                   
+
                                 </div>
 
                 </fieldset>
@@ -465,15 +465,21 @@
           const url = 'estudiantes/'+cedula;
           axios.get('{{url('/')}}/estudiante/'+cedula).then(response => {
              let data = response.data;
-             $('#nombres').val(data.nombres);
-             $('#promedioS').val(data.promedio_general);
-             $('#promedioA').val(data.promedio_semestral);
-             $('#celular').val(data.celular);
-             $('#direccion').val(data.direccion);
-             $('#riesgo').val(data.estado.substr(2));
-             $('#programa').val(data.programa);
-             $('#semestre').val(data.periodo_cronologico);
-             $('#estudiante_id').val(data.id);
+
+             if(data.status == 'error'){
+                 $.notify(data.message);
+             }else{
+                 $('#nombres').val(data.nombres);
+                 $('#promedioS').val(data.promedio_general);
+                 $('#promedioA').val(data.promedio_semestral);
+                 $('#celular').val(data.celular);
+                 $('#direccion').val(data.direccion);
+                 $('#riesgo').val(data.estado.substr(2));
+                 $('#programa').val(data.programa);
+                 $('#semestre').val(data.periodo_cronologico);
+                 $('#estudiante_id').val(data.id);
+             }
+
           });
         }
 
