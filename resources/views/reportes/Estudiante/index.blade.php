@@ -57,7 +57,19 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <h2><center>ESTUDIANTES CLASIFICADOS POR NIVEL DE RIESGO-LINEA</center></h2>
+                <h2><center>ESTUDIANTES CLASIFICADOS POR NIVEL DE RIESGO</center></h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a onclick="descargar()" id="link1" download="LineaJpg.jpg">Descargar jpg</a></li>
+                            <li><a onclick="descargar()" id="link2" download="Lineapng.png">Descargar png</a></li>
+                            <li><a onclick="imprimir('line_chart')">Imprimir</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="body">
                 <canvas id="line_chart" height="150"></canvas>
@@ -69,7 +81,19 @@
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <h2><center>ESTUDIANTES CLASIFICADOS POR NIVEL DE RIESGO-BARRAS</center></h2>
+                <h2><center>ESTUDIANTES CLASIFICADOS POR NIVEL DE RIESGO</center></h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a onclick="descargar()" id="link3" download="BarraJpg.jpg">Descargar jpg</a></li>
+                            <li><a onclick="descargar()"id="link4" download="Barrapng.png">Descargar png</a></li>
+                            <li><a onclick="imprimir('bar_chart')">Imprimir</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="body">
                 <canvas id="bar_chart" height="150"></canvas>
@@ -237,58 +261,43 @@ $(function () {
     axios.get('{{url('reportes/Periodos')}}')
         .then(response => {
             datos = response.data;
-            new Chart(document.getElementById("line_chart").getContext("2d"), getChartJs('line',datos));
-            new Chart(document.getElementById("bar_chart").getContext("2d"), getChartJs('bar',datos));
+            graficaHorizonal= new Chart(document.getElementById("line_chart").getContext("2d"), getChartJs('horizontalBar',datos));
+            graficaVertical = new Chart(document.getElementById("bar_chart").getContext("2d"), getChartJs('bar',datos));
         });
 });
 
 function getChartJs(type,datos) {
     var config = null;
 
-    if (type === 'line') {
+    if (type === 'horizontalBar') {
         config = {
-            type: 'line',
+            type: 'horizontalBar',
             data: {
                 labels: datos.periodos,
                 datasets: [{
                     label: "Riesgo Super Alto",
                     data: datos.riesgoSuperAlto,
-                    borderColor: 'rgba(68, 114, 196, 0.75)',
-                    backgroundColor: 'rgba(68, 114, 196, 0.3)',
-                    pointBorderColor: 'rgba(68, 114, 196, 0)',
-                    pointBackgroundColor: 'rgba(68, 114, 196, 0.9)',
+                    backgroundColor: 'rgba(229, 44, 44)',
                     pointBorderWidth: 1
                 }, {
                         label: "Riesgo Alto",
                         data: datos.riesgoAlto,
-                        borderColor: 'rgba(237, 125, 49, 0.75)',
-                        backgroundColor: 'rgba(237, 125, 49, 0.3)',
-                        pointBorderColor: 'rgba(237, 125, 49, 0)',
-                        pointBackgroundColor: 'rgba(237, 125, 49, 0.9)',
+                        backgroundColor: 'rgba(252, 211, 4)',
                         pointBorderWidth: 1
                     },{
                     label: "Riesgo Medio",
                     data: datos.riesgoMedio,
-                    borderColor: 'rgba(165, 165, 165, 0.75)',
-                    backgroundColor: 'rgba(165, 165, 165, 0.3)',
-                    pointBorderColor: 'rgba(165, 165, 165, 0)',
-                    pointBackgroundColor: 'rgba(165, 165, 165, 0.9)',
+                    backgroundColor: 'rgba(165, 165, 165)',
                     pointBorderWidth: 1
                 },{
                     label: "Riesgo Bajo",
                     data: datos.riegoBajo,
-                    borderColor: 'rgba(255, 192, 0, 0.75)',
-                    backgroundColor: 'rgba(255, 192, 0, 0.3)',
-                    pointBorderColor: 'rgba(255, 192, 0, 0)',
-                    pointBackgroundColor: 'rgba(255, 192, 0, 0.9)',
+                    backgroundColor: 'rgba(32, 190, 78)',
                     pointBorderWidth: 1
                 },{
                     label: "Riesgo Super Bajo",
                     data: datos.riesgoSuperBajo,
-                    borderColor: 'rgba(68, 114, 196, 0.75)',
-                    backgroundColor: 'rgba(68, 114, 196, 0.3)',
-                    pointBorderColor: 'rgba(68, 114, 196, 0)',
-                    pointBackgroundColor: 'rgba(68, 114, 196, 0.9)',
+                    backgroundColor: 'rgba(68, 114, 196)',
                     pointBorderWidth: 1
                 }]
             },
@@ -341,6 +350,34 @@ function getChartJs(type,datos) {
     return config;
 }
 
+function descargar(){
+    var url_base64jp = document.getElementById("line_chart").toDataURL("image/jpg");
+    var url_base64 = document.getElementById("line_chart").toDataURL("image/png");
+    var url_base64jp2 = document.getElementById("bar_chart").toDataURL("image/jpg");
+    var url_base642 = document.getElementById("bar_chart").toDataURL("image/png");
+    
+    link1.href = url_base64jp;
+    link2.href = url_base64;
+    link3.href = url_base64jp2;
+    link4.href = url_base642;
+}
+
+function imprimir(grafico){
+    graficaHorizonal.render();
+    graficaVertical.render();
+    var canvas = document.getElementById(grafico);
+    var imagen = canvas.toDataURL("image/jpg"); 
+    var printWin = window.open();
+    printWin.document.open();       
+    printWin.document.write("<center><br><img src='" + imagen + "'/" + "></center>");
+    printWin.document.close();
+    printWin.focus();
+    printWin.print();
+    printWin.onafterprint = function(){
+        printWin.close(); 
+    }
+
+}
 
 </script>
 

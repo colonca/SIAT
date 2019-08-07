@@ -38,10 +38,9 @@
             <div class="header">
                 <h2>
                     ESTUDIANTES
-                <a href="{{route('estudiantes.create')}}" class="btn bg-deep-orange waves-effect pull-right"><i class="material-icons">person_add</i><span>Nuevo Estudiante</span></a>
+                    <a href="{{route('estudiantes.create')}}" class="btn bg-deep-orange waves-effect pull-right"><i class="material-icons">person_add</i><span>Nuevo Estudiante</span></a>
                 </h2>
                 <small>Utilice las siguientes opciones para filtrar su búsqueda.</small>
-
             </div>
             <div class="body">
                 <form action="{{route('estudiantes.index')}}" method="get">
@@ -123,61 +122,62 @@
                         </div>
 
                     </div>
-                </form>
+                    </form>
 
-            <div class="table-responsive">
-                <table class="table table-bordered table-condensed table-hover" id="grupos">
-                    <thead>
-                    <tr class="bg-green">
-                        <th class="align-center">Cédula</th>
-                        <th class="align-center">Nombres</th>
-                        <th class="align-center">Programa</th>
-                        <th class="align-center">Contacto</th>
-                        <th class="align-center">Promedio General</th>
-                        <th class="align-center">Periodo cronológico</th>
-                        <th class="align-center">Riesgo</th>
-                        <th class="align-center">Acción</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($estudiantes as $estudiante)
-                        <tr>
-                            <th class="align-center">{{$estudiante->cedula}}</th>
-                            <td class="font-bold col-blue-grey">{{$estudiante->nombres}}</td>
-                            <td>{{$estudiante->programa}}</td>
-                            <td>
-                                <div class="demo-icon-container">
-                                    <div class="demo-google-material-icon"> <i class="material-icons">room</i> <span class="icon-name">{{$estudiante->direccion}}</span></div>
-                                    <div class="demo-google-material-icon"> <i class="material-icons">call</i> <span class="icon-name">{{$estudiante->telefono }}</span></div>
-                                    <div class="demo-google-material-icon"> <i class="material-icons">mail_outline</i> <span class="icon-name font-underline col-pink">{{$estudiante->email}}</span></div>
-                                </div>
-                            </td>
-                            <td class="align-center">{{$estudiante->promedio_general}}</td>
-                            <td class="align-center">{{$estudiante->periodo_cronologico}}</td>
-                            <td class="font-bold font-underline col-teal">{{substr($estudiante->estado,2)}}</td>
-                            <td class="align-center">
-                                <a href="{{route('estudiantes.show',$estudiante->id)}}"  class="btn btn-sm btn-info" title="Ver">
-                                    <i class="material-icons">
-                                        remove_red_eye
-                                    </i>
-                                </a>
-                                <a href="#" onclick="enviarCorreo(event,'{{$estudiante->email}}')" class="btn btn-sm btn-outline-danger m-t-5" title="Enviar Correo Electronico">
-                                    <i class="material-icons">
-                                        exit_to_app
-                                    </i>
-                                </a>
-                                <a href="#"  class="btn btn-sm btn-warning m-t-5" title="Modificar">
-                                    <i class="material-icons">
-                                        exit_to_app
-                                    </i>
-                                </a>
-                            </td>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed table-hover" id="grupos">
+                        <thead>
+                        <tr class="bg-green">
+                            <th class="align-center">Cédula</th>
+                            <th class="align-center">Nombres</th>
+                            <th class="align-center">Programa</th>
+                            <th class="align-center">Contacto</th>
+                            <th class="align-center">Promedio General</th>
+                            <th class="align-center">Periodo cronológico</th>
+                            <th class="align-center">Riesgo</th>
+                            <th class="align-center">Acción</th>
                         </tr>
-                    @endforeach
-                    {!!$estudiantes->render()!!}
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                        @foreach($estudiantes as $estudiante)
+                            <tr>
+                                <th class="align-center">{{$estudiante->cedula}}</th>
+                                <td class="font-bold col-blue-grey">{{$estudiante->nombres}}</td>
+                                <td>{{$estudiante->programa}}</td>
+                                <td>
+                                    <div class="demo-icon-container">
+                                        <div class="demo-google-material-icon"> <i class="material-icons">room</i> <span class="icon-name">{{$estudiante->direccion}}</span></div>
+                                        <div class="demo-google-material-icon"> <i class="material-icons">call</i> <span class="icon-name">{{$estudiante->telefono }}</span></div>
+                                        <div class="demo-google-material-icon"> <i class="material-icons">mail_outline</i> <span class="icon-name font-underline col-pink">{{$estudiante->email}}</span></div>
+                                    </div>
+                                </td>
+                                <td class="align-center">{{$estudiante->promedio_general}}</td>
+                                <td class="align-center">{{$estudiante->periodo_cronologico}}</td>
+                                <td class="font-bold font-underline col-teal">{{substr($estudiante->estado,2)}}</td>
+                                <td class="align-center">
+                                    <a href="{{route('estudiantes.show',$estudiante->id)}}"  class="btn btn-sm btn-info" title="Ver">
+                                        <i class="material-icons">
+                                            remove_red_eye
+                                        </i>
+                                    </a>
+                                    <a href="#" onclick="enviarCorreo(event,'{{$estudiante->email}}')" class="btn btn-sm btn-outline-danger m-t-5" title="Enviar Correo Electronico">
+                                        <i class="material-icons">
+                                            exit_to_app
+                                        </i>
+                                    </a>
+                                    <a href="#"  class="btn btn-sm btn-warning m-t-5" title="Modificar">
+                                        <i class="material-icons">
+                                            exit_to_app
+                                        </i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        {!!$estudiantes->render()!!}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
