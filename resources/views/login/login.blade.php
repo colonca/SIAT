@@ -49,7 +49,7 @@
                 @csrf
                 <div class="wrap-input100 validate-input m-b-26 {{$errors->has('cedula') ? 'has-error' : '' }}" data-validate="Usuario requerido">
                     <span class="label-input100">Cedula</span>
-                    <input class="input100" type="text" name="cedula" value="{{ old('cedula') }}" placeholder="Ingresa tu Identificacion">
+                    <input class="input100" type="text" name="cedula" value="{{ old('cedula') }}" placeholder="Ingresa tu Identificación">
                     <span class="focus-input100"></span>
                 </div>
 

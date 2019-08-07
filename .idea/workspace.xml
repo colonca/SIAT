@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/Laravel.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -335,7 +337,7 @@
       <workItem from="1564952170550" duration="6415000" />
       <workItem from="1565051697144" duration="1576000" />
       <workItem from="1565127140057" duration="5381000" />
-      <workItem from="1565194044341" duration="3244000" />
+      <workItem from="1565194044341" duration="3902000" />
     </task>
     <servers />
   </component>
