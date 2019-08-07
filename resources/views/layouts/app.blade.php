@@ -237,7 +237,7 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2019 - 2020 <a href="javascript:void(0);">PEBI- CANADA</a>.
+                &copy; 2019 - 2020 <a href="javascript:void(0);"> Camilo Colón - Daniel Barros</a>.
             </div>
             <div class="version">
                 <b>Version: </b> 1.0.0

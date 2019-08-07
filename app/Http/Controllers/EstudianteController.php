@@ -114,6 +114,7 @@ class EstudianteController extends Controller
         $estudiante->promedio_semestral = $request->get('promedio_semestral');
         $estudiante->contraseña = bcrypt($request->get('cedula'));
         $estudiante->periodo_id = $request->get('periodo');
+        $estudiante->estado=$request->get('riesgo');
         $estudiante->save();
 
         return redirect()->route('estudiantes.create')
@@ -121,22 +122,32 @@ class EstudianteController extends Controller
 
     }
 
-
     public function show($id)
     {
         $estudiante = Estudiante::find($id);
-
+        return view('estudiantes.show',compact('estudiante'));
     }
-
 
     public function edit($id)
     {
-        //
+        $estudiante = Estudiante::find($id);
+
+        $periodos =Periodoacademico::all();
+
+        $programas= DB::table('estudiantes')
+            ->select('programa')
+            ->distinct()->get();
+
+        return view('estudiantes.edit',compact('estudiante','periodos','programas'));
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $estudiante = Estudiante::find($id);
+        $estudiante->fill($request->all());
+        $estudiante->save();
+
+        return back()->withInput()->with('info','estudiante actualizado correctamente');
     }
 
     public function destroy($id)

@@ -12,9 +12,10 @@
                     <a href="{{route('dashboard')}}" style="color: white;">
                 @endif
                     <i class="material-icons">home</i> inicio
-                </a>
+                    </a>
             </li>
-            <li><a href="" style="color: white;">
+            <li>
+                <a href="" style="color: white;">
                     <i class="material-icons">perm_identity</i> Estudiantes
                 </a>
             </li>
@@ -167,7 +168,7 @@
                                             exit_to_app
                                         </i>
                                     </a>
-                                    <a href="#"  class="btn btn-sm btn-warning m-t-5" title="Modificar">
+                                    <a href="{{route('estudiantes.edit',$estudiante->id)}}"  class="btn btn-sm btn-warning m-t-5" title="Modificar">
                                         <i class="material-icons">
                                             exit_to_app
                                         </i>

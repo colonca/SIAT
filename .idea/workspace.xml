@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/Laravel.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/estudiantes/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Estudiante.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estudiante.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reportes/Estudiante/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estudiantes/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estudiantes/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/estudiantes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -189,19 +190,19 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/estudiantes" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\docentesPermanencia" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\public\images\users" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\psicologos" />
+      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\usuarios\grupos" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\psicologos\admin" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\database\migrations" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\citas\estudiante" />
       <recent name="C:\xampp\htdocs\Proyectos\SIAT\public\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\docentesPermanencia" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\public\images\users" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\personal\psicologos" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\usuarios\grupos" />
-      <recent name="C:\xampp\htdocs\Proyectos\SIAT\resources\views\usuarios\modulos" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -337,7 +338,7 @@
       <workItem from="1564952170550" duration="6415000" />
       <workItem from="1565051697144" duration="1576000" />
       <workItem from="1565127140057" duration="5381000" />
-      <workItem from="1565194044341" duration="3902000" />
+      <workItem from="1565194044341" duration="12608000" />
     </task>
     <servers />
   </component>

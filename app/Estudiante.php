@@ -38,7 +38,6 @@ class Estudiante extends Model
             return $query->where('nombres','LIKE',"%$nombre%");
     }
 
-
     public function scopePeriodo($query,$periodo){
         if($periodo)
             return $query->where('periodo_id',$periodo);
