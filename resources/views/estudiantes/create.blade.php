@@ -77,7 +77,7 @@
                                                     <select name="periodo" id="periodo" required>
                                                         <option value="">Por favor, elija una opcion</option>
                                                         @foreach($periodos as $periodo)
-                                                            <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
+                                                            <option value="{{$periodo->id}}">{{$periodo->anio}}-{{$periodo->periodo}}</option>
                                                         @endforeach
                                                     </select>
                                             </div>
@@ -95,9 +95,12 @@
                                         <div class="col-md-6">
                                             <b>Programa</b>
                                             <div class="input-group">
-                                                <div class="form-line">
-                                                    <input type="text" name="programa" class="form-control nombre" placeholder="Ex: Sociologia" required>
-                                                </div>
+                                                <select name="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
+                                                    <option value="">Seleccione</option>
+                                                    @foreach($programas as $programa)
+                                                        <option value="{{$programa->programa}}">{{$programa->programa}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +160,7 @@
                                                 </i>
                                             </span>
                                                 <div class="form-line">
-                                                    <input type="number" name="periodo_academico" class="form-control email" placeholder="" required>
+                                                    <input type="number" name="periodo_academico" min="0" class="form-control email" placeholder="" required value="0">
                                                 </div>
                                             </div>
                                         </div>
@@ -170,7 +173,7 @@
                                                 </i>
                                             </span>
                                                 <div class="form-line">
-                                                    <input type="number" name="periodo_cronologico" class="form-control email" placeholder="" required>
+                                                    <input type="number" min="0" name="periodo_cronologico" class="form-control email" placeholder="" required value="0">
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +186,7 @@
                                                 </i>
                                             </span>
                                                 <div class="form-line">
-                                                    <input type="number" min="0" max="5" name="promedio_general" class="form-control email" placeholder="" required>
+                                                    <input type="number" min="0" max="5" step="0.1" name="promedio_general" class="form-control email" placeholder="" required value="0">
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +199,7 @@
                                                 </i>
                                             </span>
                                                 <div class="form-line">
-                                                    <input type="number" name="promedio_semestral" min="0" max="5" class="form-control email" placeholder="" required>
+                                                    <input type="number" name="promedio_semestral" min="0" max="5"  step="0.1" class="form-control email" placeholder="" required value="0">
                                                 </div>
                                             </div>
                                         </div>
@@ -206,11 +209,11 @@
                                                     <b>Riesgo</b>
                                                     <select name="riesgo" id="" class="form-group">
                                                         <option value="">Selecione...</option>
-                                                        <option value="Riesgo Bajo">Riesgo Bajo</option>
-                                                        <option value="super Bajo">Riesgo super Bajo</option>
-                                                        <option value="Riesgo Medio">Riesgo Medio</option>
-                                                        <option value="Alto">Riesgo Alto</option>
-                                                        <option value="super Alto">Riesgo Super Alto</option>
+                                                        <option value="4. Riesgo Bajo">Riesgo Bajo</option>
+                                                        <option value="5. Riesgo super bajo" selected>Riesgo super Bajo</option>
+                                                        <option value="3. Riesgo Medio">Riesgo Medio</option>
+                                                        <option value="2. Alto">Riesgo Alto</option>
+                                                        <option value="1. Riesgo super alto">Riesgo Super Alto</option>
                                                     </select>
                                                 </div>
                                             </div>

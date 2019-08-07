@@ -65,7 +65,12 @@ class EstudianteController extends Controller
             ['periodo_id',$periodo]
         ])->first();
 
-
+        if($estudiante==null){
+            return response()->json([
+                'status' => 'error',
+                'message' => 'el estudiante no se encuentra registrado en el periodo actual, verifique que se hayan cargado los datos del estudiante'
+            ]);
+        }
 
         return json_encode($estudiante);
     }
@@ -74,7 +79,12 @@ class EstudianteController extends Controller
     public function create()
     {
        $periodos = Periodoacademico::all();
-        return view('estudiantes.create',compact('periodos'));
+
+        $programas= DB::table('estudiantes')
+            ->select('programa')
+            ->distinct()->get();
+
+        return view('estudiantes.create',compact('periodos','programas'));
     }
 
     public function save(Request $request)
@@ -129,12 +139,6 @@ class EstudianteController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

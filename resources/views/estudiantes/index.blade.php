@@ -87,15 +87,15 @@
                                             <select name="periodo" id="" class="form-control selectpicker show-tick">
                                                 <option value="">Selecione...</option>
                                                 @foreach($periodos as $periodo)
-                                                    <option value="{{$periodo->id}}">{{$periodo->anio}}==>{{$periodo->periodo}}</option>
+                                                    <option value="{{$periodo->id}}">{{$periodo->anio}}-{{$periodo->periodo}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-                            </div> 
+                            </div>
 
                         </div>
-                        <div class="col-md-12">  
+                        <div class="col-md-12">
                                 <div class="col-md-7">
                                         <b>Programa</b>
                                         <div class="input-group">
@@ -106,9 +106,9 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                    </div>                           
+                                    </div>
 
-                        
+
                             <div class="col-md-3">
                                 <b>Promedio</b>
                                 <div class="input-group">
@@ -226,7 +226,7 @@
     <script src="{{asset('js/notify.min.js')}}"></script>
     <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
     <script>
-        
+
         $(document).ready(function () {
 
             CKEDITOR.replace( 'editor',
