@@ -43,7 +43,9 @@ class EstudianteController extends Controller
 
         $estudiantes->withPath("estudiantes?riesgo=$riesgo&programa=$programa&cedula=$cedula&periodo=$periodo&nombre=$nombre");
 
-        return view('estudiantes.index', compact('estudiantes','periodos','programas'));
+        $location = 'estudiante';
+
+        return view('estudiantes.index', compact('estudiantes','periodos','programas','location'));
 
     }
 
@@ -84,7 +86,9 @@ class EstudianteController extends Controller
             ->select('programa')
             ->distinct()->get();
 
-        return view('estudiantes.create',compact('periodos','programas'));
+        $location = 'estudiante';
+
+        return view('estudiantes.create',compact('periodos','programas','location'));
     }
 
     public function save(Request $request)
@@ -125,7 +129,8 @@ class EstudianteController extends Controller
     public function show($id)
     {
         $estudiante = Estudiante::find($id);
-        return view('estudiantes.show',compact('estudiante'));
+        $location = 'estudiante';
+        return view('estudiantes.show',compact('estudiante','location'));
     }
 
     public function edit($id)
@@ -137,8 +142,8 @@ class EstudianteController extends Controller
         $programas= DB::table('estudiantes')
             ->select('programa')
             ->distinct()->get();
-
-        return view('estudiantes.edit',compact('estudiante','periodos','programas'));
+        $location = 'estudiante';
+        return view('estudiantes.edit',compact('estudiante','periodos','programas','location'));
     }
 
     public function update(Request $request, $id)

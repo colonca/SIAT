@@ -16,10 +16,11 @@ class ReportesController extends Controller
      public function __construct(){
          $this->middleware('auth');
      }
-     
+
      public function reporteIntervencionIndividual(){
-           
-        return view('reportes.intervencion_individual.index');
+
+        $location ='reportes_intervencion_individual';
+        return view('reportes.intervencion_individual.index',compact('location'));
 
      }
 
@@ -32,9 +33,8 @@ class ReportesController extends Controller
                          ->cedula($request->get('tallerista'))
                          ->periodo($request->get('periodo'))
                          ->get();
-
-
-      return view('reportes.intervencion_individual.reporte_General',compact('intervenciones','talleristas','periodos'));
+      $location ='reportes_intervencion_individual';
+      return view('reportes.intervencion_individual.reporte_General',compact('intervenciones','talleristas','periodos','location'));
 
     }
 
@@ -57,8 +57,8 @@ class ReportesController extends Controller
      }else{
          $impresionesDiagnosticas = ImpresionDiagnostica::all();
      }
-
-      return view('reportes.intervencion_individual.r_impresion_Diagnostica',compact('periodos','programas','impresionesDiagnosticas'));
+      $location ='reportes_intervencion_individual';
+      return view('reportes.intervencion_individual.r_impresion_Diagnostica',compact('periodos','programas','impresionesDiagnosticas','location'));
    }
 
      public function reporte_Estudiante(){
@@ -73,7 +73,7 @@ class ReportesController extends Controller
          $riesgoAltototal = 0;
          $riegoSuperAltototal = 0;
          $riegoSuperBajototal = 0;
-         
+
          foreach ($periodos as $periodo){
              $riegoBajo = 0;
              $riegoMedio = 0;
@@ -168,8 +168,8 @@ class ReportesController extends Controller
              ];
 
          }
-              
-        return view('reportes.Estudiante.index',compact('datos','totales','periodos','datosPrograma'));
+        $location = 'reportes_estudiante';
+        return view('reportes.Estudiante.index',compact('datos','totales','periodos','datosPrograma','location'));
      }
 
      public function getDatos(){

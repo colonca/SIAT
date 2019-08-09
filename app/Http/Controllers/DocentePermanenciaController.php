@@ -22,12 +22,14 @@ class DocentePermanenciaController extends Controller
     public function index()
     {
         $docentePermanencia = Personal::where('tipo_usuario','docente_permanencia')->get();
-        return view('personal.docentesPermanencia.index',compact('docentePermanencia'));
+        $location = 'personal';
+        return view('personal.docentesPermanencia.index',compact('docentePermanencia','location'));
     }
 
     public function create()
     {
-        return view('personal.docentesPermanencia.create');
+        $location = 'personal';
+        return view('personal.docentesPermanencia.create',compact('location'));
     }
 
 
@@ -123,8 +125,8 @@ class DocentePermanenciaController extends Controller
     public function show($id)
     {
         $personal = Personal::find($id);
-
-        return view('personal.docentesPermanencia.show',compact('personal'));
+        $location = 'personal';
+        return view('personal.docentesPermanencia.show',compact('personal','location'));
     }
 
 
@@ -153,11 +155,8 @@ class DocentePermanenciaController extends Controller
     }
 
     public function horarios($id){
-
         $persona =  Personal::find($id);
         $horarios = $persona->horarios;
-
         return json_encode($horarios);
-
     }
 }

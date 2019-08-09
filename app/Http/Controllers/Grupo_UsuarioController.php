@@ -18,14 +18,15 @@ class Grupo_UsuarioController extends Controller
     public function index()
     {
         $grupos = Grupo_Usuario::orderBy('id','DESC')->get();
-        return view('usuarios.grupos.index',compact('grupos'));
+        $location = 'usuarios';
+        return view('usuarios.grupos.index',compact('grupos','location'));
     }
 
     public function create()
     {
         $modulos = Modulo::orderBy('id','DESC')->get();
-
-        return view('usuarios.grupos.create',compact('modulos'));
+        $location = 'usuarios';
+        return view('usuarios.grupos.create',compact('modulos','location'));
     }
 
 
@@ -46,7 +47,8 @@ class Grupo_UsuarioController extends Controller
     public function show($id)
     {
         $grupo = Grupo_Usuario::find($id);
-        return view('usuarios.grupos.show',compact('grupo'));
+        $location = 'usuarios';
+        return view('usuarios.grupos.show',compact('grupo','location'));
     }
 
 
@@ -55,8 +57,8 @@ class Grupo_UsuarioController extends Controller
         $grupo = Grupo_Usuario::find($id);
         $modulosSelecionados = $grupo->modulos()->get();
         $modulos = Modulo::all();
-
-        return view('usuarios.grupos.edit',compact('grupo','modulos','modulosSelecionados'));
+        $location = 'usuarios';
+        return view('usuarios.grupos.edit',compact('grupo','modulos','modulosSelecionados','location'));
     }
 
 
@@ -84,7 +86,8 @@ class Grupo_UsuarioController extends Controller
     public function showPrivilegios(){
         $grupos = Grupo_Usuario::all();
         $paginas = Pagina::all();
-        return view('usuarios.grupos.privilegios',compact('grupos','paginas'));
+        $location = 'usuarios';
+        return view('usuarios.grupos.privilegios',compact('grupos','paginas','location'));
     }
 
     public function searhPaginas($id) {

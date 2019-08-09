@@ -30,7 +30,9 @@ class IntervencionIndividualController extends Controller
             ['cedula',Auth::user()->cedula]
         ])->get();
 
-        return view('personal.psicologos.admin.intervencion',compact('intervenciones'));
+        $location = 'intervencion_individual';
+
+        return view('personal.psicologos.admin.intervencion',compact('intervenciones','location'));
     }
 
 
@@ -40,7 +42,8 @@ class IntervencionIndividualController extends Controller
 
         if($periodo){
             $impresiones = ImpresionDiagnostica::all();
-            return view('personal.psicologos.admin.create',compact('impresiones'));
+            $location = 'intervencion_individual';
+            return view('personal.psicologos.admin.create',compact('impresiones','location'));
         }else{
             return back()->with('error','no se pueden crear nuevas historias clínica para la fecha actual, por favor verifique el limite del periodo actual');
         }

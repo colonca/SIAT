@@ -49,7 +49,9 @@ class HomeController extends Controller
             }
         }
 
-        return view('usuarios.rol_usuarios.psicologos.index',compact('diaActual','citasPerdidas','mesActual','itervencionesMes'));
+        $location = '';
+
+        return view('usuarios.rol_usuarios.psicologos.index',compact('diaActual','citasPerdidas','mesActual','itervencionesMes','location'));
     }
 
 
@@ -60,7 +62,9 @@ class HomeController extends Controller
 
         $intervenciones = IntervencionIndividual::all()->count();
 
-        return view('welcome',compact('estudiantes','intervenciones'));
+        $location = '';
+
+        return view('welcome',compact('estudiantes','intervenciones','location'));
     }
 
 }

@@ -19,13 +19,15 @@ class ModuloController extends Controller
     public function index()
     {
         $modulos = Modulo::orderBy('id','DESC')->get();
-        return view('usuarios.modulos.index',compact('modulos'));
+        $location = 'usaurios';
+        return view('usuarios.modulos.index',compact('modulos','location'));
 
     }
 
     public function create()
     {
-        return view('usuarios.modulos.create');
+        $location = 'usaurios';
+        return view('usuarios.modulos.create',compact('location'));
     }
 
     public function store(Request $request)
@@ -45,13 +47,15 @@ class ModuloController extends Controller
     public function show($id)
     {
         $modulo = Modulo::find($id);
-        return view('usuarios.modulos.show',compact('modulo'));
+        $location = 'usaurios';
+        return view('usuarios.modulos.show',compact('modulo','usuarios'));
     }
 
     public function edit($id)
     {
         $modulo = Modulo::find($id);
-        return view('usuarios.modulos.edit',compact('modulo'));
+        $location = 'usaurios';
+        return view('usuarios.modulos.edit',compact('modulo','usuarios'));
     }
 
     public function update(Request $request, $id)

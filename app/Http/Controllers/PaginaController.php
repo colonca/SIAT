@@ -16,13 +16,14 @@ class PaginaController extends Controller
     public function index()
     {
         $paginas  = Pagina::orderBy('id','DESC')->get();
-
-        return view('usuarios.paginas.index',compact('paginas'));
+        $location = 'usaurios';
+        return view('usuarios.paginas.index',compact('paginas','location'));
     }
 
     public function create()
     {
-        return view('usuarios.paginas.create');
+        $location = 'usaurios';
+        return view('usuarios.paginas.create',compact('location'));
     }
 
     public function store(Request $request)
@@ -42,13 +43,15 @@ class PaginaController extends Controller
     public function show($id)
     {
         $pagina = Pagina::find($id);
-        return view('usuarios.paginas.show',compact('pagina'));
+        $location = 'usaurios';
+        return view('usuarios.paginas.show',compact('pagina','location'));
     }
 
     public function edit($id)
     {
         $pagina = Pagina::find($id);
-        return view('usuarios.paginas.edit',compact('pagina'));
+        $location = 'usaurios';
+        return view('usuarios.paginas.edit',compact('pagina','location'));
     }
 
     public function update(Request $request, $id)

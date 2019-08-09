@@ -16,12 +16,14 @@ class LoaderExcelController extends Controller
 
     public function index(){
 
-        return view('loaders.index');
+        $location = 'loader';
+        return view('loaders.index',compact('location'));
     }
 
     public function viewEstudiantes(){
         $periodos = Periodoacademico::all();
-       return view('loaders.estudiante',compact('periodos'));
+        $location = 'loader';
+       return view('loaders.estudiante',compact('periodos','location'));
     }
 
     public function loadEstudiantes(Request $request){
@@ -36,7 +38,7 @@ class LoaderExcelController extends Controller
                $name = $request->file('file')->getClientOriginalName();
 
                $ruta = $request->file('file')->getRealPath();
-          
+
                Excel::import(new StudentImport($request->get('periodo')), $request->file('file'));
 
                return response([

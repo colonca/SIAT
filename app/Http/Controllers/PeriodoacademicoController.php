@@ -17,8 +17,10 @@ class PeriodoacademicoController extends Controller {
     public function index() {
 
         $periodos = Periodoacademico::all();
+        $location = 'periodo';
         return view('periodos_academicos.list')
-                        ->with('periodos', $periodos);
+                        ->with('periodos', $periodos)
+                        ->with('location',$location);
 
     }
 
@@ -28,7 +30,8 @@ class PeriodoacademicoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('periodos_academicos.create');
+        $location = 'periodo';
+        return view('periodos_academicos.create')->with('location',$location);
     }
 
 
@@ -66,9 +69,9 @@ class PeriodoacademicoController extends Controller {
      */
     public function edit($id) {
         $periodo = Periodoacademico::find($id);
+        $location = 'periodo';
         return view('periodos_academicos.edit')
-                        ->with('periodo', $periodo);
-
+                        ->with('periodo', $periodo)->with('location',$location);
     }
 
     /**
@@ -95,16 +98,9 @@ class PeriodoacademicoController extends Controller {
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id) {
         $periodo = Periodoacademico::find($id);
         $result = $periodo->delete();
-
     }
 
 }

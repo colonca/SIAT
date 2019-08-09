@@ -109,7 +109,11 @@
 
 
                 @if(session()->has('MOD_PERSONAL'))
-                <li onclick="">
+                    @if($location=='personal')
+                        <li class="active">
+                    @else
+                        <li>
+                    @endif
                     <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
                         <i class="material-icons">contacts</i>
                         <span>Personal</span>
@@ -141,21 +145,32 @@
                 @endif
 
                 @if(session()->has('MOD_REPORTES'))
-                <li onclick="">
+                    @if($location=='reportes_estudiante' || $location=='reportes_intervencion_individual')
+                        <li class="active">
+                    @else
+                        <li>
+                    @endif
                     <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
                         <i class="material-icons">equalizer</i>
                         <span>Reportes</span>
                     </a>
                     <ul class="ml-menu" style="display: none;">
-
-                        <li>
+                        @if($location=='reportes_intervencion_individual')
+                            <li class="active">
+                        @else
+                            <li>
+                        @endif
                             <a href="{{route('reporte_individual')}}" class="waves-effect waves-block">
                                 <i class="material-icons">assessment</i>
                                 <span>Intervenciones Individuales</span>
                             </a>
                         </li>
 
-                        <li>
+                            @if($location=='reportes_estudiante')
+                                <li class="active">
+                            @else
+                                <li>
+                            @endif
                             <a href="{{route('reporte_Estudiante')}}" class="waves-effect waves-block">
                                 <i class="material-icons">assessment</i>
                                 <span>Estudiantes</span>
@@ -166,15 +181,23 @@
                 @endif
 
                 @if(session()->has('MOD_ESTUDIANTES'))
-                <li>
-                    <a href="{{route('estudiantes.index')}}" class="waves-effect waves-block">
-                        <i class="material-icons">face</i>
-                        <span>Estudiantes</span>
-                    </a>
-                </li>
+                    @if($location=='estudiante')
+                      <li class="active">
+                    @else
+                      <li>
+                   @endif
+                        <a href="{{route('estudiantes.index')}}" class="waves-effect waves-block">
+                            <i class="material-icons">face</i>
+                            <span>Estudiantes</span>
+                        </a>
+                      </li>
                 @endif
                 @if(session()->has('MOD_CARGAR_INFORMACIóN'))
-                    <li>
+                    @if($location=='loader')
+                        <li class="active">
+                    @else
+                        <li>
+                    @endif
                         <a href="{{route('loaders')}}" class="waves-effect waves-block">
                             <i class="material-icons">note_add</i>
                             <span>Cargar Informacion</span>
@@ -182,7 +205,11 @@
                     </li>
                   @endif
                 @if(session()->has('MOD_PERIODOS_ACADEMICOS'))
-                    <li>
+                    @if($location=='periodo')
+                        <li class="active">
+                    @else
+                        <li>
+                     @endif
                         <a href="{{route('periodoa.index')}}" class="waves-effect waves-block">
                             <i class="material-icons">
                                 timeline
@@ -193,7 +220,11 @@
                 @endif
 
                 @if(session()->has('MOD_USUARIOS'))
-                <li>
+                @if($location=='usuarios')
+                    <li class="active">
+                @else
+                    <li>
+                @endif
                     <a href="{{route('users')}}" class="waves-effect waves-block">
                         <i class="material-icons">people</i>
                         <span>Usuarios</span>
@@ -201,7 +232,11 @@
                 </li>
              @endif
             @if(session()->has('MOD_INTERVENCIONES_INDIVIDUALES'))
-             <li>
+                @if($location=='intervencion_individual')
+                    <li class="active">
+                @else
+                    <li>
+                @endif
                  <a href="{{route('intervenciones_individuales.index')}}" class="waves-effect waves-block">
                      <i class="material-icons">people</i>
                      <span>Intervención Individual</span>
@@ -219,7 +254,11 @@
                     </a>
                 </li>
             @endif
-                <li>
+                    @if($location=='contrasenia')
+                        <li class="active">
+                    @else
+                        <li>
+                    @endif
                     <a href="{{route('nuevoPassword')}}" class="waves-effect waves-block">
                         <i class="material-icons">lock_open</i>
                         <span>Cambiar Contraseña</span>

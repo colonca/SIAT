@@ -20,13 +20,15 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuarios = User::all();
-        return view('usuarios.list',compact('usuarios'));
+        $location = 'usuarios';
+        return view('usuarios.list',compact('usuarios','location'));
     }
 
     public function create()
     {
         $roles= Grupo_Usuario::all();
-        return view('usuarios.create',compact('roles'));
+        $location = 'usuarios';
+        return view('usuarios.create',compact('roles','location'));
     }
 
     public function store(Request $request)
@@ -57,12 +59,12 @@ class UsuarioController extends Controller
 
     public function cambiarPasswordShow()
     {
-       return view('usuarios.perfil.cambiarPassword');
+        $location = 'contrasenia';
+       return view('usuarios.perfil.cambiarPassword',compact('location'));
     }
 
     //actualiza la contraseña pidiendo la actual
     public function updatePassword(Request $request){
-
 
     if (Hash::check($request->get('pass0'), Auth::user()->getAuthPassword())){
 
@@ -110,7 +112,8 @@ class UsuarioController extends Controller
     {
         $usuario =  User::find($id);
         $roles= Grupo_Usuario::all();
-        return view('usuarios.edit',compact('roles','usuario'));
+        $location = 'usuarios';
+        return view('usuarios.edit',compact('roles','usuario','location'));
     }
 
     public function updateUser(Request $request, $id)
@@ -149,8 +152,8 @@ class UsuarioController extends Controller
     public function profile()
     {
         $personal = Personal::where('cedula',Auth::user()->cedula)->first();
-
-        return view('usuarios.perfil.perfil',compact('personal'));
+        $location = 'usuarios';
+        return view('usuarios.perfil.perfil',compact('personal','location'));
     }
 
     public function operaciones(Request $request){
@@ -159,7 +162,8 @@ class UsuarioController extends Controller
 
         if($user){
             $roles = Grupo_Usuario::all();
-            return view('usuarios.operaciones',compact('user','roles'));
+            $location = 'usuarios';
+            return view('usuarios.operaciones',compact('user','roles','location'));
         }else{
           return back()->with('error','El usuario consultado no se encuentra registrado!');
         }
