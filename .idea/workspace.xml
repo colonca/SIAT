@@ -3,19 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocentePermanenciaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstudianteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Grupo_UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Grupo_UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GruposUsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GruposUsuariosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IntervencionIndividualController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoaderExcelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoaderExcelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModuloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModuloController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaginaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaginaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeriodoacademicoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeriodoacademicoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReportesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/estudiantes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -348,6 +341,7 @@
       <workItem from="1565194044341" duration="12608000" />
       <workItem from="1565298156978" duration="3757000" />
       <workItem from="1565388659818" duration="2674000" />
+      <workItem from="1570133289213" duration="7725000" />
     </task>
     <servers />
   </component>

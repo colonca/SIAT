@@ -48,20 +48,36 @@ Route::get('estudiante/{id}','EstudianteController@consultarEstudiante');
 Route::post('mensageIndividual','MessageController@store');
 
 //citas
+//login
 Route::get('login/estudiante',function(){
     return view('citas.agendar_cita');
 })->name('loginEstudiante');
+//logout cierre de session estudiante
+Route::get('logout/esudiante',function (){
+    session()->put('estudiante');
+    return redirect('login/estudiante');
+})->name('logoutStudent');
 
 Route::get('cita/estudiante/{id}','CitaController@estudiante');
 
 //Citas
-Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante');
-Route::get('citas/estudiante/contraseña','CitaController@editNuevaContraseña')->name('estudianteContraseña');
-Route::post('citas/estudiante/Actualizarcontrasena','CitaController@updateContrasena')->name('actualizarContraseña');
-Route::get('citas/estudiante/agendar','CitaController@cita')->name('agendar');
+Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante')
+    ->middleware('authStudent');
+Route::get('citas/estudiante/contraseña','CitaController@editNuevaContraseña')
+    ->name('estudianteContraseña')
+    ->middleware('authStudent');
+Route::post('citas/estudiante/Actualizarcontrasena','CitaController@updateContrasena')
+    ->name('actualizarContraseña')
+    ->middleware('authStudent');
+Route::get('citas/estudiante/agendar','CitaController@cita')
+    ->name('agendar')
+    ->middleware('authStudent');
 Route::post('citas/estudiante/agendar','CitaController@agendar')->name('agendarcita');
-Route::get('citas/estudiante/citas','CitaController@historialCitas')->name('citas');
-Route::get('citas/estudiante/citasAgendadas','CitaController@citasAgnedadas');
+Route::get('citas/estudiante/citas','CitaController@historialCitas')
+    ->name('citas')
+    ->middleware('authStudent');
+Route::get('citas/estudiante/citasAgendadas','CitaController@citasAgnedadas')
+          ->middleware('authStudent');
 Route::get('citas/citasTotales','CitaController@citasTotales');
 Route::post('citas/estudiante/cancelarCita','CitaController@cancelarCita');
 Route::get('citas/tallerista/','CitaController@citasTallerista')->name('citas_agendadas');

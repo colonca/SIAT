@@ -22,12 +22,15 @@ class PsicologoController extends Controller
     public function index()
     {
         $psicologos = Personal::where('tipo_usuario','psicologo')->get();
-        return view('personal.psicologos.index',compact('psicologos'));
+        $location = 'talleristas';
+        return view('personal.psicologos.index',compact('psicologos','location'));
     }
 
     public function create()
     {
-        return view('personal.psicologos.create');
+        $location = 'talleristas';
+        return view('personal.psicologos.create')
+              ->with('location',$location);
     }
 
 
@@ -122,9 +125,9 @@ class PsicologoController extends Controller
 
     public function show($id)
     {
-        $personal = Personal::find($id);
-
-        return view('personal.psicologos.show',compact('personal'));
+         $personal = Personal::find($id);
+         $location = 'talleristas';
+         return view('personal.psicologos.show',compact('personal','location'));
     }
 
 

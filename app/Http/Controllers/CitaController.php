@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\DB;
 
 class CitaController extends Controller
 {
-
     public function __construct()
     {
 
@@ -38,6 +37,7 @@ class CitaController extends Controller
             ['cedula',$usuario],
             ['contraseña',$contraseña],
             ['periodo_id',$periodo->id]
+
         ])->first();
 
         }else{
@@ -46,7 +46,6 @@ class CitaController extends Controller
                     ->with('error','no se puden agendar citas para la fecha actual');
 
         }
-
 
         if($estudiante!=null){
 
@@ -91,7 +90,7 @@ class CitaController extends Controller
                 }
 
             }
-
+            session()->put('estudiante',$estudiante);
             return view('citas.estudiante.agendar',compact('psicologos'));
 
         }else{
@@ -115,7 +114,7 @@ class CitaController extends Controller
             $fechaFFase = date('Y-m-d');
             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
             $dia = strftime('%u',strtotime($fechaFFase));
-            $mes = strftime('%m',strtoti1192745235me($fechaFFase));
+            $mes = strftime('%m',strtotime($fechaFFase));
 
             $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
@@ -304,7 +303,6 @@ class CitaController extends Controller
         return response()->json($event);
 
     }
-
 
     public function cancelarCita (Request $request){
         $cita = Cita::find($request->get('id'));

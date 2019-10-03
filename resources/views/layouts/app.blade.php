@@ -46,7 +46,7 @@
     @yield('styles')
 </head>
 
-<body class="theme-red">
+<body class="theme-teal">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
@@ -107,9 +107,8 @@
             <ul class="list">
                 <li class="header">Navegacion Principal</li>
 
-
                 @if(session()->has('MOD_PERSONAL'))
-                    @if($location=='personal')
+                    @if($location=='personal' || $location=='talleristas')
                         <li class="active">
                     @else
                         <li>
@@ -119,24 +118,25 @@
                         <span>Personal</span>
                     </a>
                     <ul class="ml-menu" style="display: none;">
-                            @if(session()->has('PAG_PSICOLOGOS'))
-                        <li>
+                        @if(session()->has('PAG_PSICOLOGOS'))
+                            @if($location=='talleristas')
+                                <li class="active">
+                            @else
+                                <li>
+                            @endif
                             <a href="{{route('psicologos.index')}}" class="waves-effect waves-block">
                                 <span>Talleristas</span>
                             </a>
                         </li>
                         @endif
                         @if(session()->has('PAG_DOCENTES_DE_PERMANENCIA'))
-                        <li>
+                            @if($location=='personal')
+                                <li class="active">
+                            @else
+                                <li>
+                            @endif
                             <a href="{{route('docentes_permanencia.index')}}" class="waves-effect waves-block">
                                 <span>Docentes de Permanencia</span>
-                            </a>
-                        </li>
-                        @endif
-                        @if(session()->has('PAG_TALLERISTAS'))
-                        <li>
-                            <a href="{{route('loaders')}}" class="waves-effect waves-block">
-                                <span>Talleristas</span>
                             </a>
                         </li>
                         @endif

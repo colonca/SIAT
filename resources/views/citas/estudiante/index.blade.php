@@ -137,7 +137,7 @@
                 </li>
 
                 <li>
-                    <a href="{{url('login/estudiante')}}">
+                    <a href="{{route('logoutStudent')}}">
                         <i class="material-icons">power_settings_new</i>
                         <span>Cerrar Sessión</span>
                     </a>
