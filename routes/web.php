@@ -1,7 +1,8 @@
 <?php
 
 //login
-Route::get('/', 'Auth\LoginController@showLoginForm')->middleware('guest')->name('/');
+Route::get('/', 'Auth\LoginController@showLoginForm')
+    ->middleware('guest')->name('/');
 Route::get('login', 'Auth\LoginController@ShowLoginForm');
 Route::post('login','Auth\LoginController@login')->name('login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
@@ -61,8 +62,7 @@ Route::get('logout/esudiante',function (){
 Route::get('cita/estudiante/{id}','CitaController@estudiante');
 
 //Citas
-Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante')
-    ->middleware('authStudent');
+Route::post('estudiante/dashboard','CitaController@estudiante')->name('loginEstudiante');
 Route::get('citas/estudiante/contraseña','CitaController@editNuevaContraseña')
     ->name('estudianteContraseña')
     ->middleware('authStudent');

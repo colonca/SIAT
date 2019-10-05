@@ -16,7 +16,7 @@ class AuthStudent
     public function handle($request, Closure $next)
     {
 
-        if(session()->has('estudiante')){
+        if(!session()->has('estudiante')){
             return redirect('login/estudiante');
         }
 

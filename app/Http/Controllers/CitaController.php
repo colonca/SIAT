@@ -90,7 +90,7 @@ class CitaController extends Controller
                 }
 
             }
-            session()->put('estudiante',$estudiante);
+
             return view('citas.estudiante.agendar',compact('psicologos'));
 
         }else{

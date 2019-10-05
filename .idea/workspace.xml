@@ -4,11 +4,11 @@
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AuthStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthStudent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +177,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Plandetrabajo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -222,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.r_impresion_Diagnostica.blade.php">
+  <component name="RunManager" selected="PHPUnit.LoginTest.authenticated_to_a_user">
     <configuration name="IntervencionIndividualController.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/Http/Controllers/IntervencionIndividualController.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -230,6 +230,10 @@
       <method v="2" />
     </configuration>
     <configuration name="r_impresion_Diagnostica.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginTest.authenticated_to_a_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LoginTest" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="authenticated_to_a_user" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -241,6 +245,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.LoginTest.authenticated_to_a_user" />
         <item itemvalue="JavaScript Debug.r_impresion_Diagnostica.blade.php" />
         <item itemvalue="JavaScript Debug.IntervencionIndividualController.php" />
         <item itemvalue="PHP Script.CitaController.php" />
@@ -341,8 +346,18 @@
       <workItem from="1565194044341" duration="12608000" />
       <workItem from="1565298156978" duration="3757000" />
       <workItem from="1565388659818" duration="2674000" />
-      <workItem from="1570133289213" duration="7725000" />
+      <workItem from="1570133289213" duration="10043000" />
+      <workItem from="1570156587441" duration="2507000" />
+      <workItem from="1570201663414" duration="20069000" />
     </task>
+    <task id="LOCAL-00001" summary="version 1.0 03/10/19 Camilo Colon">
+      <created>1570141453764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570141453764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -383,5 +398,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 1.0 03/10/19 Camilo Colon" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1.0 03/10/19 Camilo Colon" />
   </component>
 </project>
