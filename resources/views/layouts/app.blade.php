@@ -86,6 +86,11 @@
             <a href="javascript:void(0);" class="bars"></a>
             <img src="{{asset('images/logo.png')}}" alt="" height="50px">
         </div>
+        <div class="collapse navbar-collapse">
+            <p class="navbar-brand navbar-right">UNIVERSIDAD POPULAR DEL CESAR</p>
+        </div>        
+    </div>
+
 </nav>
 <!-- #Top Bar -->
 <section>
@@ -101,6 +106,7 @@
                 <div class="email">{{Auth::user()->email}}</div>
             </div>
         </div>
+        
         <!-- #User Info -->
         <!-- Menu -->
         <div class="menu">

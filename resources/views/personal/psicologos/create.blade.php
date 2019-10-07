@@ -34,12 +34,12 @@
                 </a>
             </li>
             <li><a href="{{route('psicologos.index')}}" style="color: white;">
-                    <i class="material-icons">perm_identity</i> Gestion de Psicologos
+                    <i class="material-icons">perm_identity</i> Gestion de Talleristas
                 </a>
             </li>
             <li>
                 <a href="" style="color: white;">
-                    <i class="material-icons">perm_identity</i>Nuevo Psicologo
+                    <i class="material-icons">perm_identity</i>Nuevo Tallerista
                 </a>
             </li>
         </ol>
@@ -60,7 +60,7 @@
                     <div class="header">
                         <h2>
                             Información Personal
-                            <small>Complete con precision la siguiente información para asegurarnos de mantener un registro actualizado de la informacion del personal</small>
+                            <small>Complete con precisión la siguiente información para asegurarnos de mantener un registro actualizado de la informacion del personal</small>
                         </h2>
                     </div>
                     <div class="body">

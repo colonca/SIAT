@@ -18,7 +18,7 @@
                                 <b>Periodo Académico</b>
                                     <div class="input-group">
                                         <select name="periodo" id="periodo" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true">
-                                            <option value="">por favor, elejir un periodo para filtrar</option>
+                                            <option value="">por favor elija un periodo para filtrar</option>
                                             @foreach($periodos as $periodo)
                                                 <option value="{{$periodo->id}}">{{$periodo->anio.' '.$periodo->periodo}}</option>
                                             @endforeach
@@ -26,10 +26,10 @@
                                     </div>            
                             </div>
                             <div class="col-md-6">
-                                    <b>Programam</b>
+                                    <b>Programa</b>
                                         <div class="input-group">
                                             <select name="programa" id="programa" class="form-control selectpicker show-tick"  data-actions-box="true" data-live-search="true" data-selected-text-format="count > 2">
-                                                   <option value="">por favor, elejir un programa para filtrar</option>
+                                                   <option value="">por favor elija un programa para filtrar</option>
                                                     @foreach($programas as $programa)
                                                     <option value="{{$programa->programa}}">{{$programa->programa}}</option>
                                                     @endforeach
@@ -49,7 +49,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="card">
             <div class="header">
-                <center><p class="font-bold col-teal font-20">Impresiones Diagnosticas</p></center>
+                <p class="font-bold col-teal font-20 text-center">Impresiones Diagnosticas</p>
             </div>
             <div class="body">               
                     <div class="table-responsive">

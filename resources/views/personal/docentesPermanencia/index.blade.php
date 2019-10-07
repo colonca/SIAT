@@ -60,17 +60,17 @@
                     <a href="{{route('docentes_permanencia.create')}}" class="btn btn-success pull-right">Agregar Nuevo Docente</a>
                 </div>
             </div>
-            <div class="body table-responsive">
+            <div class="body table-responsive table-bordered">
                 <table class="table table-condensed" id="docentes_permanencia">
                     <thead>
-                    <tr>
-                        <th>Cedula</th>
-                        <th>Nombre</th>
-                        <th>Direccion</th>
-                        <th>Correos</th>
-                        <th>Telefonos</th>
-                        <th>Contacto de Emergencia</th>
-                        <th>Action</th>
+                    <tr class="bg-green">
+                        <th class="text-center">Cedula</th>
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Direccion</th>
+                        <th class="text-center">Correos</th>
+                        <th class="text-center">Telefonos</th>
+                        <th class="text-center">Contacto de Emergencia</th>
+                        <th class="text-center">Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -245,6 +245,7 @@
     <script>
         $('document').ready(function () {
             $('#docentes_permanencia').dataTable({
+                "language": {"url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"},
                 "paging":   false,
                 "ordering": false,
                 "info":     false

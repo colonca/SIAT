@@ -51,7 +51,7 @@
                                 <b>Cédula</b>
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" name="cedula" class="form-control date" placeholder="ej: 1065xxx">
+                                            <input type="number" name="cedula" class="form-control date" placeholder="ej: 1065xxx">
                                         </div>
                                     </div>
                             </div>

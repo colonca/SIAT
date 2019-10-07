@@ -53,7 +53,7 @@
                     <div class="header">
                         <h2>
                             Nuevo Estudiante
-                            <small>Complete con precision la siguiente información para asegurarnos de mantener un registro actualizado del estudiante</small>
+                            <small>Complete con precisión la siguiente información para asegurarnos de mantener un registro actualizado del estudiante.</small>
                         </h2>
                     </div>
                     <div class="body">
@@ -66,13 +66,13 @@
                                             <b>Numero de Identificacion</b>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input type="text" name="cedula" class="form-control nombre" placeholder="Ex: 9999999999" required>
+                                                    <input type="number" name="cedula" class="form-control nombre" placeholder="Ex: 9999999999" required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <b>Periodo Academico</b>
+                                            <b>Periodo Academico Semestral</b>
                                             <div class="input-group">
                                                     <select name="periodo" id="periodo" required>
                                                         <option value="">Por favor, elija una opcion</option>
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="col-md-6">
-                                            <b>Nombres</b>
+                                            <b>Nombres y Apellidos</b>
                                             <div class="input-group">
                                                 <div class="form-line">
                                                     <input type="text" name="nombres" class="form-control nombre" placeholder="Ex: CAÑIZARES ALVERNIA JUAN CAMILO" required>
@@ -112,12 +112,12 @@
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                                 <div class="form-line">
-                                                    <input type="text" name="celular" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
+                                                    <input type="number" name="celular" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
-                                            <b>Telefono Domiciliario</b>
+                                            <b>Teléfono de Domicilio</b>
                                             <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="material-icons">phone</i>
@@ -210,7 +210,7 @@
                                                     <select name="riesgo" id="" class="form-group">
                                                         <option value="">Selecione...</option>
                                                         <option value="4. Riesgo Bajo">Riesgo Bajo</option>
-                                                        <option value="5. Riesgo super bajo" selected>Riesgo super Bajo</option>
+                                                        <option value="5. Riesgo super bajo">Riesgo super Bajo</option>
                                                         <option value="3. Riesgo Medio">Riesgo Medio</option>
                                                         <option value="2. Alto">Riesgo Alto</option>
                                                         <option value="1. Riesgo super alto">Riesgo Super Alto</option>

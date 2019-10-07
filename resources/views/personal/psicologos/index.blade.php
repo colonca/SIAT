@@ -53,7 +53,7 @@
             <div class="header container">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <h2>
-                        psicologos del Sistema
+                        Talleristas del Sistema
                     </h2>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -61,16 +61,16 @@
                 </div>
             </div>
             <div class="body table-responsive">
-                <table class="table table-condensed" id="psicologos">
+                <table class="table table-condensed table-bordered" id="psicologos">
                     <thead>
-                    <tr>
-                        <th>Cedula</th>
-                        <th>Nombre</th>
-                        <th>Direccion</th>
-                        <th>Correos</th>
-                        <th>Telefonos</th>
-                        <th>Contacto de Emergencia</th>
-                        <th>Action</th>
+                    <tr class="bg-green">
+                        <th class="text-center">Cédula</th>
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Dirección</th>
+                        <th class="text-center">Correo</th>
+                        <th class="text-center">Teléfono</th>
+                        <th class="text-center">Contacto de Emergencia</th>
+                        <th class="text-center">Acción</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -245,6 +245,7 @@
     <script>
         $('document').ready(function () {
             $('#psicologos').dataTable({
+                "language": {"url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"},
                 "paging":   false,
                 "ordering": false,
                 "info":     false
