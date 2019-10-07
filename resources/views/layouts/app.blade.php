@@ -273,7 +273,7 @@
               <li>
                   <a href="{{url('logout')}}" class="waves-effect waves-block">
                       <i class="material-icons">input</i>
-                     <span>Cerrar Session</span>
+                     <span>Cerrar Sesion</span>
                   </a>
               </li>
             </ul>
