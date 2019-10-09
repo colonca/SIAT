@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\DB;
 
 class PsicologoController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -32,7 +31,6 @@ class PsicologoController extends Controller
         return view('personal.psicologos.create')
               ->with('location',$location);
     }
-
 
     public function store(Request $request)
     {
@@ -114,14 +112,15 @@ class PsicologoController extends Controller
             ]);
 
         }else {
+
             return response()->json([
                 'status' => 'fail',
                 'message' => 'este usuario ya se encuentra registrado en nuestra base de datos'
             ]);
+
         }
 
     }
-
 
     public function show($id)
     {
@@ -130,12 +129,10 @@ class PsicologoController extends Controller
          return view('personal.psicologos.show',compact('personal','location'));
     }
 
-
     public function edit($id)
     {
         //
     }
-
 
     public function update(Request $request, $id)
     {

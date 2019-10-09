@@ -71,7 +71,7 @@
                                         <b>Numero de Identificacion</b>
                                         <div class="input-group">
                                             <div class="form-line">
-                                                <input type="text" name="cedula" class="form-control nombre" placeholder="Ex: 7765848xxx" required>
+                                                <input type="number"  pattern=".{6,10}" name="cedula" class="form-control nombre" placeholder="Ex: 7765848xxx" required>
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                                                 <i class="material-icons">phone_iphone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="number" name="celular" maxlength="11" minlength="7"class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
+                                                <input type="number" name="celular" maxlength="11" minlength="7" class="form-control mobile-phone-number" placeholder="Ex: +00 (000) 000-00-00" required>
                                             </div>
                                         </div>
                                     </div>
@@ -129,7 +129,7 @@
                                                 <i class="material-icons">phone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="number" name="telefono" maxlength="10" minlength="7" class="form-control mobile-phone-number" placeholder="Ex: +000 (000) 00-00">
+                                                <input type="number" name="telefono" required maxlength="10" minlength="7" class="form-control mobile-phone-number" placeholder="Ex: +000 (000) 00-00">
                                             </div>
                                         </div>
                                     </div>
@@ -205,7 +205,7 @@
                                     <b>Nombre del contacto de emergencia</b>
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" name="nombre" class="form-control date" placeholder="Ex: daniel" required>
+                                            <input type="text" name="nombre" class="form-control date" placeholder="Ex: Daniel" required>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@
                                     <b>Relación o parentezco (Conyuge,Padre,Amigo,ETC)</b>
                                     <div class="input-group">
                                         <div class="form-line">
-                                            <input type="text" name="paretezco" class="form-control time24" placeholder="Ex: andres" required>
+                                            <input type="text" name="paretezco" class="form-control time24" placeholder="Ex: Amigo" required>
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +244,7 @@
                     <div class="header">
                         <h2>
                             Disponibilidad
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, vel.</small>
+                            <small>Por favor seleccione el horario de disponibilidad del tallerista. </br> <strong>NOTA:</strong> haga click sobre la celda para indicar la hora y el día de disponibilidad del tallerista.</small>
                         </h2>
                     </div>
                     <div class="body">
@@ -260,6 +260,7 @@
                                             <th>Miercoles</th>
                                             <th>Jueves</th>
                                             <th>Viernes</th>
+                                            <th>Sabados</th>
                                             </thead>
                                             <tbody>
                                             <tr>
@@ -269,6 +270,7 @@
                                                 <td data-value="13" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="14" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="15" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="16" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">09:00-10:00</td>
@@ -277,6 +279,7 @@
                                                 <td data-value="23" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="24" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="25" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="26" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">10:00-11:00</td>
@@ -285,6 +288,7 @@
                                                 <td data-value="33" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="34" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="35" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="36" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">11:00-12:00</td>
@@ -293,11 +297,25 @@
                                                 <td data-value="43" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="44" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="45" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="46" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
-                                                <td colspan="6" class="text-center" style=" color: black;background-color: rgb(232, 234, 237); border-radius: 4px;">
-                                                    <h6 class="white">DESCANSO</h6>
-                                                </td>
+                                                <td class="bg-light-green text-center">12:00-13:00</td>
+                                                <td data-value="51" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="52" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="53" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="54" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="55" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="56" onclick="addDisponibilidad(event)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-light-green text-center">13:00-14:00</td>
+                                                <td data-value="61" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="62" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="63" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="64" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="65" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="66" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">14:00-15:00</td>
@@ -305,7 +323,8 @@
                                                 <td data-value="72" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="73" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="74" onclick="addDisponibilidad(event)"></td>
-                                                <td data-value="55" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="75" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="76" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">15:00-16:00</td>
@@ -314,6 +333,7 @@
                                                 <td data-value="83" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="84" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="85" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="86" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">16:00-17:00</td>
@@ -322,6 +342,7 @@
                                                 <td data-value="93" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="94" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="95" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="96" onclick="addDisponibilidad(event)"></td>
                                             </tr>
                                             <tr>
                                                 <td class="bg-light-green text-center">17:00-18:00</td>
@@ -330,8 +351,44 @@
                                                 <td data-value="103" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="104" onclick="addDisponibilidad(event)"></td>
                                                 <td data-value="105" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="106" onclick="addDisponibilidad(event)"></td>
                                             </tr>
-
+                                            <tr>
+                                                <td class="bg-light-green text-center">18:00-19:00</td>
+                                                <td data-value="111" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="112" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="113" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="114" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="115" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="116" onclick="addDisponibilidad(event)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-light-green text-center">19:00-20:00</td>
+                                                <td data-value="121" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="122" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="123" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="124" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="125" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="126" onclick="addDisponibilidad(event)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-light-green text-center">20:00-21:00</td>
+                                                <td data-value="131" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="132" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="133" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="134" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="135" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="136" onclick="addDisponibilidad(event)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-light-green text-center">21:00-22:00</td>
+                                                <td data-value="141" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="142" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="143" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="144" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="145" onclick="addDisponibilidad(event)"></td>
+                                                <td data-value="146" onclick="addDisponibilidad(event)"></td>
+                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -488,7 +545,6 @@
             event.preventDefault();
             let data = new FormData(document.getElementById('formulario'));
             data.append('disponibilidad',horario);
-            console.log(data.get('disponibilidad'));
 
             axios.post('{{url('/psicologos')}}',data)
                 .then(function (response) {

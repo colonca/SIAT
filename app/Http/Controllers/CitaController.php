@@ -61,8 +61,8 @@ class CitaController extends Controller
                 setlocale(LC_TIME,"es_CO");;
                 $fechaFFase = date('Y-m-d');
                 $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-                $dia = strftime('%u',strtotime($fechaFFase));
-                $mes = strftime('%m',strtotime($fechaFFase));
+                $dia = strftime('%u',strtotime($nuevafecha));
+                $mes = strftime('%m',strtotime($nuevafecha));
 
                 $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
@@ -113,8 +113,8 @@ class CitaController extends Controller
             setlocale(LC_TIME,"es_CO");;
             $fechaFFase = date('Y-m-d');
             $nuevafecha = date('Y-m-d',strtotime ( '+1 day' , strtotime ($fechaFFase )));
-            $dia = strftime('%u',strtotime($fechaFFase));
-            $mes = strftime('%m',strtotime($fechaFFase));
+            $dia = strftime('%u',strtotime($nuevafecha));
+            $mes = strftime('%m',strtotime($nuevafecha));
 
             $horarios = $persona->horarios()->orderBy('hora')->where('dia',$dia)->get();
 
@@ -177,7 +177,14 @@ class CitaController extends Controller
     }
 
     public function agendar(Request $request){
+
         //validaciones
+        request()->validate([
+           'personal_id' => 'required|numeric',
+           'fecha'=>'required|date|after:today',
+           'hora'=>'required|numeric'
+        ]);
+
        $cita = new Cita();
        $cita->personal_id = $request->get('personal_id');
        $cita->estudiante_id = session()->get('estudiante')->id;
@@ -312,7 +319,6 @@ class CitaController extends Controller
 
     public function citasTallerista(){
 
-
         $personal = Personal::where('cedula',Auth::user()->cedula)
                             ->first();
 
@@ -321,7 +327,8 @@ class CitaController extends Controller
             ['fecha',Date('Y-m-d')]
         ])->get();
 
-        return view('personal.psicologos.admin.citas',compact('citas'));
+        $location = 'citas_agendas';
+        return view('personal.psicologos.admin.citas',compact('citas','location'));
     }
 
     public function cambiarEstado(Request $request){

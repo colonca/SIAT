@@ -14,7 +14,7 @@
                     </li>
                 </ol>
             </div>
-            
+
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
@@ -33,14 +33,14 @@
                                 Importar Estudiantes
                             </a>
                             @endif
-                            @if(session()->has('PAG_CARGAR_ASIGNATURAS'))
+                            <!--@if(session()->has('PAG_CARGAR_ASIGNATURAS'))
                               <a href="{{route('loaderAsignaturas')}}" type="button" class="btn bg-deep-orange btn-lg  waves-effect">
                                   <i class="material-icons">
                                       layers
                                   </i>
                                   Importar Asignaturas
                               </a>
-                            @endif
+                            @endif-->
                         </div>
                     </div>
                 </div>

@@ -128,7 +128,8 @@
                                 </div>
 
                             </div>
-
+                        </div>
+                        </div>
                         </form>
                     </div>
                 </div>
@@ -145,7 +146,7 @@
 @section('scripts')
    <script>
        $(document).ready(function () {
-           
+
        });
 
        function selecionarHora(event){
@@ -156,7 +157,7 @@
          $('#id').val(id);
          $('#psicologo').val(nombre);
          $('#hora').val(hora);
-         
+
        }
 
        function solicitar(event){

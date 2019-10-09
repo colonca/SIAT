@@ -11,7 +11,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class LoginTest extends TestCase
 {
-
     /** @test */
     public function it_visit_to_page_of_login()
     {
@@ -23,6 +22,7 @@ class LoginTest extends TestCase
     /** @test */
     public function authenticated_to_a_user()
     {
+        $this->withExceptionHandling();
 
         $credentials = [
             "cedula" => "1065848333",
@@ -36,7 +36,7 @@ class LoginTest extends TestCase
     }
 
     /** @test */
-    public function the_email_is_required_for_authenticate()
+    public function the_cedula_is_required_for_authenticate()
     {
 
         $credentials = [
@@ -55,7 +55,7 @@ class LoginTest extends TestCase
     {
 
         $credentials = [
-            "cedula" => "zaratedev@gmail.com",
+            "cedula" => "1065848333",
             "password" => null
         ];
 

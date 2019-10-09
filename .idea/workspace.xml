@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d8928e-dee7-4aa8-86e3-e6cbeb679a4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/SIAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SIAT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AuthStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthStudent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PsicologoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/citas/estudiante/agendar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/loaders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/loaders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/personal/psicologos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/personal/psicologos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CitaTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CitaTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LoginTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LoginTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,52 +31,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="SIAT" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>date</find>
-      <find>table</find>
-      <find>onclick=&quot;addDisponibilidad(event)&quot;</find>
-      <find>lefts</find>
-      <find>agendar</find>
-      <find>btnA</find>
-      <find>====</find>
-      <find>Example</find>
-      <find>locale-se</find>
-      <find>profile</find>
-      <find>Psicologo</find>
-      <find>identific</find>
-      <find>nombre</find>
-      <find>celular</find>
-      <find>semest</find>
-      <find>fecha</find>
-      <find>antecedentes</find>
-      <find>antecedente</find>
-      <find>trabaja</find>
-      <find>anteceden</find>
-      <find>relacion</find>
-      <find>Datos</find>
-      <find>anteced</find>
-      <find>cel</find>
-      <find>celula</find>
-      <find>eSCOJ</find>
-      <find>antec</find>
-      <find>estudiantes</find>
-      <find>fil</find>
-      <find>localsele</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>./fonts/</replace>
-      <replace>.</replace>
-      <replace>..</replace>
-      <replace>../</replace>
-      <replace>modulo</replace>
-      <replace>gru</replace>
-      <replace>grupo</replace>
-      <replace>psicologo</replace>
-      <replace>DocentePermanencia</replace>
-      <replace>docente</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,20 +125,16 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
       <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
       <path value="$PROJECT_DIR$/vendor/laracasts/flash" />
+      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/laravel/dusk" />
     </include_path>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="y" value="18" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
   </component>
   <component name="ProjectId" id="1OvoQkz2U5qudXqzmOJ6AgKJrWG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Plandetrabajo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -226,10 +183,11 @@
     <configuration name="IntervencionIndividualController.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/Http/Controllers/IntervencionIndividualController.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/resources/views/estudiantes/index.blade.php" useBuiltInWebServerPort="true">
+    <configuration name="r_impresion_Diagnostica.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="r_impresion_Diagnostica.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SIAT/resources/views/reportes/intervencion_individual/r_impresion_Diagnostica.blade.php" useBuiltInWebServerPort="true">
+    <configuration name="ExampleTest.testBasicExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Browser\ExampleTest" file="$PROJECT_DIR$/tests/Browser/ExampleTest.php" method="testBasicExample" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="LoginTest.authenticated_to_a_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -245,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ExampleTest.testBasicExample" />
         <item itemvalue="PHPUnit.LoginTest.authenticated_to_a_user" />
         <item itemvalue="JavaScript Debug.r_impresion_Diagnostica.blade.php" />
         <item itemvalue="JavaScript Debug.IntervencionIndividualController.php" />
         <item itemvalue="PHP Script.CitaController.php" />
-        <item itemvalue="JavaScript Debug.index.blade.php" />
       </list>
     </recent_temporary>
   </component>
@@ -349,6 +307,12 @@
       <workItem from="1570133289213" duration="10043000" />
       <workItem from="1570156587441" duration="2507000" />
       <workItem from="1570201663414" duration="20069000" />
+      <workItem from="1570296802246" duration="5989000" />
+      <workItem from="1570317601165" duration="15490000" />
+      <workItem from="1570374846418" duration="6042000" />
+      <workItem from="1570385697345" duration="14034000" />
+      <workItem from="1570462637774" duration="8959000" />
+      <workItem from="1570505424677" duration="126000" />
     </task>
     <task id="LOCAL-00001" summary="version 1.0 03/10/19 Camilo Colon">
       <created>1570141453764</created>
@@ -357,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570141453764</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="version 2.0 03/10/19 Camilo Colon">
+      <created>1570296853364</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570296853364</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -401,6 +372,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version 1.0 03/10/19 Camilo Colon" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.0 03/10/19 Camilo Colon" />
+    <MESSAGE value="version 2.0 03/10/19 Camilo Colon" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2.0 03/10/19 Camilo Colon" />
   </component>
 </project>

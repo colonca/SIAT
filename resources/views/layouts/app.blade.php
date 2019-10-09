@@ -129,7 +129,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(session()->has('PAG_DOCENTES_DE_PERMANENCIA'))
+                        <!-- @if(session()->has('PAG_DOCENTES_DE_PERMANENCIA'))
                             @if($location=='personal')
                                 <li class="active">
                             @else
@@ -138,7 +138,7 @@
                             <a href="{{route('docentes_permanencia.index')}}" class="waves-effect waves-block">
                                 <span>Docentes de Permanencia</span>
                             </a>
-                        </li>
+                        </li>-->
                         @endif
                     </ul>
                 </li>
@@ -245,7 +245,11 @@
            @endif
 
             @if(session()->has('MOD_CITAS_AGENDADAS'))
-                <li>
+                @if($location=='citas_agendas')
+                    <li class="active">
+                @else
+                    <li>
+                @endif
                     <a href="{{route('citas_agendadas')}}" class="waves-effect waves-block">
                         <i class="material-icons">
                             card_membership
